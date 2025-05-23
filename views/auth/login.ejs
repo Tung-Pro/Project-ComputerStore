@@ -44,6 +44,12 @@
                                 </div>
                                 <% } %>
                                 
+                                <% if (typeof message !== 'undefined' && message) { %>
+                                <div class="alert alert-success">
+                                    <%= message %>
+                                </div>
+                                <% } %>
+
                                 <% if (typeof registered !== 'undefined' && registered) { %>
                                 <div class="alert alert-success">
                                     Đăng ký tài khoản thành công! Vui lòng đăng nhập.
@@ -59,8 +65,13 @@
                                 <% if (typeof verifyNotice !== 'undefined' && verifyNotice) { %>
                                 <div class="alert alert-info">
                                     Đăng ký thành công! Vui lòng kiểm tra email để xác thực tài khoản trước khi đăng nhập.
+                                    <form action="/auth/resend-verification" method="POST" class="mt-2">
+                                        <input type="hidden" name="email" value="<%= email %>">
+                                        <button type="submit" class="btn btn-sm btn-outline-primary">Gửi lại email xác thực</button>
+                                    </form>
                                 </div>
                                 <% } %>
+
                                 <% if (typeof verified !== 'undefined' && verified) { %>
                                 <div class="alert alert-success">
                                     Xác thực email thành công! Bạn có thể đăng nhập.

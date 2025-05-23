@@ -21,6 +21,9 @@ router.get('/logout', authController.logout);
 // Route xác thực email
 router.get('/verify-email', authController.verifyEmail);
 
+// Route gửi lại email xác thực
+router.post('/resend-verification', authController.resendVerification);
+
 // Route hiển thị form đổi mật khẩu qua link token
 router.get('/reset-password', authController.getResetPasswordForm);
 

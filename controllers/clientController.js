@@ -1613,4 +1613,86 @@ exports.retryVnpayPayment = async (req, res) => {
     }
 };
 
+// @desc    Đổi mật khẩu người dùng
+// @route   POST /account/change-password
+// @access  Private
+exports.changePassword = async (req, res) => {
+    try {
+        const userId = req.session.user._id;
+        const { currentPassword, newPassword, confirmPassword } = req.body;
+
+        // Tìm người dùng và lấy mật khẩu (select: false trong model)
+        const user = await User.findById(userId).select('+password');
+
+        if (!user) {
+            // Nên không xảy ra vì đã có middleware isAuthenticated, nhưng thêm để an toàn
+            return res.redirect('/account?passwordError=user_not_found');
+        }
+
+        // Kiểm tra mật khẩu hiện tại
+        const isMatch = await user.matchPassword(currentPassword);
+
+        if (!isMatch) {
+            const userData = await User.findById(userId); // Lấy lại dữ liệu người dùng
+            return res.render('client/account/info', { 
+                title: 'Thông tin tài khoản', 
+                user: req.session.user, 
+                userData: userData, 
+                activeMenu: 'info', 
+                categories: res.locals.categories,
+                passwordError: 'wrong_password', // Truyền lỗi cụ thể
+                showPasswordModal: true // Cờ để mở modal
+            });
+        }
+
+        // Kiểm tra mật khẩu mới và xác nhận mật khẩu mới có khớp không
+        if (newPassword !== confirmPassword) {
+             const userData = await User.findById(userId); // Lấy lại dữ liệu người dùng
+             return res.render('client/account/info', { 
+                title: 'Thông tin tài khoản', 
+                user: req.session.user, 
+                userData: userData, 
+                activeMenu: 'info', 
+                categories: res.locals.categories,
+                passwordError: 'password_mismatch', // Truyền lỗi cụ thể
+                showPasswordModal: true // Cờ để mở modal
+            });
+        }
+        
+        // Kiểm tra mật khẩu mới có đủ độ dài không (đã validate ở client, nhưng kiểm tra lại ở server)
+        if (newPassword.length < 6) {
+              const userData = await User.findById(userId); // Lấy lại dữ liệu người dùng
+              return res.render('client/account/info', { 
+                title: 'Thông tin tài khoản', 
+                user: req.session.user, 
+                userData: userData, 
+                activeMenu: 'info', 
+                categories: res.locals.categories,
+                passwordError: 'password_mismatch', // Truyền lỗi cụ thể (hoặc code khác)
+                showPasswordModal: true // Cờ để mở modal
+            });
+        }
+
+        // Cập nhật mật khẩu mới
+        user.password = newPassword;
+        await user.save();
+
+        // Chuyển hướng về trang tài khoản với thông báo thành công (redirect để tránh gửi lại form)
+        res.redirect('/account?passwordSuccess=true');
+
+    } catch (error) {
+        console.error('Lỗi khi đổi mật khẩu:', error);
+         const userData = await User.findById(req.session.user._id); // Lấy lại dữ liệu người dùng
+         res.render('client/account/info', { 
+            title: 'Thông tin tài khoản', 
+            user: req.session.user, 
+            userData: userData, 
+            activeMenu: 'info', 
+            categories: res.locals.categories,
+            passwordError: 'update_failed', // Truyền lỗi chung
+            showPasswordModal: true // Cờ để mở modal
+        });
+    }
+};
+
 

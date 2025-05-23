@@ -48,4 +48,7 @@ router.get('/account/orders', isAuthenticated, clientController.getMyOrders);
 router.get('/account/reviews', isAuthenticated, clientController.getMyReviews);
 router.post('/account/update', isAuthenticated, clientController.updateProfile);
 
+// Route đổi mật khẩu
+router.post('/account/change-password', isAuthenticated, clientController.changePassword);
+
 module.exports = router;

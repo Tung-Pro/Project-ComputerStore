@@ -74,7 +74,7 @@
         } 
     </style>
 </head>
-<body>
+<body data-show-password-modal="<%= typeof showPasswordModal !== 'undefined' && showPasswordModal ? 'true' : 'false' %>">
     <!-- Header -->
     <%- include('../../partials/header.ejs') %>
 
@@ -153,10 +153,63 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Cập nhật thông tin</button>
+                        <button type="button" class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                            Đổi mật khẩu
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center w-100" id="changePasswordModalLabel">Đổi mật khẩu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <% if (typeof passwordSuccess !== 'undefined' && passwordSuccess) { %>
+                 <div class="alert alert-success">
+                     Đổi mật khẩu thành công
+                 </div>
+             <% } %>
+             <% if (typeof passwordError !== 'undefined' && passwordError) { %>
+                 <div class="alert alert-danger">
+                     <% if (passwordError === 'wrong_password') { %>
+                         Mật khẩu hiện tại không đúng.
+                     <% } else if (passwordError === 'password_mismatch') { %>
+                         Mật khẩu mới và xác nhận mật khẩu không khớp.
+                     <% } else if (passwordError === 'update_failed') { %>
+                         Đã xảy ra lỗi khi đổi mật khẩu. Vui lòng thử lại.
+                     <% } else { %>
+                         Đã xảy ra lỗi.
+                     <% } %>
+                 </div>
+             <% } %>
+            <form action="/account/change-password" method="POST" id="changePasswordForm">
+              <div class="mb-3">
+                <label for="currentPassword" class="form-label">Mật khẩu hiện tại</label>
+                <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
+              </div>
+              <div class="mb-3">
+                <label for="newPassword" class="form-label">Mật khẩu mới</label>
+                <input type="password" class="form-control" id="newPassword" name="newPassword" required minlength="6">
+              </div>
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Xác nhận mật khẩu mới</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required minlength="6">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button type="submit" form="changePasswordForm" class="btn btn-primary"><i class="fas fa-save me-2"></i> Lưu thay đổi</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <%- include('../../partials/footer.ejs') %>
@@ -236,6 +289,27 @@
                 });
             }
         });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Check if the password modal should be shown based on data attribute
+        const showModal = document.body.getAttribute('data-show-password-modal');
+        if (showModal === 'true') {
+          const changePasswordModal = new bootstrap.Modal(document.getElementById('changePasswordModal'));
+          changePasswordModal.show();
+        }
+
+        // Tùy chọn: Xóa các tham số khỏi URL sau khi hiển thị modal (nếu bạn đã dùng redirect)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('passwordSuccess') || urlParams.has('passwordError')) {
+             urlParams.delete('passwordSuccess');
+             urlParams.delete('passwordError');
+             const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
+             history.replaceState(null, '', newUrl);
+        }
+
+      });
     </script>
 </body>
 </html> 

@@ -322,3 +322,6 @@ exports.verifyEmail = async (req, res) => {
   await user.save();
   return res.render('auth/login', { title: 'Đăng nhập', verified: true });
 }; 
+
+
+

@@ -1,4 +1,4 @@
-//Không cần xác thực email khi đăng ký tài khoản
+//Cần xác thực email khi đăng ký tài khoản
 
 const User = require('../models/User');
 const crypto = require('crypto');
@@ -54,7 +54,8 @@ exports.register = async (req, res) => {
       });
     }
 
-    // Tạo user mới (kích hoạt luôn)
+    // Tạo user mới (chưa xác thực)
+    const verifyToken = crypto.randomBytes(32).toString('hex');
     const user = await User.create({
       name,
       email,
@@ -64,11 +65,25 @@ exports.register = async (req, res) => {
       district,
       ward,
       password,
-      isVerified: true // Đánh dấu đã xác thực luôn
+      isVerified: false,
+      verifyToken
     });
 
-    // Chuyển hướng đến trang đăng nhập
-      return res.redirect('/auth/login?registered=true');
+    // Gửi email xác thực
+    const verifyUrl = `${BASE_URL}/auth/verify-email?token=${verifyToken}&email=${encodeURIComponent(email)}`;
+    await transporter.sendMail({
+      from: 'nguyentung11122003@gmail.com',
+      to: email,
+      subject: 'Xác thực tài khoản ThinkPro',
+      html: `<h3>Chào mừng bạn đến với ThinkPro!</h3><p>Vui lòng xác thực tài khoản bằng cách bấm vào link sau:</p><a href="${verifyUrl}">${verifyUrl}</a>`
+    });
+
+    return res.render('auth/login', {
+      title: 'Đăng nhập',
+      registered: false,
+      verifyNotice: true,
+      email
+    });
   } catch (error) {
     console.error('Lỗi đăng ký:', error);
     
@@ -132,6 +147,16 @@ exports.login = async (req, res) => {
         title: 'Đăng nhập',
         error: 'Email hoặc mật khẩu không đúng',
         email
+      });
+    }
+
+    // Kiểm tra xác thực email
+    if (!user.isVerified) {
+      return res.render('auth/login', {
+        title: 'Đăng nhập',
+        error: 'Tài khoản chưa xác thực email. Vui lòng kiểm tra email để xác thực.',
+        email,
+        verifyNotice: true
       });
     }
 
@@ -298,4 +323,60 @@ exports.verifyEmail = async (req, res) => {
   user.verifyToken = undefined;
   await user.save();
   return res.render('auth/login', { title: 'Đăng nhập', verified: true });
+};
+
+// @desc    Gửi lại email xác thực
+// @route   POST /auth/resend-verification
+// @access  Public
+exports.resendVerification = async (req, res) => {
+  try {
+    const { email } = req.body;
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return res.render('auth/login', {
+        title: 'Đăng nhập',
+        error: 'Email không tồn tại trong hệ thống',
+        email
+      });
+    }
+
+    if (user.isVerified) {
+      return res.render('auth/login', {
+        title: 'Đăng nhập',
+        error: 'Tài khoản đã được xác thực',
+        email
+      });
+    }
+
+    // Tạo token xác thực mới
+    const verifyToken = crypto.randomBytes(32).toString('hex');
+    user.verifyToken = verifyToken;
+    await user.save();
+
+    // Gửi email xác thực
+    const verifyUrl = `${BASE_URL}/auth/verify-email?token=${verifyToken}&email=${encodeURIComponent(email)}`;
+    await transporter.sendMail({
+      from: 'nguyentung11122003@gmail.com',
+      to: email,
+      subject: 'Xác thực tài khoản ThinkPro',
+      html: `<h3>Chào mừng bạn đến với ThinkPro!</h3><p>Vui lòng xác thực tài khoản bằng cách bấm vào link sau:</p><a href="${verifyUrl}">${verifyUrl}</a>`
+    });
+
+    return res.render('auth/login', {
+      title: 'Đăng nhập',
+      message: 'Đã gửi lại email xác thực. Vui lòng kiểm tra hộp thư.',
+      email
+    });
+  } catch (error) {
+    console.error('Lỗi gửi lại email xác thực:', error);
+    return res.render('auth/login', {
+      title: 'Đăng nhập',
+      error: 'Lỗi server, vui lòng thử lại sau',
+      email: req.body.email
+    });
+  }
 }; 
+
+
+
