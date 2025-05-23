@@ -180,6 +180,9 @@ Copyright © Designed & Developed by [Nguyễn Văn Tùng](https://www.facebook.
 | ![Giao diện website](https://github.com/user-attachments/assets/07f2b70a-a3fc-4c20-91d7-92fa25bed15d) | ![Giao diện quản trị](https://github.com/user-attachments/assets/af4333ec-9489-404b-a277-3668a2522fcb) |
 | Trang chi tiết sản phẩm và đánh giá sản phẩm | Trang giỏ hàng |
 |---------------------|--------------------------|
+|![image](https://github.com/user-attachments/assets/84d2da85-3f5d-4296-af6f-a0b9171622fd) | ![image](https://github.com/user-attachments/assets/3e8b714a-4a23-4cf7-83f6-ebdcca290293) |
+
+
 
 
 
