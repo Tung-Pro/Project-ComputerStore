@@ -109,7 +109,7 @@ touch .env
 npm run start
 ```
 
-## 🛠️ Cấu hình môi trường
+## 🛠 Cấu hình môi trường
 
 Tạo file `.env` tại thư mục gốc dự án với nội dung mẫu:
 
@@ -151,7 +151,7 @@ Thư mục này chứa các tài liệu liên quan đến đồ án như:
 
 👉 Đây là phần tài liệu hỗ trợ cho việc bảo vệ đồ án, trình bày kiến trúc và phân tích hệ thống.
 
-### 🗄️ Backup-Database/
+### 🗄 Backup-Database/
 Thư mục này chứa các tệp `.json` dùng để backup và khôi phục dữ liệu MongoDB bao gồm:
 
 - `computer-store.users.json` – danh sách người dùng
