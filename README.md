@@ -203,6 +203,12 @@ Copyright © Designed & Developed by [Nguyễn Văn Tùng](https://www.facebook.
 
 | Trang tổng quan | Trang quản lý người dùng|
 |---------------------|--------------------------|
-
+|![image](https://github.com/user-attachments/assets/840d2774-86a2-4d6f-9a94-9818fa1d4619) | ![image](https://github.com/user-attachments/assets/47eaa5a3-0ee1-4d19-8d9e-34b2b8d02c6b)|
+| Trang quản lý danh mục | Trang quản lý sản phẩm |
+| ![image](https://github.com/user-attachments/assets/beec36c1-2f12-42d8-90f9-e84955d1194d) | ![image](https://github.com/user-attachments/assets/afb2ef80-4810-4462-a71e-99f3a244a6d0) |
+| Trang quản lý mã khuyến mãi | Trang quản lý đánh giá |
+| ![image](https://github.com/user-attachments/assets/951995d7-15a5-48b8-8716-54096492554f) | ![image](https://github.com/user-attachments/assets/cfc16e66-53c7-4253-922b-d42af1caa2cc) |
+| Trang quản lý đơn hàng |
+| ![image](https://github.com/user-attachments/assets/ea5738f3-2fe3-4d7b-a34c-ba86d2824285) |
 
 
