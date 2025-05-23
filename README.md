@@ -46,6 +46,7 @@
 - [Cấu hình môi trường](#%EF%B8%8F-cấu-hình-môi-trường)
 - [Tài khoản mẫu](#-tài-khoản-mẫu)
 - [Đóng góp](#-đóng-góp)
+- [Tài liệu đồ án](#-tài-liệu-đồ-án)
 - [Giấy phép](#-giấy-phép)
 - [Giao diện website](#-giao-diện-website)
 
@@ -109,7 +110,7 @@ Tạo file `.env` tại thư mục gốc dự án với nội dung mẫu:
 ```env
 # Database config
 PORT=3000
-MONGO_URI=mongodb://localhost:27017/computerstore
+MONGO_URI=mongodb://localhost:27017/computer-store
 # Session config
 SESSION_SECRET=your_session_secret
 # Mail config
@@ -137,6 +138,33 @@ SECURE_SECRET=your_vnpay_HashSecret
 
 Chào mừng mọi đóng góp nhằm cải thiện dự án!
 Vui lòng fork repo và tạo pull request sau khi hoàn thiện.
+
+---
+
+
+## 📁 Thư mục bổ sung
+
+### 📚 TaiLieuDoAn/
+Thư mục này chứa các tài liệu liên quan đến đồ án như:
+
+- Báo cáo thuyết minh (.docx/.pdf)
+- Slide thuyết trình (.pptx)
+- Sơ đồ Activity Diagram, Use Case Diagram, Sequence Diagram, Class Diagram, Deployment Diagram,... (.drawio)
+
+👉 Đây là phần tài liệu hỗ trợ cho việc bảo vệ đồ án, trình bày kiến trúc và phân tích hệ thống.
+
+### 🗄️ Backup-Database/
+Thư mục này chứa các tệp `.json` dùng để backup và khôi phục dữ liệu MongoDB bao gồm:
+
+- `computer-store.users.json` – danh sách người dùng
+- `computer-store.products.json` – danh sách sản phẩm
+- `computer-store.orders.json` – danh sách đơn hàng
+- `computer-store.carts.json` – danh sách giỏ hàng
+- `computer-store.categories.json` – danh mục sản phẩm
+- `computer-store.coupons.json` – danh sách mã giảm giá
+- `computer-store.reviews.json` – danh sách đánh giá
+
+👉 Có thể sử dụng lệnh `mongoimport` để phục hồi dữ liệu trong quá trình chạy thử dự án.
 
 ---
 
