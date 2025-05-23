@@ -207,4 +207,6 @@ Vui lòng fork repo và tạo pull request sau khi hoàn thiện.
 
 ## 📄 Giấy phép
 
-Copyright © Designed & Developed by [Nguyễn Văn Tùng](https://www.facebook.com/vtungpro) – MSV: 521100184  
+Dự án này được cấp phép theo [MIT License](./LICENSE). Vui lòng tham khảo file LICENSE để biết thêm chi tiết.
+
+Copyright © Designed & Developed by [Nguyễn Văn Tùng](https://www.facebook.com/vtungpro) – MSV: 521100184
