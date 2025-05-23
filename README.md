@@ -100,7 +100,7 @@ cd Project-ComputerStore
 ```bash
 npm install
 ```
-#### Bước 3: Tạo file .env [xem hướng dẫn bên dưới](#%EF%B8%8F-cấu-hình-môi-trường)
+#### Bước 3: Tạo file .env [xem hướng dẫn bên dưới](#-cấu-hình-môi-trường)
 ```bash
 touch .env
 ```
