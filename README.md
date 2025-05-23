@@ -39,10 +39,11 @@
 ## 📚 Mục lục
 
 - [Giới thiệu](#-giới-thiệu)
+- [Công nghệ sử dụng](#-công-nghệ-sử-dụng)
 - [Tính năng chính](#-tính-năng-chính)
-- [Kiến trúc hệ thống](#-kiến-trúc-hệ-thốn)
+- [Kiến trúc hệ thống](#-kiến-trúc-hệ-thống)
 - [Hướng dẫn cài đặt](#-hướng-dẫn-cài-đặt)
-- [Cấu hình môi trường](#-cấu-hình-môi-trường)
+- [Cấu hình môi trường](#%EF%B8%8F-cấu-hình-môi-trường)
 - [Tài khoản mẫu](#-tài-khoản-mẫu)
 - [Đóng góp](#-đóng-góp)
 - [Giấy phép](#-giấy-phép)
@@ -61,7 +62,7 @@
 
 ---
 
-## 🏗️ Kiến trúc hệ thống
+## 🏗 Kiến trúc hệ thống
 
 - **Frontend**: EJS Template + Bootstrap Framework + HTML/CSS/JS 
 - **Backend**: MVC, RESTful API với Node.js và Express.js Framework
@@ -71,7 +72,7 @@
 
 ---
 
-## ⚙️ Hướng dẫn cài đặt
+## ⚙ Hướng dẫn cài đặt
 
 ### ✅ Yêu cầu hệ thống
 
@@ -79,7 +80,7 @@
 - npm (>= 6.x)
 - MongoDB (cài local hoặc dùng MongoDB Atlas)
 
-### ⬇️ Các bước thực hiện
+### ▶ Các bước thực hiện
 
 #### Bước 1: Clone project
 ```bash
@@ -92,7 +93,7 @@ cd Project-ComputerStore
 ```bash
 npm install
 ```
-#### Bước 3: Tạo file .env [xem hướng dẫn bên dưới](#-cấu-hình-môi-trường)
+#### Bước 3: Tạo file .env [xem hướng dẫn bên dưới](#%EF%B8%8F-cấu-hình-môi-trường)
 ```bash
 touch .env
 ```
@@ -106,13 +107,17 @@ npm run start
 Tạo file `.env` tại thư mục gốc dự án với nội dung mẫu:
 
 ```env
+# Database config
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/computerstore
+# Session config
 SESSION_SECRET=your_session_secret
+# Mail config
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_email_password
+# VNPay config
 TMN_CODE=your_vnpay_TmnCode
-SECURE_SECRET=your_vnp_HashSecret
+SECURE_SECRET=your_vnpay_HashSecret
 ```
 
 🔐 Đảm bảo bảo mật file `.env` và không commit lên GitHub.
@@ -138,6 +143,8 @@ Vui lòng fork repo và tạo pull request sau khi hoàn thiện.
 ## 📄 Giấy phép
 
 Copyright © Designed & Developed by Nguyễn Văn Tùng - MSV: 521100184
+
+---
 
 ## 🌐 Giao diện website
 
