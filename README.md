@@ -169,7 +169,7 @@ Vui lòng fork repo và tạo pull request sau khi hoàn thiện.
 
 ## 📄 Giấy phép
 
-Copyright © Designed & Developed by Nguyễn Văn Tùng - MSV: 521100184
+Copyright © Designed & Developed by [Nguyễn Văn Tùng](https://www.facebook.com/vtungpro) – MSV: 521100184  
 
 ---
 
