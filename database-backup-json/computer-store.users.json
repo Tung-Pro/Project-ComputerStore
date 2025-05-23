@@ -1,0 +1,272 @@
+[{
+  "_id": {
+    "$oid": "67e6f91bafdde27b1fdb7208"
+  },
+  "name": "Nguyễn Văn Tùng",
+  "email": "nguyentung11122003@gmail.com",
+  "password": "$2a$10$UMV.Yu4k.xqomuIuHMyBr.k2aXScOA0QzDeyPnLNRcsCYldRqtXkq",
+  "phone": "0967812904",
+  "address": "Hà Nội",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-03-28T19:31:39.270Z"
+  },
+  "__v": 0,
+  "city": "Thành phố Hà Nội",
+  "district": "Quận Hoàng Mai",
+  "isVerified": false,
+  "ward": "Phường Yên Sở"
+},
+{
+  "_id": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$TONDpFMvW5sNtYtmPCEUl.EgAmJ2TbnmSApb3NvQ2YQ2vPOHNKVYW",
+  "phone": "0967812904",
+  "address": "99 Phố Dịch Vọng",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-03-28T20:18:02.965Z"
+  },
+  "__v": 0,
+  "city": "Thành phố Hà Nội",
+  "district": "Quận Cầu Giấy",
+  "ward": "Phường Dịch Vọng",
+  "isVerified": true
+},
+{
+  "_id": {
+    "$oid": "67e70c117ad8a81aa851dc72"
+  },
+  "name": "tung",
+  "email": "tung@gmail.com",
+  "password": "$2a$10$1rfov89Z.jVRuvywB/fOsuLAbFJou.qwsE0q.6fEh3zxOIOc4Q2rO",
+  "phone": "2133123123",
+  "address": "qdw",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-03-28T20:52:33.885Z"
+  },
+  "__v": 0,
+  "city": "Tỉnh Hà Giang",
+  "district": "Thành phố Hà Giang",
+  "isVerified": false,
+  "ward": "Phường Minh Khai"
+},
+{
+  "_id": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "name": "Sơn Tùng M-TP",
+  "email": "test@gmail.com",
+  "password": "$2a$10$BbFhtNTvsor3LHu9EqYDvOpbYOn1qG6gi0lmoeykeZgncXW2.eMge",
+  "phone": "0989779909",
+  "address": "Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-03-29T09:03:35.437Z"
+  },
+  "__v": 0,
+  "city": "Thành phố Hà Nội",
+  "district": "Huyện Phúc Thọ",
+  "ward": "Xã Vân Hà",
+  "isVerified": "true"
+},
+{
+  "_id": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "name": "Nguyễn Thành Nam",
+  "email": "nam@gmail.com",
+  "password": "$2a$10$wg/s/InNRuOU4cL.cydIb.pu/vFqztldTgki5R0nnhyAIC.yQMyba",
+  "phone": "0858879202",
+  "address": "2a 12 Đầm Trấu",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-04-18T08:52:16.882Z"
+  },
+  "__v": 0,
+  "city": "Thành phố Hà Nội",
+  "district": "Quận Long Biên",
+  "ward": "Phường Ngọc Thụy"
+},
+{
+  "_id": {
+    "$oid": "68021df09109c1dcd8cb3ab5"
+  },
+  "name": "Nguyễn Phi Long",
+  "email": "long@gmail.com",
+  "password": "$2a$10$JjU0u2H6QQTa54WJTwetw.mTQ3VRTu3uppE/Lw8dqtISkUgynMeNG",
+  "phone": "0989776904",
+  "address": "2a 12x",
+  "city": "Tỉnh Hưng Yên",
+  "district": "Huyện Yên Mỹ",
+  "ward": "Xã Thanh Long",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-04-18T09:40:00.359Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680225d5ed6f234d435674e5"
+  },
+  "name": "test1",
+  "email": "test1@gmail.com",
+  "password": "$2a$10$YNHKSpckcS.DKNrvTlWrFOj/TZZfnSb33bqIYBEmwjPASQ7fp73z6",
+  "phone": "0989776904",
+  "address": "adwa",
+  "city": "Thành phố Hà Nội",
+  "district": "Huyện Phúc Thọ",
+  "ward": "Xã Vân Hà",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-04-18T10:13:41.214Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681306aa262616e80ada2d24"
+  },
+  "name": "Nguyễn Văn Quang",
+  "email": "quang@gmail.com",
+  "password": "$2a$10$JudtPQ535nJH3lnmWGOt4ul5O4g47un1.nHg.b2iU6EwWV4d9OSAi",
+  "phone": "0985465904",
+  "address": "69 Đê Châu Xá",
+  "city": "Tỉnh Hưng Yên",
+  "district": "Huyện Yên Mỹ",
+  "ward": "Xã Thanh Long",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-05-01T05:29:14.501Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "name": "Tùng Nguyễn",
+  "email": "vantung11122003@gmail.com",
+  "password": "$2a$10$cqzaK3YzuyO9onXN9.F7FeBc3DgDPXlyHnpScdooWclyX4G68VFoy",
+  "phone": "0967812904",
+  "address": "69 Đường Cầu Giấy",
+  "city": "Thành phố Hà Nội",
+  "district": "Quận Cầu Giấy",
+  "ward": "Phường Dịch Vọng",
+  "role": "admin",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-05-06T04:28:26.935Z"
+  },
+  "__v": 0,
+  "resetPasswordExpires": {
+    "$date": "2025-05-22T17:04:23.733Z"
+  },
+  "resetPasswordToken": "d52bf9ee8819ceb2c868364910863d11a15a996a455d68bac56f332ef8b82f90"
+},
+{
+  "_id": {
+    "$oid": "68199668a0c21e60925ea880"
+  },
+  "name": "test-1@gmail.com",
+  "email": "test-1@gmail.com",
+  "password": "$2a$10$n.D2vZjwJOIek/W46Nexl.6JHpGVb.JtGYWc5H.a0oUCXmtDvbCPG",
+  "phone": "0999999999",
+  "address": "32 Hoàng Mai",
+  "city": "Tỉnh Gia Lai",
+  "district": "Huyện Đăk Đoa",
+  "ward": "Xã Đăk Sơmei",
+  "role": "user",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-05-06T04:56:08.722Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681996d999e9571d56fe4e68"
+  },
+  "name": "test-2",
+  "email": "test-2@gmail.com",
+  "password": "$2a$10$KPizhHzjTszIeNXmIipwgeFxkiqCHv2bYzCdf03ze8elA/jVfPPS6",
+  "phone": "0999999999",
+  "address": "32 d",
+  "city": "Tỉnh An Giang",
+  "district": "Huyện Châu Phú",
+  "ward": "Xã Bình Long",
+  "role": "user",
+  "isVerified": true,
+  "createdAt": {
+    "$date": "2025-05-06T04:58:01.215Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681a421e089e946eb8d8ba30"
+  },
+  "name": "dhpd",
+  "email": "521100184@dhpd.edu.vn",
+  "password": "$2a$10$qeaam4.8qHDQwI/zxlGNouPvW6t2wHqKht.ILeYugVQhZ167wOYg6",
+  "phone": "0967812904",
+  "address": "32",
+  "city": "Tỉnh An Giang",
+  "district": "Huyện Châu Phú",
+  "ward": "Xã Bình Mỹ",
+  "role": "user",
+  "isVerified": false,
+  "verifyToken": "b6608968884761a4ad6655aeff40f47874128d6cdbe7425881dc9dab4d82b10c",
+  "createdAt": {
+    "$date": "2025-05-06T17:08:46.687Z"
+  },
+  "__v": 0,
+  "resetPasswordExpires": {
+    "$date": "2025-05-06T17:44:04.267Z"
+  },
+  "resetPasswordToken": "4f2d9bfd768e3fb863a9e436a54af6e7fd54e90c33eb8c74b951327da61bbb3e"
+},
+{
+  "_id": {
+    "$oid": "681a43d0119947a97039b1f2"
+  },
+  "name": "Phi Long",
+  "email": "amduongsu3999@gmail.com",
+  "password": "$2a$10$wu5WxdvehnN7ezM1cKND4.IKyowrYnWBQMDIC0h7xtRBUPEWzkqDm",
+  "phone": "0989779904",
+  "address": "32 Chợ Yên Mỹ",
+  "city": "Tỉnh Hưng Yên",
+  "district": "Huyện Yên Mỹ",
+  "ward": "Thị trấn Yên Mỹ",
+  "role": "user",
+  "isVerified": false,
+  "verifyToken": "08b1f9366839a2a888e7e3c3030e8638b3ab84874e177560054aeabf50b22031",
+  "createdAt": {
+    "$date": "2025-05-06T17:16:00.065Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6830a25aa6b0c856c7652d5c"
+  },
+  "name": "piexlsnamdz001@gmail.com",
+  "email": "piexlsnamdz001@gmail.com",
+  "password": "$2a$10$DBeE89L7sjfEL4/t06i8f.s6VVU5fmIzuvyqr7HX9UIecMLJuOXLW",
+  "phone": "13131312123",
+  "address": "12312223",
+  "city": "Tỉnh Bắc Giang",
+  "district": "Huyện Lạng Giang",
+  "ward": "Xã Dương Đức",
+  "role": "user",
+  "isVerified": true,
+  "createdAt": {
+    "$date": "2025-05-23T16:29:14.290Z"
+  },
+  "__v": 0
+}]

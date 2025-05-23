@@ -1,0 +1,144 @@
+[{
+  "_id": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "code": "TUNGPRO",
+  "description": "Không nhân dịp gì cả",
+  "discountType": "percentage",
+  "discountValue": 20,
+  "minSpend": 10000,
+  "maxDiscount": 30000,
+  "startDate": {
+    "$date": "2025-03-28T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-04-27T00:00:00.000Z"
+  },
+  "usageLimit": 100,
+  "usedCount": 14,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-03-28T22:01:17.972Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "code": "TESTKM",
+  "description": "test",
+  "discountType": "percentage",
+  "discountValue": 50,
+  "minSpend": 0,
+  "maxDiscount": 0,
+  "startDate": {
+    "$date": "2025-03-29T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-28T00:00:00.000Z"
+  },
+  "usageLimit": 100,
+  "usedCount": 10,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-03-29T21:20:34.317Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f1b43a8c0c011cc0ca524b"
+  },
+  "code": "TESTKMOUTDATE",
+  "description": "Test khuyến mãi hết hạn",
+  "discountType": "fixed",
+  "discountValue": 90000,
+  "minSpend": 0,
+  "maxDiscount": 0,
+  "startDate": {
+    "$date": "2025-04-02T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-04-05T00:00:00.000Z"
+  },
+  "usageLimit": 0,
+  "usedCount": 0,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-04-05T22:52:42.155Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "code": "SUMMER2025",
+  "description": "Giảm giá mùa hè năm 2025",
+  "discountType": "percentage",
+  "discountValue": 70,
+  "minSpend": 9000000,
+  "maxDiscount": 0,
+  "startDate": {
+    "$date": "2025-04-28T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-28T00:00:00.000Z"
+  },
+  "usageLimit": 30,
+  "usedCount": 17,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-04-28T04:02:06.509Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812f626bbb9e94fbfd1084f"
+  },
+  "code": "DONHANG500TRIEU",
+  "description": "Áp dụng với các đơn hàng có giá > 500 triệu",
+  "discountType": "percentage",
+  "discountValue": 70,
+  "minSpend": 500000000,
+  "maxDiscount": 0,
+  "startDate": {
+    "$date": "2025-05-01T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-31T00:00:00.000Z"
+  },
+  "usageLimit": 10,
+  "usedCount": 1,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-05-01T04:18:46.096Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "code": "PDU",
+  "description": "Mã khuyến mãi dành cho sinh viên trường Đại Học Phương Đông",
+  "discountType": "percentage",
+  "discountValue": 50,
+  "minSpend": 30000000,
+  "maxDiscount": 0,
+  "startDate": {
+    "$date": "2025-05-11T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-10T00:00:00.000Z"
+  },
+  "usageLimit": 100,
+  "usedCount": 26,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-05-11T15:20:01.115Z"
+  },
+  "__v": 0
+}]

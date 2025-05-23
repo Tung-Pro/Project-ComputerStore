@@ -1,0 +1,714 @@
+[{
+  "_id": {
+    "$oid": "6812be46ea853984b4b166e6"
+  },
+  "product": {
+    "$oid": "680326eb805fb835a9408f63"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 4,
+  "comment": "sản phẩm tuyệt vời",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T00:20:22.328Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T00:21:24.197Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812be50ea853984b4b166f8"
+  },
+  "product": {
+    "$oid": "680326eb805fb835a9408f63"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 3,
+  "comment": "Tôi thích sản phẩm này sửa test",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T00:20:32.284Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T00:43:19.216Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812c0555d7cfc180010fa8f"
+  },
+  "product": {
+    "$oid": "680326eb805fb835a9408f63"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 2,
+  "comment": "Sản phẩm cũng ổn",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T00:29:09.182Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T02:19:40.290Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812c2775d7cfc180010fae6"
+  },
+  "product": {
+    "$oid": "67e746119065e8fe13501777"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 4,
+  "comment": "Sản phẩm khá tốt",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T00:38:15.859Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T00:38:40.926Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812c2a35d7cfc180010fb1f"
+  },
+  "product": {
+    "$oid": "67e746119065e8fe13501777"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 3,
+  "comment": "Tôi khá thích sản phẩm này",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T00:38:59.345Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T00:43:52.205Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812c7975d7cfc180010fdf2"
+  },
+  "product": {
+    "$oid": "68028651b6b5ecd35075255f"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 4,
+  "comment": "sản phẩm khá ok",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T01:00:07.104Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T01:00:07.104Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812c7e25d7cfc180010fe2e"
+  },
+  "product": {
+    "$oid": "68028651b6b5ecd35075255f"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 5,
+  "comment": "Sản phẩm tuyệt vời",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T01:01:22.599Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T15:33:22.502Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812e64606477ca7c29c538b"
+  },
+  "product": {
+    "$oid": "67e746119065e8fe13501777"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 2,
+  "comment": "Sản phẩm chưa tối ưu về giá lắm",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T03:11:02.295Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T03:13:29.721Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812e93b06477ca7c29c54f8"
+  },
+  "product": {
+    "$oid": "67e746119065e8fe13501777"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 3,
+  "comment": "Tôi thích sản phẩm này",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T03:23:39.523Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T03:25:15.477Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812f2c006477ca7c29c5bce"
+  },
+  "product": {
+    "$oid": "680326eb805fb835a9408f63"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 4,
+  "comment": "Sản phẩm tuyệt vời đỉnk nóc kịch trần",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T04:04:16.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T15:08:41.376Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812f453bbb9e94fbfd10598"
+  },
+  "product": {
+    "$oid": "680326eb805fb835a9408f63"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "rating": 4,
+  "comment": "Sản phẩm tuyệt zời nha bro",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T04:10:59.057Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T04:10:59.057Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6813062d262616e80ada2cc8"
+  },
+  "product": {
+    "$oid": "6803284d805fb835a9408fab"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 5,
+  "comment": "Máy chạy mượt, khởi động nhanh. Mình dùng để chơi game và làm việc đều ổn. Shop tư vấn nhiệt tình, giao hàng đúng hẹn!",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-04-30T05:27:09.156Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T14:35:00.680Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6813063b262616e80ada2ce0"
+  },
+  "product": {
+    "$oid": "6803284d805fb835a9408fab"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 5,
+  "comment": "PC build gọn, không ồn, case nhìn cũng đẹp nữa. Cắm vào là dùng luôn, không cần cài đặt gì thêm. Rất hài lòng!",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T05:27:23.076Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T15:37:20.022Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68130662262616e80ada2d08"
+  },
+  "product": {
+    "$oid": "6803284d805fb835a9408fab"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "rating": 4,
+  "comment": "Máy chạy ổn, chơi game và lướt web mượt. Tuy nhiên lúc đầu chưa cài sẵn Windows, phải gọi shop hỗ trợ. May mà shop hướng dẫn nhiệt tình.",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-04-29T05:28:02.567Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T05:29:57.290Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681306ba262616e80ada2d3e"
+  },
+  "product": {
+    "$oid": "6803284d805fb835a9408fab"
+  },
+  "user": {
+    "$oid": "681306aa262616e80ada2d24"
+  },
+  "rating": 4,
+  "comment": "Hiệu năng ổn với tầm giá. Giao hàng nhanh. Trừ 1 sao vì thùng hàng hơi móp nhẹ, nhưng bên trong vẫn an toàn.",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T05:29:30.903Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T05:29:49.626Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6813868490ec718c7779c9fc"
+  },
+  "product": {
+    "$oid": "6803284d805fb835a9408fab"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 5,
+  "comment": "Build đẹp, case sáng đèn nhìn chất. Tuy nhiên quạt hơi ồn, dùng buổi tối hơi khó chịu. Mong shop cải thiện phần này.",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-30T14:34:44.836Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T14:34:44.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681393f190ec718c7779cb11"
+  },
+  "product": {
+    "$oid": "68028651b6b5ecd35075255f"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 3,
+  "comment": "Laptop đẹp, case sáng đèn nhìn chất. Tuy nhiên quạt hơi ồn, dùng buổi tối hơi khó chịu. Mong shop cải thiện phần này",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T15:32:01.408Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T15:18:29.114Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6813940e90ec718c7779cb40"
+  },
+  "product": {
+    "$oid": "68028651b6b5ecd35075255f"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "rating": 5,
+  "comment": "Sản phẩm tốt phù hợp với giá tiền.",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T15:32:30.811Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T15:33:37.243Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6813942b90ec718c7779cb7a"
+  },
+  "product": {
+    "$oid": "68028651b6b5ecd35075255f"
+  },
+  "user": {
+    "$oid": "681306aa262616e80ada2d24"
+  },
+  "rating": 5,
+  "comment": "Đáng để trải nghiệm",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-01T15:32:59.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T15:33:32.277Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68196c60f2b75d4db17ae717"
+  },
+  "product": {
+    "$oid": "68196845a5c7a8a3437163cc"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 5,
+  "comment": "Sản phẩm mỏng nhẹ, đẹp, tuyệt đối điện ảnh 😍",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T01:56:48.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T01:56:56.767Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68196cf1f2b75d4db17ae7fa"
+  },
+  "product": {
+    "$oid": "68196845a5c7a8a3437163cc"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "rating": 4,
+  "comment": "Chiếc laptop này hoạt động ổn định, thiết kế đẹp và hiệu năng tốt trong tầm giá, tuy nhiên pin chưa thật sự ấn tượng nên mình chấm 4 sao.",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T01:59:13.960Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T01:59:27.878Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6819752a41cc079cbce3077a"
+  },
+  "product": {
+    "$oid": "68196845a5c7a8a3437163cc"
+  },
+  "user": {
+    "$oid": "681306aa262616e80ada2d24"
+  },
+  "rating": 5,
+  "comment": "Tôi thích sản phẩm này 😘",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T02:34:18.438Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T02:34:41.517Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68197b1a368bc608e4173849"
+  },
+  "product": {
+    "$oid": "68189e7fc7bb52222494ec38"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "rating": 5,
+  "comment": "Laptop chạy mượt mà, thiết kế sang trọng, pin dùng cả ngày, rất hài lòng với hiệu năng vượt trội và chất lượng hoàn thiện tuyệt vời! 😊",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T02:59:38.148Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T03:02:14.814Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68197b42368bc608e417387d"
+  },
+  "product": {
+    "$oid": "68189e7fc7bb52222494ec38"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "rating": 5,
+  "comment": "Hiệu năng cực mạnh, màn hình sắc nét, loa sống động, đáng đồng tiền bát gạo, mua là quyết định đúng đắn! 🤩",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T03:00:18.210Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T03:01:46.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68197b71368bc608e41738cd"
+  },
+  "product": {
+    "$oid": "68189e7fc7bb52222494ec38"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "rating": 4,
+  "comment": "Máy tốt, cấu hình ổn định, nhưng loa hơi nhỏ, cần nâng cấp âm thanh để trải nghiệm được hoàn hảo hơn. 😐",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T03:01:05.183Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T03:01:51.599Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68197b8c368bc608e41738fd"
+  },
+  "product": {
+    "$oid": "68189e7fc7bb52222494ec38"
+  },
+  "user": {
+    "$oid": "681306aa262616e80ada2d24"
+  },
+  "rating": 3,
+  "comment": "Nhẹ, khởi động nhanh, nhưng bàn phím hơi cứng, gõ lâu hơi mỏi tay, mong cải thiện ở phiên bản sau. 😕",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T03:01:32.108Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T03:01:55.987Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6819ae9df4abf08b81dce3df"
+  },
+  "product": {
+    "$oid": "681872fed565256de9cfa5a3"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "rating": 5,
+  "comment": "Đẹp quá tôi rất ưng ý",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T06:39:25.383Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T14:09:56.407Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6819aeb0f4abf08b81dce3f7"
+  },
+  "product": {
+    "$oid": "6803284d805fb835a9408fab"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "rating": 4,
+  "comment": "Không màu mè lắm nhẩy😒",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T06:39:44.726Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T06:40:09.236Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6819aee3f4abf08b81dce442"
+  },
+  "product": {
+    "$oid": "681871d0d565256de9cfa583"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "rating": 5,
+  "comment": "Máy đẹp ghê😍",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-06T06:40:35.349Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-06T06:40:44.669Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681a186a7de231f0cc2df4cf"
+  },
+  "product": {
+    "$oid": "68189e7fc7bb52222494ec38"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "rating": 4,
+  "comment": "10 diểm không có nhưng😍💕!",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-06T14:10:50.070Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T15:00:51.115Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e0616e6c513d004bb5ebf"
+  },
+  "product": {
+    "$oid": "681871d0d565256de9cfa583"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "rating": 3,
+  "comment": "heheeeeeeeeeeee",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T16:57:58.346Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T16:57:58.346Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682fbb690643b6a994642777"
+  },
+  "product": {
+    "$oid": "681871d0d565256de9cfa583"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "rating": 4,
+  "comment": "hehehehehheh",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-23T00:03:53.181Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-23T00:03:53.181Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682fe4084a1304a38a90772d"
+  },
+  "product": {
+    "$oid": "680326eb805fb835a9408f63"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "rating": 4,
+  "comment": "sản phẩm 10 diểm",
+  "status": "approved",
+  "createdAt": {
+    "$date": "2025-05-23T02:57:12.799Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-23T02:58:54.584Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6830a432e4c7f37b7a5996d1"
+  },
+  "product": {
+    "$oid": "681c3d62b799703102010a7d"
+  },
+  "user": {
+    "$oid": "6830a25aa6b0c856c7652d5c"
+  },
+  "rating": 4,
+  "comment": "13212313312",
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-23T16:37:06.482Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-23T16:37:06.482Z"
+  },
+  "__v": 0
+}]
