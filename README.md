@@ -38,8 +38,6 @@
 
 ## 📚 Mục lục
 
-## 📚 Mục lục
-
 - [Giới thiệu](#-giới-thiệu)
 - [Công nghệ sử dụng](#-công-nghệ-sử-dụng)
 - [Tính năng chính](#-tính-năng-chính)
