@@ -1,5 +1,5 @@
-# 🧑‍🎓 ĐỒ ÁN TỐT NGHIỆP: Xây dựng website bán máy tính
-> **Nguyễn Văn Tùng - 521100184**  
+# 🧑‍🎓 ĐỒ ÁN TỐT NGHIỆP: XÂY DỰNG WEBSITE BÁN MÁY TÍNH
+> **Nguyễn Văn Tùng – MSV: 521100184**  
 > Trường Đại học Phương Đông – PDU
 > Khoa Công nghệ Thông tin & Truyền thông
 
@@ -53,12 +53,12 @@
 
 ## 🧩 Tính năng chính
 
-- ✅ Quản lý người dùng, danh mục sản phẩm & sản phẩm, đánh giá, đơn hàng, khuyến mãi
+- ✅ Quản lý người dùng, danh mục sản phẩm & sản phẩm, đánh giá, đơn hàng và khuyến mãi
 - 🔐 Xác thực & phân quyền người dùng (Admin, Customer)
 - 📧 Gửi email tự động khi có đơn hàng hoặc sự kiện
 - 📊 Giao diện quản trị dashboard trực quan
 - 📱 Thiết kế responsive, tương thích mọi thiết bị
-- 💳 Hỗ trợ thanh toán: COD, QR Code, VNPAY
+- 💳 Hỗ trợ thanh toán: COD, QR Code và VNPAY
 
 ---
 
