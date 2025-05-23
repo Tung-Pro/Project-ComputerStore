@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="/admin/image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="container-fluid mt-3">
+                <!-- Bộ lọc thời gian -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Lọc thống kê theo thời gian</h4>
+                                <form action="/admin/dashboard" method="GET" class="d-flex flex-wrap">
+                                    <div class="form-check mb-2 mr-4">
+                                        <input class="form-check-input" type="radio" name="timeRange" id="timeRange7days" value="7days" <%= timeRange === '7days' ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="timeRange7days">
+                                            7 ngày qua
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2 mr-4">
+                                        <input class="form-check-input" type="radio" name="timeRange" id="timeRange30days" value="30days" <%= timeRange === '30days' ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="timeRange30days">
+                                            30 ngày qua
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2 mr-4">
+                                        <input class="form-check-input" type="radio" name="timeRange" id="timeRange90days" value="90days" <%= timeRange === '90days' ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="timeRange90days">
+                                            90 ngày qua
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2 mr-4">
+                                        <input class="form-check-input" type="radio" name="timeRange" id="timeRangeThisMonth" value="thismonth" <%= timeRange === 'thismonth' ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="timeRangeThisMonth">
+                                            Tháng này
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2 mr-4">
+                                        <input class="form-check-input" type="radio" name="timeRange" id="timeRangeLastMonth" value="lastmonth" <%= timeRange === 'lastmonth' ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="timeRangeLastMonth">
+                                            Tháng trước
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2 mr-4">
+                                        <input class="form-check-input" type="radio" name="timeRange" id="timeRangeThisYear" value="thisyear" <%= timeRange === 'thisyear' ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="timeRangeThisYear">
+                                            Năm nay
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-auto">Áp dụng</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-1">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Người dùng</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white"><%= userCount %></h2>
+                                    <p class="text-white mb-0">Tổng số người dùng</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-2">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Sản phẩm</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white"><%= productCount %></h2>
+                                    <p class="text-white mb-0">Tổng số sản phẩm</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Danh mục</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white"><%= categoryCount %></h2>
+                                    <p class="text-white mb-0">Tổng số danh mục</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-list"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-9">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Khuyến mãi</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white"><%= couponCount %></h2>
+                                    <p class="text-white mb-0">Tổng số mã giảm giá</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-tag"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Doanh thu</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">
+                                        <% if (typeof totalRevenue !== 'undefined') { %>
+                                            <%= totalRevenue.toLocaleString('vi-VN') %> ₫
+                                        <% } else { %>
+                                            0 ₫
+                                        <% } %>
+                                    </h2>
+                                    <p class="text-white mb-0">Tổng doanh thu</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-5">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Đơn hàng</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">
+                                        <% if (typeof totalOrders !== 'undefined') { %>
+                                            <%= totalOrders %>
+                                        <% } else { %>
+                                            0
+                                        <% } %>
+                                    </h2>
+                                    <p class="text-white mb-0">Tổng số đơn hàng</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-bag"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-6">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Đơn chờ xử lý</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">
+                                        <% if (typeof pendingOrders !== 'undefined') { %>
+                                            <%= pendingOrders %>
+                                        <% } else { %>
+                                            0
+                                        <% } %>
+                                    </h2>
+                                    <p class="text-white mb-0">Đơn cần xử lý</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-clock-o"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-7">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Đơn giao thành công</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">
+                                        <% if (typeof deliveredOrders !== 'undefined') { %>
+                                            <%= deliveredOrders %>
+                                        <% } else { %>
+                                            0
+                                        <% } %>
+                                    </h2>
+                                    <p class="text-white mb-0">Đơn hoàn thành</p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-check-circle"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thống kê biểu đồ -->
+                <div class="row">
+                    <!-- Biểu đồ đơn hàng theo ngày -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Đơn hàng theo ngày</h4>
+                                <canvas id="ordersByDayChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Biểu đồ doanh thu theo ngày -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Doanh thu theo ngày</h4>
+                                <canvas id="revenueByDayChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Biểu đồ doanh thu theo danh mục -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Doanh thu theo danh mục</h4>
+                                <canvas id="revenueByCategoryChart" width="400" height="250"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sản phẩm bán chạy -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Top 10 sản phẩm bán chạy</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left">Sản phẩm</th>
+                                                <th class="text-center">Số lượt bán</th>
+                                                <th class="text-right">Doanh thu</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if (typeof topSellingProducts !== 'undefined' && topSellingProducts.length > 0) { %>
+                                                <% topSellingProducts.forEach((product, index) => { %>
+                                                    <tr>
+                                                        <td class="d-flex align-items-center">
+                                                            <img src="<%= product.image %>" alt="<%= product.name %>" style="width: 40px; height: 40px; object-fit: contain;" class="mr-2">
+                                                            <span class="<%= index < 3 ? 'font-weight-bold' : '' %>" ><a href="/products/<%= product.slug %>" target="_blank"><%= product.name %></a></span>
+                                                        </td>
+                                                        <td style="width: 120px; text-align: center;"><%= product.quantity %></td>
+                                                        <td style="width: 120px; text-align: right;"><%= product.revenue.toLocaleString('vi-VN') %> ₫</td>
+                                                    </tr>
+                                                <% }); %>
+                                            <% } else { %>
+                                                <tr>
+                                                    <td colspan="3" class="text-center">Không có dữ liệu</td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đơn hàng mới nhất -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Đơn hàng mới nhất</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered zero-configuration">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã đơn hàng</th>
+                                                <th>Khách hàng</th>
+                                                <th>Tổng tiền</th>
+                                                <th>Trạng thái</th>
+                                                <th>Ngày đặt</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if (typeof latestOrders !== 'undefined' && latestOrders.length > 0) { %>
+                                                <% latestOrders.forEach(order => { %>
+                                                    <tr>
+                                                        <td><%= order.orderCode %></td>
+                                                        <td><%= order.user ? order.user.name : 'N/A' %></td>
+                                                        <td><%= order.finalPrice.toLocaleString('vi-VN') %> ₫</td>
+                                                        <td>
+                                                            <% if (order.status === 'pending') { %>
+                                                                <span class="badge badge-warning">Chờ xử lý</span>
+                                                            <% } else if (order.status === 'confirmed') { %>
+                                                                <span class="badge badge-info">Đã xác nhận</span>
+                                                            <% } else if (order.status === 'shipping') { %>
+                                                                <span class="badge badge-primary">Đang giao</span>
+                                                            <% } else if (order.status === 'delivered') { %>
+                                                                <span class="badge badge-success">Đã giao</span>
+                                                            <% } else { %>
+                                                                <span class="badge badge-danger">Đã hủy</span>
+                                                            <% } %>
+                                                        </td>
+                                                        <td><%= new Date(order.createdAt).toLocaleString('vi-VN') %></td>
+                                                        <td>
+                                                            <a href="/admin/orders/detail/<%= order._id %>" class="btn btn-info btn-sm">Xem</a>
+                                                        </td>
+                                                    </tr>
+                                                <% }); %>
+                                            <% } else { %>
+                                                <tr>
+                                                    <td colspan="6" class="text-center">Không có đơn hàng nào</td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+
+    <!-- <script src="/admin/plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="/admin/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="/admin/plugins/tables/js/datatable-init/datatable-basic.min.js"></script> -->
+    <!-- Chart.js setup -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Biểu đồ đơn hàng theo ngày
+            const ordersByDayCtx = document.getElementById('ordersByDayChart').getContext('2d');
+            const ordersByDayChart = new Chart(ordersByDayCtx, {
+                type: 'line',
+                data: {
+                    labels: [<% if (typeof ordersByDay !== 'undefined' && ordersByDay.length > 0) { %>
+                        <% ordersByDay.forEach((day, index) => { %>
+                            '<%= day.date %>'<%= index < ordersByDay.length - 1 ? ',' : '' %>
+                        <% }); %>
+                    <% } else { %>
+                        'Không có dữ liệu'
+                    <% } %>],
+                    datasets: [{
+                        label: 'Số đơn hàng',
+                        data: [<% if (typeof ordersByDay !== 'undefined' && ordersByDay.length > 0) { %>
+                            <% ordersByDay.forEach((day, index) => { %>
+                                <%= day.count %><%= index < ordersByDay.length - 1 ? ',' : '' %>
+                            <% }); %>
+                        <% } else { %>
+                            0
+                        <% } %>],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 2,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Biểu đồ doanh thu theo ngày
+            const revenueByDayCtx = document.getElementById('revenueByDayChart').getContext('2d');
+            const revenueByDayChart = new Chart(revenueByDayCtx, {
+                type: 'line',
+                data: {
+                    labels: [<% if (typeof revenueByDay !== 'undefined' && revenueByDay.length > 0) { %>
+                        <% revenueByDay.forEach((day, index) => { %>
+                            '<%= day.date %>'<%= index < revenueByDay.length - 1 ? ',' : '' %>
+                        <% }); %>
+                    <% } else { %>
+                        'Không có dữ liệu'
+                    <% } %>],
+                    datasets: [{
+                        label: 'Doanh thu (VNĐ)',
+                        data: [<% if (typeof revenueByDay !== 'undefined' && revenueByDay.length > 0) { %>
+                            <% revenueByDay.forEach((day, index) => { %>
+                                <%= day.revenue %><%= index < revenueByDay.length - 1 ? ',' : '' %>
+                            <% }); %>
+                        <% } else { %>
+                            0
+                        <% } %>],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString('vi-VN') + ' ₫';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += (context.parsed.y).toLocaleString('vi-VN') + ' ₫';
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Biểu đồ doanh thu theo danh mục
+            const revenueByCategoryCtx = document.getElementById('revenueByCategoryChart').getContext('2d');
+            const revenueByCategoryChart = new Chart(revenueByCategoryCtx, {
+                type: 'bar',
+                data: {
+                    labels: [<% if (typeof revenueByCategory !== 'undefined' && revenueByCategory.length > 0) { %>
+                        <% revenueByCategory.forEach((category, index) => { %>
+                            '<%= category.name %>'<%= index < revenueByCategory.length - 1 ? ',' : '' %>
+                        <% }); %>
+                    <% } else { %>
+                        'Chưa có dữ liệu'
+                    <% } %>],
+                    datasets: [{
+                        label: 'Doanh thu (triệu VNĐ)',
+                        data: [<% if (typeof revenueByCategory !== 'undefined' && revenueByCategory.length > 0) { %>
+                            <% revenueByCategory.forEach((category, index) => { %>
+                                <%= category.revenue %><%= index < revenueByCategory.length - 1 ? ',' : '' %>
+                            <% }); %>
+                        <% } else { %>
+                            0
+                        <% } %>],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + ' triệu';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.parsed.y + ' triệu';
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+        // Tự động submit form khi radio button thay đổi
+        document.querySelectorAll('input[name="timeRange"]').forEach(input => {
+            input.addEventListener('change', function() {
+                this.form.submit();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

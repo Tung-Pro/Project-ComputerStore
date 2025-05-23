@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="icon" sizes="16x16" href="/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <style>
+        .content-area {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .order-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .order-header {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .order-body {
+            padding: 15px;
+        }
+        .order-footer {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+        .order-product {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .order-product:last-child {
+            border-bottom: none;
+        }
+        .order-product img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 15px;
+            border: 1px solid #eee;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('../../partials/header.ejs') %>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <%- include('../../partials/sidebar-account.ejs') %>
+            
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="content-area">
+                    <h4 class="mb-4">Lịch sử đơn hàng</h4>
+                    
+                    <% if (orders && orders.length > 0) { %>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="mb-0">Tổng số: <%= totalOrders %> đơn hàng</p>
+                            <% if (totalPages > 1) { %>
+                                <p class="mb-0">Trang <%= currentPage %>/<%= totalPages %></p>
+                            <% } %>
+                        </div>
+                        
+                        <% orders.forEach(order => { %>
+                            <div class="order-card">
+                                <div class="order-header d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1">Đơn hàng #<%= order.orderCode %></h6>
+                                        <p class="mb-0 text-muted"><small>Ngày đặt: <%= new Date(order.createdAt).toLocaleDateString('vi-VN') %></small></p>
+                                    </div>
+                                    <div>
+                                        <% if (order.status === 'pending') { %>
+                                            <span class="badge rounded-pill text-bg-warning">Chờ xác nhận</span>
+                                        <% } else if (order.status === 'confirmed') { %>
+                                            <span class="badge rounded-pill text-bg-info">Đã xác nhận</span>
+                                        <% } else if (order.status === 'shipping') { %>
+                                            <span class="badge rounded-pill text-bg-primary">Đang giao hàng</span>
+                                        <% } else if (order.status === 'delivered') { %>
+                                            <span class="badge rounded-pill text-bg-success">Đã giao hàng</span>
+                                        <% } else if (order.status === 'cancelled') { %>
+                                            <span class="badge rounded-pill text-bg-danger">Đã hủy</span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-body">
+                                    <% if (order.items && order.items.length > 0) { %>
+                                        <% order.items.slice(0, 3).forEach(item => { %>
+                                            <div class="order-product">
+                                                <img src="<%= item.image %>" alt="<%= item.name %>">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">
+                                                        <a href="/products/<%= item.product.slug %>" class="text-decoration-none text-dark hover-primary">
+                                                            <%= item.name %>
+                                                        </a>
+                                                    </h6>
+                                                    <p class="mb-0">
+                                                        <span class="text-muted"><%= item.quantity %> x </span>
+                                                        <span class="fw-bold"><%= item.price.toLocaleString('vi-VN') %>₫</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        <% }); %>
+                                        
+                                        <% if (order.items.length > 3) { %>
+                                            <div class="mt-2 text-center">
+                                                <p class="mb-0 text-muted"><small>... và <%= order.items.length - 3 %> sản phẩm khác</small></p>
+                                            </div>
+                                        <% } %>
+                                    <% } %>
+                                </div>
+                                
+                                <div class="order-footer d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="mb-0">
+                                            <span class="fw-bold">Tổng tiền:</span> 
+                                            <span class="fw-bold text-danger"><%= order.finalPrice.toLocaleString('vi-VN') %>₫</span>
+                                        </p>
+                                        <small class="text-muted">
+                                            Phương thức: 
+                                            <% if (order.paymentMethod === 'cod') { %>
+                                                Thanh toán khi nhận hàng
+                                            <% } else if (order.paymentMethod === 'banking') { %>
+                                                Chuyển khoản ngân hàng
+                                            <% } else if (order.paymentMethod === 'vnpay') { %>
+                                                Thanh toán qua VNPay
+                                            <% } %>
+                                        </small>
+                                    </div>
+                                    <a href="/orders/<%= order.orderCode %>" class="btn btn-sm btn-outline-primary">
+                                        Xem chi tiết
+                                    </a>
+                                </div>
+                            </div>
+                        <% }); %>
+                        
+                        <!-- Thêm phân trang -->
+                        <% if (totalPages > 1) { %>
+                            <nav aria-label="Phân trang đơn hàng" class="mt-4">
+                                <ul class="pagination justify-content-center">
+                                    <!-- Nút Previous -->
+                                    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+                                        <a class="page-link" href="/account/orders?page=<%= currentPage - 1 %>" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <!-- Các trang -->
+                                    <% for(let i = 1; i <= totalPages; i++) { %>
+                                        <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+                                            <a class="page-link" href="/account/orders?page=<%= i %>"><%= i %></a>
+                                        </li>
+                                    <% } %>
+                                    
+                                    <!-- Nút Next -->
+                                    <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                                        <a class="page-link" href="/account/orders?page=<%= currentPage + 1 %>" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        <% } %>
+                    <% } else { %>
+                        <div class="text-center py-5">
+                            <i class="fas fa-shopping-bag fa-3x text-muted mb-3"></i>
+                            <h5>Bạn chưa có đơn hàng nào</h5>
+                            <p class="text-muted">Hãy mua sắm và đặt hàng để xem lịch sử đơn hàng của bạn tại đây</p>
+                            <a href="/products" class="btn btn-primary mt-2">Mua sắm ngay</a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../../partials/footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="/admin/image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/orders">Quản lý đơn hàng</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/orders/detail/<%= order._id %>">Chi tiết đơn hàng</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="card-title">Chi tiết đơn hàng #<%= order.orderCode %></h4>
+                                    <div>
+                                        <a href="/admin/orders" class="btn btn-secondary mr-2">
+                                            <i class="fa fa-arrow-left"></i> Quay lại
+                                        </a>
+                                        <a href="/admin/orders/edit/<%= order._id %>" class="btn btn-primary">
+                                            <i class="fa fa-edit"></i> Cập nhật trạng thái
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card border">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">Thông tin đơn hàng</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Mã đơn hàng:</strong></p>
+                                                    <p><%= order.orderCode %></p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Ngày đặt hàng:</strong></p>
+                                                    <p><%= new Date(order.createdAt).toLocaleString('vi-VN') %></p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Trạng thái đơn hàng:</strong></p>
+                                                    <p>
+                                                        <% if (order.status === 'pending') { %>
+                                                            <span class="badge badge-warning">Chờ xác nhận</span>
+                                                        <% } else if (order.status === 'confirmed') { %>
+                                                            <span class="badge badge-info">Đã xác nhận</span>
+                                                        <% } else if (order.status === 'shipping') { %>
+                                                            <span class="badge badge-primary">Đang giao hàng</span>
+                                                        <% } else if (order.status === 'delivered') { %>
+                                                            <span class="badge badge-success">Đã giao hàng</span>
+                                                        <% } else if (order.status === 'cancelled') { %>
+                                                            <span class="badge badge-danger">Đã hủy</span>
+                                                        <% } %>
+                                                    </p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Phương thức thanh toán:</strong></p>
+                                                    <p>
+                                                        <% if (order.paymentMethod === 'cod') { %>
+                                                            <span class="badge badge-info">Thanh toán khi nhận hàng (COD)</span>
+                                                        <% } else if (order.paymentMethod === 'banking') { %>
+                                                            <span class="badge badge-primary">Chuyển khoản ngân hàng</span>
+                                                        <% } %>
+                                                    </p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Trạng thái thanh toán:</strong></p>
+                                                    <p>
+                                                        <% if (order.paymentStatus === 'pending') { %>
+                                                            <span class="badge badge-warning">Chờ thanh toán</span>
+                                                        <% } else if (order.paymentStatus === 'paid') { %>
+                                                            <span class="badge badge-success">Đã thanh toán</span>
+                                                        <% } else if (order.paymentStatus === 'failed') { %>
+                                                            <span class="badge badge-danger">Thanh toán thất bại</span>
+                                                        <% } %>
+                                                    </p>
+                                                </div>
+
+                                                <% if (order.trackingCode) { %>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Mã vận đơn:</strong></p>
+                                                    <p><%= order.trackingCode %></p>
+                                                </div>
+                                                <% } %>
+                                                
+                                                <% if (order.adminNote) { %>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Ghi chú nội bộ:</strong></p>
+                                                    <p><%= order.adminNote %></p>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">Thông tin khách hàng</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Người nhận:</strong></p>
+                                                    <p><%= order.shippingAddress.fullName %></p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Số điện thoại:</strong></p>
+                                                    <p><%= order.shippingAddress.phone %></p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Địa chỉ email:</strong></p>
+                                                    <p><%= order.user ? order.user.email : 'Không có' %></p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Địa chỉ giao hàng:</strong></p>
+                                                    <p><%= order.shippingAddress.address %>, <%= order.shippingAddress.ward %>, <%= order.shippingAddress.district %>, <%= order.shippingAddress.city %></p>
+                                                </div>
+                                                <% if (order.shippingAddress.note) { %>
+                                                <div class="mb-3">
+                                                    <p class="mb-1"><strong>Ghi chú:</strong></p>
+                                                    <p><%= order.shippingAddress.note %></p>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card border mt-4">
+                                    <div class="card-header bg-light">
+                                        <h5 class="mb-0">Sản phẩm đã đặt</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sản phẩm</th>
+                                                        <th>Đơn giá</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Thành tiền</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% order.items.forEach(item => { %>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="<%= item.image %>" alt="<%= item.name %>" style="width: 60px; height: 60px; object-fit: contain;" class="mr-3">
+                                                                <div>
+                                                                    <p class="mb-0 font-weight-bold"><%= item.name %></p>
+                                                                    <small class="text-muted">Mã SP: <%= item.product %></small>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td><%= item.price.toLocaleString('vi-VN') %>₫</td>
+                                                        <td><%= item.quantity %></td>
+                                                        <td><strong><%= (item.price * item.quantity).toLocaleString('vi-VN') %>₫</strong></td>
+                                                    </tr>
+                                                    <% }); %>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="3" class="text-right font-weight-bold">Tạm tính:</td>
+                                                        <td><%= order.totalPrice.toLocaleString('vi-VN') %>₫</td>
+                                                    </tr>
+                                                    <% if (order.discountPrice > 0) { %>
+                                                    <tr>
+                                                        <td colspan="3" class="text-right font-weight-bold">Giảm giá:</td>
+                                                        <td class="text-success">-<%= order.discountPrice.toLocaleString('vi-VN') %>₫</td>
+                                                    </tr>
+                                                    <% } %>
+                                                    <tr>
+                                                        <td colspan="3" class="text-right font-weight-bold">Phí vận chuyển:</td>
+                                                        <td class="text-danger">+<%= order.shippingFee.toLocaleString('vi-VN') %>₫</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3" class="text-right font-weight-bold">Tổng thanh toán:</td>
+                                                        <td class="font-weight-bold h5 text-primary"><%= order.finalPrice.toLocaleString('vi-VN') %>₫</td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-end mt-4">
+                                    <a href="/admin/orders" class="btn btn-secondary mr-2">
+                                        <i class="fa fa-arrow-left"></i> Quay lại
+                                    </a>
+                                    <a href="/admin/orders/edit/<%= order._id %>" class="btn btn-primary">
+                                        <i class="fa fa-edit"></i> Cập nhật trạng thái
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+
+</body>
+
+</html> 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="/admin/image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+       
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/orders">Quản lý đơn hàng</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="card-title mb-0">Danh sách đơn hàng</h4>
+                                    <div>
+                                        <a href="/admin/orders?filter=today" class="btn btn-outline-primary mr-2">
+                                            <i class="fa fa-calendar"></i> Hôm nay
+                                        </a>
+                                        <a href="/admin/orders?filter=pending" class="btn btn-outline-warning mr-2">
+                                            <i class="fa fa-clock-o"></i> Chờ xử lý
+                                        </a>
+                                        <a href="/admin/orders" class="btn btn-outline-secondary">
+                                            <i class="fa fa-refresh"></i> Tất cả
+                                        </a>
+                                    </div>
+                                </div>
+                                <% if (success === 'updated') { %>
+                                    <div class="alert alert-success">Cập nhật đơn hàng thành công</div>
+                                <% } %>
+
+                                <% if (error === 'not-found') { %>
+                                    <div class="alert alert-danger">Không tìm thấy đơn hàng</div>
+                                <% } %>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered zero-configuration">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã đơn hàng</th>
+                                                <th>Khách hàng</th>
+                                                <th>Tổng tiền</th>
+                                                <th>Phương thức</th>
+                                                <th>Trạng thái đơn hàng</th>
+                                                <th>Trạng thái thanh toán</th>
+                                                <th>Ngày đặt</th>
+                                                <th>Thao tác</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if (orders && orders.length > 0) { %>
+                                                <% orders.forEach(order => { %>
+                                                    <tr>
+                                                        <td><%= order.orderCode %></td>
+                                                        <td><%= order.shippingAddress.fullName %></td>
+                                                        <td><strong><%= order.finalPrice.toLocaleString('vi-VN') %>₫</strong></td>
+                                                        <td>
+                                                            <% if (order.paymentMethod === 'cod') { %>
+                                                                <span class="badge badge-info">COD</span>
+                                                            <% } else if (order.paymentMethod === 'banking') { %>
+                                                                <span class="badge badge-primary">Chuyển khoản</span>
+                                                            <% } else if (order.paymentMethod === 'vnpay') { %>
+                                                                <span class="badge badge-dark">VNPay</span>
+                                                            <% } %>
+                                                        </td>
+                                                        <td>
+                                                            <% if (order.status === 'pending') { %>
+                                                                <span class="badge badge-warning">Chờ xác nhận</span>
+                                                            <% } else if (order.status === 'confirmed') { %>
+                                                                <span class="badge badge-info">Đã xác nhận</span>
+                                                            <% } else if (order.status === 'shipping') { %>
+                                                                <span class="badge badge-primary">Đang giao hàng</span>
+                                                            <% } else if (order.status === 'delivered') { %>
+                                                                <span class="badge badge-success">Đã giao hàng</span>
+                                                            <% } else if (order.status === 'cancelled') { %>
+                                                                <span class="badge badge-danger">Đã hủy</span>
+                                                            <% } %>
+                                                        </td>
+                                                        <td>
+                                                            <% if (order.paymentStatus === 'pending') { %>
+                                                                <span class="badge badge-warning">Chờ thanh toán</span>
+                                                            <% } else if (order.paymentStatus === 'paid') { %>
+                                                                <span class="badge badge-success">Đã thanh toán</span>
+                                                            <% } else if (order.paymentStatus === 'failed') { %>
+                                                                <span class="badge badge-danger">Thanh toán thất bại</span>
+                                                            <% } %>
+                                                        </td>
+                                                        <td><%= new Date(order.createdAt).toLocaleDateString('vi-VN') %></td>
+                                                        <td>
+                                                            <a href="/admin/orders/detail/<%= order._id %>" class="btn btn-sm btn-info">
+                                                                <i class="fa fa-eye"></i> Chi tiết
+                                                            </a>
+                                                            <a href="/admin/orders/edit/<%= order._id %>" class="btn btn-sm btn-primary">
+                                                                <i class="fa fa-edit"></i> Cập nhật
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <% }); %>
+                                            <% } else { %>
+                                                <tr>
+                                                    <td colspan="8" class="text-center">Không có đơn hàng nào</td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+
+    <script src="/admin/plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="/admin/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <!-- <script src="/admin/plugins/tables/js/datatable-init/datatable-basic.min.js"></script> -->
+    <script src="//cdn.datatables.net/plug-ins/2.3.1/dataRender/datetime.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.zero-configuration').DataTable({
+                columnDefs: [{
+                    targets: 6, // Vị trí cột ngày tháng
+                    render: function(data, type, row) {
+                        if (type === 'sort') {
+                            // Chuyển đổi định dạng ngày tháng Việt Nam sang định dạng ISO để sắp xếp
+                            const [day, month, year] = data.split('/');
+                            return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+                        }
+                        return data; // Trả về định dạng gốc để hiển thị
+                    }
+                }],
+                order: [[6, 'desc']]
+            });
+        });
+    </script>
+
+</body>
+
+</html> 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="icon" sizes="16x16" href="/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .order-header {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .order-status-timeline {
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #dee2e6;
+            z-index: 1;
+        }
+        
+        .timeline-steps {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .timeline-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border: 2px solid #dee2e6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            color: #6c757d;
+        }
+        
+        .step-icon.active {
+            border-color: #0d6efd;
+            color: #0d6efd;
+            background-color: #e6f2ff;
+        }
+        
+        .step-icon.completed {
+            border-color: #28a745;
+            color: #fff;
+            background-color: #28a745;
+        }
+        
+        .step-text {
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .order-info {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .order-items {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            margin: 15px 0;
+        }
+        
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Chi tiết đơn hàng #<%= order.orderCode %></h2>
+            <a href="/account/orders" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left me-2"></i> Quay lại đơn hàng của tôi
+            </a>
+        </div>
+        
+        <% if (typeof success !== 'undefined' && success === 'cancelled') { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle me-2"></i> Đơn hàng đã được hủy thành công!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+        
+        <% if (typeof error !== 'undefined') { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="fas fa-exclamation-triangle me-2"></i> 
+                <% if (error === 'cannot-cancel') { %>
+                    Không thể hủy đơn hàng do đơn hàng đã được xử lý!
+                <% } else { %>
+                    Đã xảy ra lỗi khi hủy đơn hàng, vui lòng thử lại sau.
+                <% } %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+        
+        <!-- Thông tin đơn hàng -->
+        <div class="order-header">
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="mb-1"><small class="text-muted">Mã đơn hàng:</small></p>
+                    <p class="mb-3 fw-bold"><%= order.orderCode %></p>
+                    
+                    <p class="mb-1"><small class="text-muted">Ngày đặt hàng:</small></p>
+                    <p class="fw-bold"><%= new Date(order.createdAt).toLocaleDateString('vi-VN') %></p>
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-1"><small class="text-muted">Trạng thái đơn hàng:</small></p>
+                    <p class="mb-3">
+                        <% if (order.status === 'pending') { %>
+                            <span class="badge rounded-pill text-bg-warning">Chờ xác nhận</span>
+                        <% } else if (order.status === 'confirmed') { %>
+                            <span class="badge rounded-pill text-bg-info">Đã xác nhận</span>
+                        <% } else if (order.status === 'shipping') { %>
+                            <span class="badge rounded-pill text-bg-primary">Đang vận chuyển</span>
+                        <% } else if (order.status === 'delivered') { %>
+                            <span class="badge rounded-pill text-bg-success">Đã giao hàng</span>
+                        <% } else if (order.status === 'cancelled') { %>
+                            <span class="badge rounded-pill text-bg-danger">Đã hủy</span>
+                        <% } %>
+                    </p>
+                    
+                    <p class="mb-1"><small class="text-muted">Trạng thái thanh toán:</small></p>
+                    <p>
+                        <% if (order.paymentStatus === 'pending') { %>
+                            <span class="badge rounded-pill text-bg-warning">Chờ thanh toán</span>
+                        <% } else if (order.paymentStatus === 'paid') { %>
+                            <span class="badge rounded-pill text-bg-success">Đã thanh toán</span>
+                        <% } else if (order.paymentStatus === 'failed') { %>
+                            <span class="badge rounded-pill text-bg-danger">Thanh toán thất bại</span>
+                        <% } %>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-1"><small class="text-muted">Phương thức thanh toán:</small></p>
+                    <p class="mb-3">
+                        <% if (order.paymentMethod === 'cod') { %>
+                            <i class="fas fa-money-bill-wave me-2"></i> Thanh toán khi nhận hàng
+                        <% } else if (order.paymentMethod === 'banking') { %>
+                            <i class="fas fa-university me-2"></i> Chuyển khoản ngân hàng
+                        <% } else if (order.paymentMethod === 'vnpay') { %>
+                            <i class="fas fa-wallet me-2"></i> Thanh toán qua VNPay
+                        <% } %>
+                    </p>
+                    
+                    <% if (order.paymentMethod === 'banking') { %>
+                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bankTransferModal">
+                            Xem thông tin chuyển khoản
+                        </button>
+                        <!-- Modal chuyển khoản -->
+                        <div class="modal fade" id="bankTransferModal" tabindex="-1" aria-labelledby="bankTransferModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="bankTransferModalLabel">Thông tin chuyển khoản</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-3 text-center">
+                                            <p class="mb-2">Quét mã QR bằng app ngân hàng để chuyển khoản nhanh, chính xác!</p>
+                                            <img src="https://img.vietqr.io/image/MB-1111112039999-7JE0crh.jpg?amount=<%= order.finalPrice %>&addInfo=<%= order.orderCode %>" alt="QR Code thanh toán" class="img-fluid" />
+                                            <p class="mt-2 small text-muted">Mã QR đã bao gồm đầy đủ thông tin tài khoản, số tiền và nội dung chuyển khoản.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Timeline trạng thái -->
+        <div class="order-status-timeline">
+            <div class="timeline-line"></div>
+            <div class="row timeline-steps">
+                <div class="col-3 timeline-step">
+                    <div class="step-icon <%= ['pending', 'confirmed', 'shipping', 'delivered'].includes(order.status) ? 'completed' : '' %>">
+                        <i class="fas fa-file-invoice <%= order.status === 'pending' ? 'fa-beat' : '' %>"></i>
+                    </div>
+                    <div class="step-text">Đơn hàng đã đặt</div>
+                </div>
+                <div class="col-3 timeline-step">
+                    <div class="step-icon <%= ['confirmed', 'shipping', 'delivered'].includes(order.status) ? 'completed' : (order.status === 'pending' ? 'active' : '') %>">
+                        <i class="fas fa-clipboard-check <%= order.status === 'confirmed' ? 'fa-beat' : '' %>"></i>
+                    </div>
+                    <div class="step-text">Đã xác nhận</div>
+                </div>
+                <div class="col-3 timeline-step">
+                    <div class="step-icon <%= ['shipping', 'delivered'].includes(order.status) ? 'completed' : (order.status === 'confirmed' ? 'active' : '') %>">
+                        <i class="fas fa-truck <%= order.status === 'shipping' ? 'fa-beat' : '' %>"></i>
+                    </div>
+                    <div class="step-text">Đang giao hàng</div>
+                </div>
+                <div class="col-3 timeline-step">
+                    <div class="step-icon <%= order.status === 'delivered' ? 'completed' : (order.status === 'shipping' ? 'active' : '') %>">
+                        <i class="fas fa-box-open <%= order.status === 'delivered' ? 'fa-bounce' : '' %>"></i>
+                    </div>
+                    <div class="step-text">Đã giao hàng</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Thông tin giao hàng -->
+            <div class="col-md-6">
+                <div class="order-info">
+                    <h5 class="mb-3">Thông tin giao hàng</h5>
+                    <p><strong>Người nhận:</strong> <%= order.shippingAddress.fullName %></p>
+                    <p><strong>Số điện thoại:</strong> <%= order.shippingAddress.phone %></p>
+                    <p><strong>Địa chỉ:</strong> <%= order.shippingAddress.address %>, <%= order.shippingAddress.ward %>, <%= order.shippingAddress.district %>, <%= order.shippingAddress.city %></p>
+                    
+                    <% if (order.shippingAddress.note) { %>
+                        <p><strong>Ghi chú:</strong> <%= order.shippingAddress.note %></p>
+                    <% } %>
+                    
+                    <% if (order.trackingCode) { %>
+                        <div class="mt-3 pt-3 border-top">
+                            <p><strong>Mã vận đơn:</strong> <%= order.trackingCode %></p>
+                            <p><strong>Đơn vị vận chuyển:</strong> Giao hàng nhanh</p>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            
+            <!-- Tổng kết đơn hàng -->
+            <div class="col-md-6">
+                <div class="order-info">
+                    <h5 class="mb-3">Tổng kết đơn hàng</h5>
+                    
+                    <div class="order-items">
+                        <% order.items.forEach(item => { %>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="<%= item.image %>" alt="<%= item.name %>" class="product-image me-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">
+                                        <a href="/products/<%= item.product.slug %>" class="text-decoration-none text-dark hover-primary">
+                                            <%= item.name %>
+                                        </a>
+                                    </h6>
+                                    <div class="text-muted small">
+                                        <span class="me-2">SL: <%= item.quantity %></span>
+                                        <span>Đơn giá: <%= item.price.toLocaleString('vi-VN') %>₫</span>
+                                    </div>
+                                </div>
+                                <div class="fs-5 fw-bold">
+                                    <%= (item.price * item.quantity).toLocaleString('vi-VN') %>₫
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Tạm tính:</span>
+                        <span class="fw-bold"><%= order.totalPrice.toLocaleString('vi-VN') %>₫</span>
+                    </div>
+                    
+                    <% if (order.discountPrice > 0) { %>
+                        <div class="d-flex justify-content-between mb-2 text-success">
+                            <span>Giảm giá:</span>
+                            <span class="fw-bold">-<%= order.discountPrice.toLocaleString('vi-VN') %>₫</span>
+                        </div>
+                    <% } %>
+                    
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Phí vận chuyển:</span>
+                        <span class="fw-bold shippingFee text-danger">+<%= order.shippingFee.toLocaleString('vi-VN') %>₫</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between pt-2 border-top">
+                        <span class="h5">Tổng cộng:</span>
+                        <span class="h4 fw-bold"><%= order.finalPrice.toLocaleString('vi-VN') %>₫</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nút hành động -->
+        <div class="mt-4 text-center">
+            <% if (order.status === 'pending') { %>
+                <button class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#cancelOrderModal">
+                    <i class="fas fa-times-circle me-2"></i> Hủy đơn hàng
+                </button>
+            <% } %>
+            <% if (order.paymentMethod === 'vnpay' && order.paymentStatus === 'failed' && order.status !== 'cancelled') { %>
+                <a href="/orders/<%= order.orderCode %>/retry-vnpay-payment" class="btn btn-warning me-2">
+                    <i class="fas fa-redo me-2"></i> Thanh toán lại
+                </a>
+            <% } %>
+            
+            <a href="/" class="btn btn-primary">
+                <i class="fas fa-shopping-cart me-2"></i> Tiếp tục mua sắm
+            </a>
+        </div>
+    </div>
+    
+    <!-- Modal xác nhận hủy đơn hàng -->
+    <div class="modal fade" id="cancelOrderModal" tabindex="-1" aria-labelledby="cancelOrderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelOrderModalLabel">Xác nhận hủy đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn hủy đơn hàng #<%= order.orderCode %> không?</p>
+                    <p class="text-danger">Lưu ý: Hành động này không thể hoàn tác.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <form action="/orders/<%= order.orderCode %>/cancel" method="post">
+                        <button type="submit" class="btn btn-danger">Xác nhận hủy</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

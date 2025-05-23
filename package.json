@@ -1,0 +1,27 @@
+{
+  "name": "website-computer-store",
+  "version": "1.0.0",
+  "description": "Website bán máy tính sử dụng ExpressJS, EJS và MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.1",
+    "moment": "^2.30.1",
+    "mongoose": "^7.4.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^7.0.2",
+    "vnpay": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

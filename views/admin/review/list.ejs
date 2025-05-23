@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="/admin/image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <style>
+        .rating-stars i {
+            font-size: 1.2rem;
+            margin-right: 2px;
+        }
+        .text-warning {
+            color: #ffc107 !important;
+        }
+        .btn-sm i {
+            font-size: 0.9rem;
+        }
+        .ml-auto i {
+            margin-left: 10px;
+        }
+        td .rating-stars {
+            white-space: nowrap;
+            height: 25px;
+            line-height: 25px;
+        }
+        .card .card-body {
+            padding: 1.75rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/reviews">Quản lý đánh giá</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <!-- Thống kê đánh giá -->
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-end">
+                                    <div>
+                                        <p class="fs-14 mb-1">Tổng số đánh giá</p>
+                                        <span class="fs-35 text-black font-w600"><%= totalReviews %></span>
+                                    </div>
+                                    <div class="ml-auto"><i class="fas fa-star fa-3x text-warning"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-end">
+                                    <div>
+                                        <p class="fs-14 mb-1">Chờ duyệt</p>
+                                        <span class="fs-35 text-black font-w600"><%= pendingCount %></span>
+                                    </div>
+                                    <div class="ml-auto"><i class="fas fa-hourglass-half fa-3x text-warning"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-end">
+                                    <div>
+                                        <p class="fs-14 mb-1">Đã duyệt</p>
+                                        <span class="fs-35 text-black font-w600"><%= approvedCount %></span>
+                                    </div>
+                                    <div class="ml-auto"><i class="fas fa-check-circle fa-3x text-success"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-end">
+                                    <div>
+                                        <p class="fs-14 mb-1">Đã từ chối</p>
+                                        <span class="fs-35 text-black font-w600"><%= rejectedCount %></span>
+                                    </div>
+                                    <div class="ml-auto"><i class="fas fa-times-circle fa-3x text-danger"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="card-title mb-0">Danh sách đánh giá</h4>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Lọc: <%= filterStatus === 'all' ? 'Tất cả' : (filterStatus === 'pending' ? 'Chờ duyệt' : (filterStatus === 'approved' ? 'Đã duyệt' : 'Đã từ chối')) %>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="/admin/reviews">Tất cả</a>
+                                            <a class="dropdown-item" href="/admin/reviews?status=pending">Chờ duyệt</a>
+                                            <a class="dropdown-item" href="/admin/reviews?status=approved">Đã duyệt</a>
+                                            <a class="dropdown-item" href="/admin/reviews?status=rejected">Đã từ chối</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered zero-configuration">
+                                        <thead>
+                                            <tr>
+                                                <th>Sản phẩm</th>
+                                                <th>Người dùng</th>
+                                                <th>Đánh giá</th>
+                                                <th>Nội dung</th>
+                                                <th>Ngày tạo</th>
+                                                <th>Trạng thái</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if (reviews && reviews.length > 0) { %>
+                                                <% reviews.forEach(review => { %>
+                                                    <tr id="review-row-<%= review._id %>">
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <% if (review.product && review.product.mainImage) { %>
+                                                                    <img src="<%= review.product.mainImage %>" alt="<%= review.product.name %>" width="40" class="mr-2">
+                                                                <% } %>
+                                                                <span>
+                                                                    <% if (review.product) { %>
+                                                                        <a href="/products/<%= review.product.slug %>" target="_blank">
+                                                                            <%= review.product.name %>
+                                                                        </a>
+                                                                    <% } else { %>
+                                                                        (Sản phẩm không tồn tại)
+                                                                    <% } %>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <% if (review.user) { %>
+                                                                <div>
+                                                                    <p class="mb-0 font-weight-bold"><%= review.user.name %></p>
+                                                                    <small><%= review.user.email %></small>
+                                                                </div>
+                                                            <% } else { %>
+                                                                (Người dùng không tồn tại)
+                                                            <% } %>
+                                                        </td>
+                                                        <td>
+                                                            <div class="rating-stars">
+                                                                <% for(let i = 1; i <= 5; i++) { %>
+                                                                    <i class="<%= i <= review.rating ? 'fas' : 'far' %> fa-star text-warning"></i>
+                                                                <% } %>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div style="max-width: 300px; overflow: hidden; text-overflow: ellipsis;">
+                                                                <%= review.comment %>
+                                                            </div>
+                                                        </td>
+                                                        <td><%= new Date(review.createdAt).toLocaleDateString('vi-VN') %></td>
+                                                        <td>
+                                                            <% if (review.status === 'pending') { %>
+                                                                <span class="badge badge-warning">Chờ duyệt</span>
+                                                            <% } else if (review.status === 'approved') { %>
+                                                                <span class="badge badge-success">Đã duyệt</span>
+                                                            <% } else { %>
+                                                                <span class="badge badge-danger">Đã từ chối</span>
+                                                            <% } %>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <% if (review.status === 'pending' || review.status === 'rejected') { %>
+                                                                    <button class="btn btn-success btn-sm mr-1" onclick="approveReview('<%= review._id %>')">
+                                                                        <i class="fas fa-check"></i>
+                                                                    </button>
+                                                                <% } %>
+                                                                
+                                                                <% if (review.status === 'pending' || review.status === 'approved') { %>
+                                                                    <button class="btn btn-warning btn-sm mr-1" onclick="rejectReview('<%= review._id %>')">
+                                                                        <i class="fas fa-ban"></i>
+                                                                    </button>
+                                                                <% } %>
+                                                                
+                                                                <button class="btn btn-danger btn-sm" onclick="deleteReview('<%= review._id %>')">
+                                                                    <i class="fas fa-trash"></i>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <% }); %>
+                                            <% } else { %>
+                                                <tr>
+                                                    <td colspan="7" class="text-center">Không có đánh giá nào</td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+
+    <script src="/admin/plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="/admin/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <!-- <script src="/admin/plugins/tables/js/datatable-init/datatable-basic.min.js"></script> -->
+    <script src="//cdn.datatables.net/plug-ins/2.3.1/dataRender/datetime.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.zero-configuration').DataTable({
+                columnDefs: [{
+                    targets: 4, // Vị trí cột ngày tháng
+                    render: function(data, type, row) {
+                        if (type === 'sort') {
+                            // Chuyển đổi định dạng ngày tháng Việt Nam sang định dạng ISO để sắp xếp
+                            const [day, month, year] = data.split('/');
+                            return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+                        }
+                        return data; // Trả về định dạng gốc để hiển thị
+                    }
+                }],
+                order: [[4, 'desc']]
+            });
+        });
+    </script>
+
+    <script>
+        // Hàm phê duyệt đánh giá
+        async function approveReview(reviewId) {
+            if (!confirm('Bạn có chắc chắn muốn phê duyệt đánh giá này?')) return;
+            
+            try {
+                const response = await fetch(`/admin/reviews/approve/${reviewId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert(data.message);
+                    window.location.reload();
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                console.error('Lỗi khi phê duyệt đánh giá:', error);
+                alert('Đã xảy ra lỗi khi phê duyệt đánh giá. Vui lòng thử lại sau.');
+            }
+        }
+        
+        // Hàm từ chối đánh giá
+        async function rejectReview(reviewId) {
+            if (!confirm('Bạn có chắc chắn muốn từ chối đánh giá này?')) return;
+            
+            try {
+                const response = await fetch(`/admin/reviews/reject/${reviewId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert(data.message);
+                    window.location.reload();
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                console.error('Lỗi khi từ chối đánh giá:', error);
+                alert('Đã xảy ra lỗi khi từ chối đánh giá. Vui lòng thử lại sau.');
+            }
+        }
+        
+        // Hàm xóa đánh giá
+        async function deleteReview(reviewId) {
+            if (!confirm('Bạn có chắc chắn muốn xóa đánh giá này?')) return;
+            
+            try {
+                const response = await fetch(`/admin/reviews/delete/${reviewId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert(data.message);
+                    document.getElementById(`review-row-${reviewId}`).remove();
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                console.error('Lỗi khi xóa đánh giá:', error);
+                alert('Đã xảy ra lỗi khi xóa đánh giá. Vui lòng thử lại sau.');
+            }
+        }
+    </script>
+
+</body>
+
+</html> 
