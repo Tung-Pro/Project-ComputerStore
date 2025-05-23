@@ -178,5 +178,8 @@ Copyright © Designed & Developed by [Nguyễn Văn Tùng](https://www.facebook.
 | Giao diện trang chủ | Giao diện trang quản trị |
 |---------------------|--------------------------|
 | ![Giao diện website](https://github.com/user-attachments/assets/07f2b70a-a3fc-4c20-91d7-92fa25bed15d) | ![Giao diện quản trị](https://github.com/user-attachments/assets/af4333ec-9489-404b-a277-3668a2522fcb) |
+| Trang chi tiết sản phẩm và đánh giá sản phẩm | Trang giỏ hàng |
+|---------------------|--------------------------|
+
 
 
