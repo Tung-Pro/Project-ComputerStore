@@ -46,7 +46,7 @@
 - [Cấu hình môi trường](#%EF%B8%8F-cấu-hình-môi-trường)
 - [Tài khoản mẫu](#-tài-khoản-mẫu)
 - [Đóng góp](#-đóng-góp)
-- [Tài liệu đồ án](#-tài-liệu-đồ-án)
+- [Thư mục bổ sung](#-thư-mục-bổ-sung)
 - [Giấy phép](#-giấy-phép)
 - [Giao diện website](#-giao-diện-website)
 
