@@ -3,7 +3,7 @@
 > Trường Đại học Phương Đông – PDU
 > Khoa Công nghệ Thông tin & Truyền thông
 
-![Giao diện](https://github.com/user-attachments/assets/5989380f-1b31-462f-99e6-c69aecbb3e6d)
+![Giao diện](public/images/demo/giaodien.png)
 
 ---
 
