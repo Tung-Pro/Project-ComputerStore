@@ -101,9 +101,9 @@ cd Project-ComputerStore
 ```bash
 npm install
 ```
-#### Bước 3: Tạo file .env [xem hướng dẫn bên dưới](#-cấu-hình-môi-trường)
+#### Bước 3: Tạo file .env từ file mẫu .env.example [xem hướng dẫn cấu hình bên dưới](#-cấu-hình-môi-trường)
 ```bash
-touch .env
+cp .env.example .env
 ```
 #### Bước 4: Khởi chạy ứng dụng
 ```bash
