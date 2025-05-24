@@ -116,7 +116,7 @@ Tạo file `.env` tại thư mục gốc dự án với nội dung mẫu:
 
 ```env
 # Database config
-PORT=3000
+PORT=9000
 MONGO_URI=mongodb://localhost:27017/computer-store
 # Session config
 SESSION_SECRET=your_session_secret
