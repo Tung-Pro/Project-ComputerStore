@@ -1,5 +1,3 @@
-//Cần xác thực email khi đăng ký tài khoản
-
 const User = require('../models/User');
 const crypto = require('crypto');
 const transporter = require('../utils/mailer');
