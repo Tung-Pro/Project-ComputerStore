@@ -1,0 +1,169 @@
+<!-- Header -->
+<header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a href="/" class="navbar-brand d-flex align-items-center">
+                <img src="/logo.png" alt="ThinkPro Logo" height="40">
+            </a>
+
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link px-3">Giới thiệu</a></li>
+                    <li class="nav-item"><a href="/products" class="nav-link px-3">Sản phẩm</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-3">Liên hệ</a></li>
+                </ul>
+
+                <!-- Thanh tìm kiếm sản phẩm -->
+                <form class="d-flex mb-3 mb-lg-0 me-lg-3" action="/search" method="GET">
+                    <div class="input-group position-relative">
+                        <input type="text" class="form-control" name="q" id="searchInput" placeholder="Xin chào, bạn đang tìm gì?" 
+                               style="border-radius: 20px; border-color: #e0e0e0; padding-right: 45px; width: 350px;">
+                        <button class="btn rounded-circle" type="submit" id="search-addon" 
+                                style="background-color: #0065EE; color: white; width: 36px; height: 36px; padding: 0; position: absolute; right: 1px; top: 50%; transform: translateY(-50%); z-index: 10;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <!-- Gợi ý tìm kiếm sản phẩm -->
+                        <div id="searchSuggestions" class="position-absolute w-100 bg-white rounded shadow-sm mt-2" style="display: none; z-index: 1050; top: 100%; left: 0; right: 0;">
+                            <div class="p-3">
+                                <div id="productSuggestions" class="d-flex flex-column gap-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                
+                <script>
+                    <!-- Script xử lý gợi ý tìm kiếm sản phẩm -->
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const searchInput = document.getElementById('searchInput');
+                        const searchSuggestions = document.getElementById('searchSuggestions');
+                        const productSuggestions = document.getElementById('productSuggestions');
+
+                        // Hàm fetch và render gợi ý sản phẩm
+                        function fetchAndShowSuggestions(query) {
+                            if (query.length < 2) {
+                                searchSuggestions.style.display = 'none';
+                                return;
+                            }
+                            fetch(`/search/suggestions?q=${encodeURIComponent(query)}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    productSuggestions.innerHTML = '';
+                                    if (data.suggestions && data.suggestions.length > 0) {
+                                        data.suggestions.forEach(product => {
+                                            const productElement = document.createElement('a');
+                                            productElement.href = `/products/${product.slug}`;
+                                            productElement.className = 'text-decoration-none text-dark d-flex align-items-center p-2 rounded hover-bg-light';
+                                            productElement.title = `${product.name}`;
+                                            productElement.innerHTML = `
+                                                <img src="${product.image}" alt="${product.name}" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                                <div class="ms-3 flex-grow-1">
+                                                    <div class="text-truncate" style="max-width: 250px;">${product.name}</div>
+                                                    <div class="text-danger fw-medium">${product.price.toLocaleString('vi-VN')}₫</div>
+                                                </div>
+                                            `;
+                                            productSuggestions.appendChild(productElement);
+                                        });
+                                    } else {
+                                        productSuggestions.innerHTML = '<div class="text-center text-muted py-2">Không tìm thấy sản phẩm phù hợp</div>';
+                                    }
+                                    searchSuggestions.style.display = 'block';
+                                })
+                                .catch(error => {
+                                    console.error('Lỗi lấy gợi ý:', error);
+                                    searchSuggestions.style.display = 'none';
+                                });
+                        }
+
+                        // Sử dụng debounce cho input
+                        let searchTimeout;
+                        searchInput.addEventListener('input', function() {
+                            clearTimeout(searchTimeout);
+                            const query = this.value.trim();
+                            searchTimeout = setTimeout(() => fetchAndShowSuggestions(query), 300);
+                        });
+
+                        // Gọi lại khi focus
+                        searchInput.addEventListener('focus', function() {
+                            fetchAndShowSuggestions(this.value.trim());
+                        });
+
+                        // Ẩn gợi ý khi click ra ngoài
+                        document.addEventListener('click', function(e) {
+                            if (!searchInput.contains(e.target) && !searchSuggestions.contains(e.target)) {
+                                searchSuggestions.style.display = 'none';
+                            }
+                        });
+
+                        // Ẩn gợi ý khi nhấn phím Escape
+                        searchInput.addEventListener('keydown', function(e) {
+                            if (e.key === 'Escape') {
+                                searchSuggestions.style.display = 'none';
+                            }
+                        });
+                    });
+                </script>
+
+                <style>
+                    .hover-bg-light:hover {
+                        background-color: #f8f9fa;
+                    }
+                </style>
+
+                <!-- User actions -->
+                <div class="d-flex align-items-center gap-2">
+                    <% if (typeof user !== 'undefined' && user) { %>
+                        <% if (user.role === 'admin') { %>
+                            <a href="/admin/dashboard" class="btn text-secondary">
+                                <i class="fas fa-cog me-1"></i> Quản trị
+                            </a>
+                        <% } %>
+                        <a href="/account" class="btn text-secondary">
+                            <i class="fa-solid fa-user me-1"></i> <%= user.name %>
+                        </a>
+                    <% } else { %>
+                        <a href="/auth/login" class="btn text-secondary">
+                            <i class="fas fa-user me-1"></i> Đăng nhập
+                        </a>
+                    <% } %>
+                    <a href="/cart" class="btn text-white position-relative rounded-pill" style="background-color: #0065EE;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger <%= typeof cartItemCount === 'undefined' || cartItemCount === 0 ? 'd-none' : '' %>">
+                            <%= typeof cartItemCount !== 'undefined' ? cartItemCount : 0 %>
+                            <span class="visually-hidden">sản phẩm trong giỏ hàng</span>
+                        </span>
+                        <span class="ms-1 d-none d-md-inline-block cart-total fw-bold">
+                            <% if (typeof cartTotal !== 'undefined') { %>
+                                <%= cartTotal.toLocaleString('vi-VN') %> ₫
+                            <% } else { %>
+                                0 ₫
+                            <% } %>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Categories Menu -->
+    <div class="bg-light py-2">
+        <div class="container">
+            <div class="categories-wrapper d-flex flex-wrap">
+                <% if (typeof categories !== 'undefined' && categories.length > 0) { %>
+                    <% categories.forEach(category => { %>
+                        <a href="/category/<%= category.slug %>" class="category-item text-decoration-none me-4 py-1 fw-medium text-secondary">
+                            <%= category.name %>
+                        </a>
+                    <% }); %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</header>

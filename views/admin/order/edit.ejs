@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="/admin/image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/orders">Quản lý đơn hàng</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/orders/edit/<%= order._id %>">Cập nhật đơn hàng</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="card-title">Cập nhật đơn hàng #<%= order.orderCode %></h4>
+                                    <a href="/admin/orders/detail/<%= order._id %>" class="btn btn-secondary">
+                                        <i class="fa fa-arrow-left"></i> Quay lại
+                                    </a>
+                                </div>
+                                
+                                <% if (error) { %>
+                                <div class="alert alert-danger">
+                                    <%= error %>
+                                </div>
+                                <% } %>
+                                
+                                <form action="/admin/orders/edit/<%= order._id %>" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card border">
+                                                <div class="card-header bg-light">
+                                                    <h5 class="mb-0">Thông tin đơn hàng</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="mb-3">
+                                                        <p class="mb-1"><strong>Mã đơn hàng:</strong></p>
+                                                        <p><%= order.orderCode %></p>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <p class="mb-1"><strong>Khách hàng:</strong></p>
+                                                        <p><%= order.shippingAddress.fullName %></p>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <p class="mb-1"><strong>Ngày đặt hàng:</strong></p>
+                                                        <p><%= new Date(order.createdAt).toLocaleString('vi-VN') %></p>
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <p class="mb-1"><strong>Tổng thanh toán:</strong></p>
+                                                        <p class="text-primary h5 font-weight-bold"><%= order.finalPrice.toLocaleString('vi-VN') %>₫</p>
+                                                    </div>
+                                                    
+                                                    <div class="mb-3">
+                                                        <label for="trackingCode" class="form-label"><strong>Mã vận đơn</strong></label>
+                                                        <input type="text" class="form-control" id="trackingCode" name="trackingCode" value="<%= order.trackingCode || '' %>" placeholder="Nhập mã vận đơn">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card border">
+                                                <div class="card-header bg-light">
+                                                    <h5 class="mb-0">Cập nhật trạng thái</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="form-group mb-4">
+                                                        <label class="form-label"><strong>Trạng thái đơn hàng</strong></label>
+                                                        <div class="form-group">
+                                                            <label class="radio-inline mr-3">
+                                                                <input type="radio" name="status" value="pending" <%= order.status === 'pending' ? 'checked' : '' %>> Chờ xác nhận
+                                                            </label>
+                                                            <label class="radio-inline mr-3">
+                                                                <input type="radio" name="status" value="confirmed" <%= order.status === 'confirmed' ? 'checked' : '' %>> Đã xác nhận
+                                                            </label>
+                                                            <label class="radio-inline mr-3">
+                                                                <input type="radio" name="status" value="shipping" <%= order.status === 'shipping' ? 'checked' : '' %>> Đang giao hàng
+                                                            </label>
+                                                            <label class="radio-inline mr-3">
+                                                                <input type="radio" name="status" value="delivered" <%= order.status === 'delivered' ? 'checked' : '' %>> Đã giao hàng
+                                                            </label>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="status" value="cancelled" <%= order.status === 'cancelled' ? 'checked' : '' %>> Đã hủy
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group mb-4">
+                                                        <label class="form-label"><strong>Trạng thái thanh toán</strong></label>
+                                                        <div class="form-group">
+                                                            <label class="radio-inline mr-3">
+                                                                <input type="radio" name="paymentStatus" value="pending" <%= order.paymentStatus === 'pending' ? 'checked' : '' %>> Chờ thanh toán
+                                                            </label>
+                                                            <label class="radio-inline mr-3">
+                                                                <input type="radio" name="paymentStatus" value="paid" <%= order.paymentStatus === 'paid' ? 'checked' : '' %>> Đã thanh toán
+                                                            </label>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="paymentStatus" value="failed" <%= order.paymentStatus === 'failed' ? 'checked' : '' %>> Thanh toán thất bại
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="note" class="form-label"><strong>Ghi chú nội bộ</strong></label>
+                                                        <textarea class="form-control" name="adminNote" rows="3" placeholder="Ghi chú thêm về đơn hàng (chỉ quản trị viên nhìn thấy)"><%= order.adminNote || '' %></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="d-flex justify-content-end mt-3">
+                                                <a href="/admin/orders/detail/<%= order._id %>" class="btn btn-secondary mr-2">Hủy</a>
+                                                <button type="submit" class="btn btn-primary">Cập nhật đơn hàng</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+
+</body>
+
+</html> 

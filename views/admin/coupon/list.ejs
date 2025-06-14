@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/coupons">Mã khuyến mãi</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="card-title">Quản lý mã khuyến mãi</h4>
+                                    <a href="/admin/coupons/add" class="btn btn-primary">Thêm mã khuyến mãi</a>
+                                </div>
+                                
+                                <% if (error) { %>
+                                    <div class="alert alert-danger">
+                                        <%= error %>
+                                    </div>
+                                <% } %>
+                                
+                                <% if (success) { %>
+                                    <div class="alert alert-success">
+                                        <% if (success === 'added') { %>
+                                            Đã thêm mã khuyến mãi thành công
+                                        <% } else if (success === 'updated') { %>
+                                            Đã cập nhật mã khuyến mãi thành công
+                                        <% } else if (success === 'deleted') { %>
+                                            Đã xóa mã khuyến mãi thành công
+                                        <% } %>
+                                    </div>
+                                <% } %>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered zero-configuration">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã khuyến mãi</th>
+                                                <th>Mô tả</th>
+                                                <th>Loại</th>
+                                                <th>Giá trị</th>
+                                                <th>Thời hạn</th>
+                                                <th>Số lần sử dụng còn lại</th>
+                                                <th>Trạng thái</th>
+                                                <th>Thao tác</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if (coupons && coupons.length > 0) { %>
+                                                <% coupons.forEach(coupon => { %>
+                                                    <tr>
+                                                        <td><%= coupon.code %></td>
+                                                        <td><%= coupon.description %></td>
+                                                        <td>
+                                                            <% if (coupon.discountType === 'percentage') { %>
+                                                                Phần trăm
+                                                            <% } else { %>
+                                                                Cố định
+                                                            <% } %>
+                                                        </td>
+                                                        <td>
+                                                            <% if (coupon.discountType === 'percentage') { %>
+                                                                <%= coupon.discountValue %>%
+                                                            <% } else { %>
+                                                                <%= coupon.discountValue.toLocaleString('vi-VN') %> đ
+                                                            <% } %>
+                                                        </td>
+                                                        <td>
+                                                            <%= new Date(coupon.startDate).toLocaleDateString('vi-VN') %> - 
+                                                            <%= new Date(coupon.endDate).toLocaleDateString('vi-VN') %>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <%= coupon.usageLimit - coupon.usedCount %>
+                                                        </td>
+                                                        <td>
+                                                            <% 
+                                                            const now = new Date();
+                                                            const isExpired = new Date(coupon.endDate) < now;
+                                                            const isNotStarted = new Date(coupon.startDate) > now;
+                                                            const isUsedUp = coupon.usageLimit > 0 && coupon.usedCount >= coupon.usageLimit;
+                                                            
+                                                            let statusClass = 'badge-success';
+                                                            let statusText = 'Đang hoạt động';
+                                                            
+                                                            if (!coupon.isActive) {
+                                                                statusClass = 'badge-danger';
+                                                                statusText = 'Không hoạt động';
+                                                            } else if (isExpired) {
+                                                                statusClass = 'badge-dark';
+                                                                statusText = 'Hết hạn';
+                                                            } else if (isNotStarted) {
+                                                                statusClass = 'badge-warning';
+                                                                statusText = 'Chưa bắt đầu';
+                                                            } else if (isUsedUp) {
+                                                                statusClass = 'badge-secondary';
+                                                                statusText = 'Hết lượt dùng';
+                                                            }
+                                                            %>
+                                                            <span class="badge <%= statusClass %>"><%= statusText %></span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <a href="/admin/coupons/edit/<%= coupon._id %>" class="btn btn-primary btn-sm mr-2">
+                                                                    <i class="fa fa-pencil"></i>
+                                                                </a>
+                                                                <form action="/admin/coupons/delete/<%= coupon._id %>" method="POST" onsubmit="return confirm('Bạn có chắc muốn xóa mã khuyến mãi này?');">
+                                                                    <button type="submit" class="btn btn-danger btn-sm">
+                                                                        <i class="fa fa-trash"></i>
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                <% }); %>
+                                            <% } else { %>
+                                                <tr>
+                                                    <td colspan="7" class="text-center">Chưa có mã khuyến mãi nào</td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+
+    <script src="/admin/plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="/admin/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="/admin/plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+</body>
+
+</html> 

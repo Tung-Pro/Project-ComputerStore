@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/users">Người dùng</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/users/add">Thêm người dùng</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Thêm người dùng mới</h4>
+                                <% if (typeof error !== 'undefined' && error) { %>
+                                    <div class="alert alert-danger">
+                                        <%= error %>
+                                        </div>
+                                <% } %>
+                                <div class="basic-form">
+                                    <form action="/admin/users/add" method="POST">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>Họ tên <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="name" required value="<%= typeof userData !== 'undefined' ? userData.name || '' : '' %>">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Email <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control" name="email" required value="<%= typeof userData !== 'undefined' ? userData.email || '' : '' %>">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>Số điện thoại <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="phone" required value="<%= typeof userData !== 'undefined' ? userData.phone || '' : '' %>">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Phân quyền <span class="text-danger">*</span></label>
+                                                <select class="form-control" name="role" required>
+                                                    <option value="user" <%= typeof userData !== 'undefined' && userData.role === 'user' ? 'selected' : '' %>>Người dùng</option>
+                                                    <option value="admin" <%= typeof userData !== 'undefined' && userData.role === 'admin' ? 'selected' : '' %>>Quản trị viên</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Địa chỉ chi tiết <span class="text-danger">*</span></label>
+                                            <textarea class="form-control" name="address" rows="2" required placeholder="Số nhà, tên đường...""><%= typeof userData !== 'undefined' ? userData.address || '' : '' %></textarea>
+                                        </div>
+                                        
+                                        <!-- Thêm trường địa chỉ tỉnh/thành, quận/huyện, phường/xã -->
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label>Tỉnh/Thành phố <span class="text-danger">*</span></label>
+                                                <select class="form-control" id="tinh" name="city" required>
+                                                    <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>Quận/Huyện <span class="text-danger">*</span></label>
+                                                <select class="form-control" id="quan" name="district" required>
+                                                    <option value="">-- Chọn Quận/Huyện --</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>Phường/Xã <span class="text-danger">*</span></label>
+                                                <select class="form-control" id="phuong" name="ward" required>
+                                                    <option value="">-- Chọn Phường/Xã --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>Mật khẩu <span class="text-danger">*</span></label>
+                                                <input type="password" class="form-control" name="password" required minlength="6">
+                                                <small class="form-text text-muted">Mật khẩu phải có ít nhất 6 ký tự</small>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                                                <input type="password" class="form-control" name="confirmPassword" required minlength="6">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Thêm người dùng</button>
+                                        <a href="/admin/users" class="btn btn-light">Hủy</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Lấy tỉnh thành
+            $.getJSON('https://esgoo.net/api-tinhthanh/1/0.htm', function(data_tinh) {
+                if(data_tinh.error == 0) {
+                    $.each(data_tinh.data, function(key_tinh, val_tinh) {
+                        $("#tinh").append('<option value="' + val_tinh.full_name + '" data-id="' + val_tinh.id + '">' + val_tinh.full_name + '</option>');
+                    });
+                    
+                    // Lấy quận huyện khi chọn tỉnh
+                    $("#tinh").change(function() {
+                        var idtinh = $(this).find(':selected').data('id');
+                        if (!idtinh) return;
+                        
+                        $.getJSON('https://esgoo.net/api-tinhthanh/2/' + idtinh + '.htm', function(data_quan) {
+                            if(data_quan.error == 0) {
+                                $("#quan").html('<option value="">-- Chọn Quận/Huyện --</option>');  
+                                $("#phuong").html('<option value="">-- Chọn Phường/Xã --</option>');   
+                                
+                                $.each(data_quan.data, function(key_quan, val_quan) {
+                                    $("#quan").append('<option value="' + val_quan.full_name + '" data-id="' + val_quan.id + '">' + val_quan.full_name + '</option>');
+                                });
+                                
+                                // Lấy phường xã khi chọn quận/huyện
+                                $("#quan").change(function() {
+                                    var idquan = $(this).find(':selected').data('id');
+                                    if (!idquan) return;
+                                    
+                                    $.getJSON('https://esgoo.net/api-tinhthanh/3/' + idquan + '.htm', function(data_phuong) {
+                                        if(data_phuong.error == 0) {
+                                            $("#phuong").html('<option value="">-- Chọn Phường/Xã --</option>');   
+                                            $.each(data_phuong.data, function(key_phuong, val_phuong) {
+                                                $("#phuong").append('<option value="' + val_phuong.full_name + '">' + val_phuong.full_name + '</option>');
+                                            });
+                                        }
+                                    });
+                                });
+                            }
+                        });
+                    });   
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

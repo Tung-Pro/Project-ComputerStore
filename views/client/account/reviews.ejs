@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="icon" sizes="16x16" href="/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <style>
+        .content-area {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .review-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .review-header {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .review-body {
+            padding: 15px;
+        }
+        .review-product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .review-product img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 15px;
+            border: 1px solid #eee;
+            padding: 5px;
+        }
+        .stars {
+            color: #ffc107;
+            margin-right: 10px;
+        }
+        .badge-status {
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .rating-star {
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .rating-star:hover {
+            transform: scale(1.1);
+        }
+        .rating-star.active i {
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('../../partials/header.ejs') %>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast align-items-center border-0 bg-white" role="alert" aria-live="assertive" aria-atomic="true" id="successToast">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <div class="text-success fw-bold mb-1">Thành công</div>
+                    <div id="toastMessage"></div>
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <%- include('../../partials/sidebar-account.ejs') %>
+            
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="content-area">
+                    <h4 class="mb-4">Đánh giá của tôi</h4>
+                    
+                    <% if (reviews && reviews.length > 0) { %>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="mb-0">Tổng số: <%= totalReviews %> đánh giá</p>
+                            <% if (totalPages > 1) { %>
+                                <p class="mb-0">Trang <%= currentPage %>/<%= totalPages %></p>
+                            <% } %>
+                        </div>
+                        
+                        <% reviews.forEach(review => { %>
+                            <div class="review-card">
+                                <div class="review-header d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="stars">
+                                            <% for (let i = 1; i <= 5; i++) { %>
+                                                <i class="fa<%= i <= review.rating ? 's' : 'r' %> fa-star"></i>
+                                            <% } %>
+                                        </span>
+                                        <span class="text-muted small"><%= new Date(review.createdAt).toLocaleDateString('vi-VN') %></span>
+                                    </div>
+                                    <div>
+                                        <% if (review.status === 'pending') { %>
+                                            <span class="badge rounded-pill text-bg-warning">Chờ duyệt</span>
+                                        <% } else if (review.status === 'approved') { %>
+                                            <span class="badge rounded-pill text-bg-success">Đã duyệt</span>
+                                        <% } else if (review.status === 'rejected') { %>
+                                            <span class="badge rounded-pill text-bg-danger">Bị từ chối</span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                
+                                <div class="review-body">
+                                    <div class="review-product">
+                                        <img src="<%= review.product.mainImage %>" alt="<%= review.product.name %>">
+                                        <div>
+                                            <h6 class="mb-0"><%= review.product.name %></h6>
+                                            <a href="/products/<%= review.product.slug %>" class="text-decoration-none">
+                                                <small class="text-primary">Xem sản phẩm</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <% if (review.title) { %>
+                                        <h6 class="mb-2"><%= review.title %></h6>
+                                    <% } %>
+                                    
+                                    <p class="mb-0"><%= review.comment %></p>
+
+                                    <!-- Nút cập nhật đánh giá -->
+                                    <% if (review.status === 'pending' || review.status === 'rejected') { %>
+                                        <div class="mt-3 text-end">
+                                            <button class="btn btn-sm btn-outline-primary edit-review-btn" 
+                                                    data-review-id="<%= review._id %>"
+                                                    data-rating="<%= review.rating %>"
+                                                    data-comment="<%= review.comment %>">
+                                                <i class="fas fa-edit me-1"></i>Cập nhật đánh giá
+                                            </button>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                        <% }); %>
+                        
+                        <!-- Thêm phân trang -->
+                        <% if (totalPages > 1) { %>
+                            <nav aria-label="Phân trang đánh giá" class="mt-4">
+                                <ul class="pagination justify-content-center">
+                                    <!-- Nút Previous -->
+                                    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+                                        <a class="page-link" href="/account/reviews?page=<%= currentPage - 1 %>" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <!-- Các trang -->
+                                    <% for(let i = 1; i <= totalPages; i++) { %>
+                                        <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+                                            <a class="page-link" href="/account/reviews?page=<%= i %>"><%= i %></a>
+                                        </li>
+                                    <% } %>
+                                    
+                                    <!-- Nút Next -->
+                                    <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                                        <a class="page-link" href="/account/reviews?page=<%= currentPage + 1 %>" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        <% } %>
+                    <% } else { %>
+                        <div class="text-center py-5">
+                            <i class="fas fa-star fa-3x text-muted mb-3"></i>
+                            <h5>Bạn chưa đánh giá sản phẩm nào</h5>
+                            <p class="text-muted">Hãy mua sắm và đánh giá sản phẩm để chia sẻ trải nghiệm của bạn</p>
+                            <a href="/products" class="btn btn-primary mt-2">Mua sắm ngay</a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cập nhật đánh giá -->
+    <div class="modal fade" id="editReviewModal" tabindex="-1" aria-labelledby="editReviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100" id="editReviewModalLabel">Cập nhật đánh giá</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Thông tin sản phẩm -->
+                    <div class="review-product mb-4">
+                        <img id="edit-product-image" src="" alt="" class="img-fluid">
+                        <div>
+                            <h6 class="mb-1" id="edit-product-name"></h6>
+                            <a href="#" id="edit-product-link" class="text-decoration-none">
+                                <small class="text-primary">Xem sản phẩm</small>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form id="edit-review-form">
+                        <input type="hidden" id="edit-review-id">
+                        <div class="mb-3">
+                            <label class="form-label">Đánh giá của bạn:</label>
+                            <div class="rating-container d-flex align-items-center mb-2">
+                                <div class="stars me-2">
+                                    <% for(let i = 1; i <= 5; i++) { %>
+                                        <span class="rating-star" data-rating="<%= i %>">
+                                            <i class="far fa-star"></i>
+                                        </span>
+                                    <% } %>
+                                </div>
+                                <small class="text-muted rating-text">Chọn số sao</small>
+                                <input type="hidden" id="edit-rating-value" name="rating" value="0">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-review-comment" class="form-label">Nhận xét của bạn:</label>
+                            <textarea class="form-control" id="edit-review-comment" rows="3" 
+                                      placeholder="Chia sẻ trải nghiệm của bạn về sản phẩm này..."
+                                      required minlength="10"></textarea>
+                            <small class="text-muted">Tối thiểu 10 ký tự</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" id="save-edit-review">
+                        <i class="fas fa-save me-2"></i>Lưu thay đổi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../../partials/footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Xử lý cập nhật đánh giá
+        $(document).ready(function() {
+            $('.edit-review-btn').on('click', function() {
+                const reviewId = $(this).data('review-id');
+                const rating = $(this).data('rating');
+                const comment = $(this).data('comment');
+                
+                // Lấy thông tin sản phẩm từ card hiện tại
+                const productCard = $(this).closest('.review-card');
+                const productImage = productCard.find('.review-product img').attr('src');
+                const productName = productCard.find('.review-product h6').text();
+                const productLink = productCard.find('.review-product a').attr('href');
+                
+                // Cập nhật thông tin sản phẩm trong modal
+                $('#edit-product-image').attr('src', productImage);
+                $('#edit-product-image').attr('alt', productName);
+                $('#edit-product-name').text(productName);
+                $('#edit-product-link').attr('href', productLink);
+                
+                // Đặt giá trị vào form
+                $('#edit-review-id').val(reviewId);
+                $('#edit-rating-value').val(rating);
+                $('#edit-review-comment').val(comment);
+                
+                // Cập nhật hiển thị sao
+                updateStarRating(rating);
+                
+                // Hiển thị modal
+                const modal = new bootstrap.Modal(document.getElementById('editReviewModal'));
+                modal.show();
+            });
+
+            // Xử lý sao đánh giá trong modal
+            $('#editReviewModal .rating-star').on('click', function() {
+                const rating = parseInt($(this).data('rating'));
+                $('#edit-rating-value').val(rating);
+                updateStarRating(rating);
+            });
+
+            // Xử lý lưu đánh giá đã cập nhật
+            $('#save-edit-review').on('click', async function() {
+                const reviewId = $('#edit-review-id').val();
+                const rating = $('#edit-rating-value').val();
+                const comment = $('#edit-review-comment').val();
+                
+                if (rating < 1) {
+                    alert('Vui lòng chọn số sao đánh giá');
+                    return;
+                }
+                
+                if (comment.trim().length < 10) {
+                    alert('Nhận xét phải có ít nhất 10 ký tự');
+                    return;
+                }
+                
+                try {
+                    const response = await fetch('/products/review/edit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            reviewId,
+                            rating,
+                            comment
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        // Cập nhật trực tiếp review card mà không reload trang
+                        updateReviewCard(reviewId, rating, comment);
+                        
+                        // Hiển thị toast thông báo
+                        $('#toastMessage').text(data.message);
+                        const toastElement = document.getElementById('successToast');
+                        const toast = new bootstrap.Toast(toastElement, {
+                            delay: 3000
+                        });
+                        toast.show();
+                        
+                        // Đóng modal sau khi cập nhật thành công
+                        const editModal = bootstrap.Modal.getInstance(document.getElementById('editReviewModal'));
+                        editModal.hide();
+                    } else {
+                        alert(data.message);
+                    }
+                } catch (error) {
+                    console.error('Lỗi khi cập nhật đánh giá:', error);
+                    alert('Đã xảy ra lỗi khi cập nhật đánh giá. Vui lòng thử lại sau.');
+                }
+            });
+        });
+
+        // Hàm cập nhật hiển thị sao
+        function updateStarRating(rating) {
+            $('#editReviewModal .rating-star').each(function() {
+                const starRating = parseInt($(this).data('rating'));
+                if (starRating <= rating) {
+                    $(this).addClass('active');
+                    $(this).find('i').attr('class', 'fas fa-star text-warning');
+                } else {
+                    $(this).removeClass('active');
+                    $(this).find('i').attr('class', 'far fa-star text-warning');
+                }
+            });
+        }
+
+        // Hàm cập nhật review card trong DOM
+        function updateReviewCard(reviewId, rating, comment) {
+            // Tìm card đánh giá tương ứng
+            const reviewCard = $(`.edit-review-btn[data-review-id="${reviewId}"]`).closest('.review-card');
+            
+            // Cập nhật số sao hiển thị
+            const starsContainer = reviewCard.find('.stars');
+            starsContainer.empty();
+            for (let i = 1; i <= 5; i++) {
+                const starClass = i <= rating ? 'fas fa-star' : 'far fa-star';
+                starsContainer.append(`<i class="${starClass}"></i>`);
+            }
+            
+            // Cập nhật nội dung nhận xét
+            reviewCard.find('.review-body > p').text(comment);
+            
+            // Cập nhật button data attributes để lần sau edit có dữ liệu mới
+            reviewCard.find('.edit-review-btn')
+                .data('rating', rating)
+                .attr('data-rating', rating)
+                .data('comment', comment)
+                .attr('data-comment', comment);
+        }
+    </script>
+
+</body>
+</html> 

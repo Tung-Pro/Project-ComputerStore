@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <link href="/admin/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/coupons">Mã khuyến mãi</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/coupons/edit/<%= coupon._id %>">Chỉnh sửa mã khuyến mãi</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Chỉnh sửa mã khuyến mãi</h4>
+                                
+                                <% if (error) { %>
+                                    <div class="alert alert-danger">
+                                        <%= error %>
+                                    </div>
+                                <% } %>
+                                
+                                <div class="basic-form mt-3">
+                                    <form action="/admin/coupons/edit/<%= coupon._id %>" method="POST">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>Mã khuyến mãi <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="code" placeholder="Ví dụ: SUMMER2023" required value="<%= coupon.code %>">
+                                                <small class="form-text text-muted">Mã khuyến mãi sẽ được chuyển thành chữ hoa tự động</small>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Mô tả <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="description" placeholder="Ví dụ: Giảm giá mùa hè 2023" required value="<%= coupon.description %>">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label>Loại giảm giá <span class="text-danger">*</span></label>
+                                                <select class="form-control" name="discountType" required>
+                                                    <option value="percentage" <%= coupon.discountType === 'percentage' ? 'selected' : '' %>>Theo phần trăm (%)</option>
+                                                    <option value="fixed" <%= coupon.discountType === 'fixed' ? 'selected' : '' %>>Số tiền cố định (VNĐ)</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>Giá trị giảm giá <span class="text-danger">*</span></label>
+                                                <input type="number" min="1" class="form-control" name="discountValue" required value="<%= coupon.discountValue %>">
+                                                <small class="form-text text-muted">Nếu là phần trăm, nhập từ 1-100. Nếu là số tiền cố định, nhập số tiền.</small>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>Đơn hàng tối thiểu</label>
+                                                <input type="number" min="0" class="form-control" name="minSpend" value="<%= coupon.minSpend %>">
+                                                <small class="form-text text-muted">Giá trị đơn hàng tối thiểu để áp dụng mã (0 = không giới hạn)</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label>Giảm giá tối đa</label>
+                                                <input type="number" min="0" class="form-control" name="maxDiscount" value="<%= coupon.maxDiscount %>">
+                                                <small class="form-text text-muted">Chỉ áp dụng cho giảm giá theo phần trăm (0 = không giới hạn)</small>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>Số lần sử dụng tối đa</label>
+                                                <input type="number" min="0" class="form-control" name="usageLimit" value="<%= coupon.usageLimit %>">
+                                                <small class="form-text text-muted">Giới hạn số lần sử dụng mã (0 = không giới hạn)</small>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>Đã sử dụng</label>
+                                                <input type="number" min="0" class="form-control" name="usedCount" value="<%= coupon.usedCount %>">
+                                                <small class="form-text text-muted">Số lần mã đã được sử dụng</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>Ngày bắt đầu <span class="text-danger">*</span></label>
+                                                <input type="date" class="form-control" name="startDate" required value="<%= new Date(coupon.startDate).toISOString().split('T')[0] %>">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Ngày kết thúc <span class="text-danger">*</span></label>
+                                                <input type="date" class="form-control" name="endDate" required value="<%= new Date(coupon.endDate).toISOString().split('T')[0] %>">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" name="isActive" id="isActive" <%= coupon.isActive ? 'checked' : '' %>>
+                                                    <label class="form-check-label" for="isActive">Kích hoạt</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <div class="col-sm-12 d-flex justify-content-end">
+                                                <a href="/admin/coupons" class="btn btn-secondary mr-2">Hủy bỏ</a>
+                                                <button type="submit" class="btn btn-primary">Cập nhật</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+    <!-- Date Picker -->
+    <script src="/admin/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    
+    <script>
+        // Ẩn/hiện các trường tùy thuộc vào loại giảm giá
+        $(document).ready(function() {
+            $('select[name="discountType"]').change(function() {
+                if ($(this).val() === 'percentage') {
+                    $('input[name="maxDiscount"]').closest('.form-group').show();
+                    $('input[name="discountValue"]').attr('max', 100);
+                } else {
+                    $('input[name="maxDiscount"]').closest('.form-group').hide();
+                    $('input[name="discountValue"]').removeAttr('max');
+                }
+            }).trigger('change');
+        });
+    </script>
+
+</body>
+
+</html> 

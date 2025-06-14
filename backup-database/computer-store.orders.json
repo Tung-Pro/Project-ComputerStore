@@ -1,0 +1,6435 @@
+[{
+  "_id": {
+    "$oid": "67f16f3bdf5e69fa916d91e3"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "67f16f3bdf5e69fa916d91e4"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f16f3bdf5e69fa916d91e5"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e93c361156102e0d0025a0"
+      },
+      "name": "MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 4060)",
+      "price": 24990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743338622555-520704080.png",
+      "_id": {
+        "$oid": "67f16f3bdf5e69fa916d91e6"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "hahadhaw",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Cống Vị",
+    "note": "adwawdw"
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "failed",
+  "totalPrice": 123949999,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 123949999,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-04-05T17:58:19.289Z"
+  },
+  "orderCode": "TP250406000001",
+  "__v": 0,
+  "trackingCode": "VN1234567890",
+  "adminNote": "khách không nhận hàng"
+},
+{
+  "_id": {
+    "$oid": "67f17168df5e69fa916d9297"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f17168df5e69fa916d9298"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "adw",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": "adw"
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 22999999,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 23029999,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-05T18:07:36.207Z"
+  },
+  "orderCode": "TP250406000002",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "67f173099848c35a9080123c"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f173099848c35a9080123d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Trúc Bạch",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "paid",
+  "totalPrice": 22999999,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 22999999,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "shipping",
+  "createdAt": {
+    "$date": "2025-04-05T18:14:33.845Z"
+  },
+  "orderCode": "TP250406000003",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "67f178947ee243c2b4a0639f"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f178947ee243c2b4a063a0"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "67f178947ee243c2b4a063a1"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "test",
+    "phone": "124314124",
+    "address": "đă",
+    "city": "Hồ Chí Minh",
+    "district": "Quận 1",
+    "ward": "Phường 3",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 34989999,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 35019999,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-05T18:38:12.921Z"
+  },
+  "orderCode": "TP250406000004",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f1a7bb3874744c44b35175"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f1a7bb3874744c44b35176"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "1312",
+    "address": "12313212323112312",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 22999999,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 23029999,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-05T21:59:23.536Z"
+  },
+  "orderCode": "TP250406000005",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f1a8a146f10f371ee687e8"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "67f1a8a146f10f371ee687e9"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "12123",
+    "address": "1231312",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Trúc Bạch",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "paid",
+  "totalPrice": 50970000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 51000000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-05T22:03:13.966Z"
+  },
+  "orderCode": "TP250406000006",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "67f1aafb3fa2a0f5fd4f4f91"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f1aafb3fa2a0f5fd4f4f92"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "9999999999",
+    "address": "37 Hoàng Văn Thụ",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "paid",
+  "totalPrice": 22999999,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 23029999,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-05T22:13:15.205Z"
+  },
+  "orderCode": "TP250406000007",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "67f1af7a8c0c011cc0ca4f9c"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 4,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "67f1af7a8c0c011cc0ca4f9d"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f1af7a8c0c011cc0ca4f9e"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "test-1",
+    "phone": "0989779909",
+    "address": "Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.",
+    "city": "Hà Nội",
+    "district": "Đống Đa",
+    "ward": "Phường 1",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 113959998,
+  "discountPrice": 56979999,
+  "shippingFee": 30000,
+  "finalPrice": 57009999,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "shipping",
+  "createdAt": {
+    "$date": "2025-04-05T22:32:26.366Z"
+  },
+  "orderCode": "TP250406000008",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "67f1b6a86e1cab8a4be339dd"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "67f1b6a86e1cab8a4be339de"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "paid",
+  "totalPrice": 16990000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 17020000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-05T23:03:04.924Z"
+  },
+  "orderCode": "TP250406000009",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "67f27280c88a867a2b22a414"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f27280c88a867a2b22a415"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 45999998,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 46029998,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-06T12:24:32.591Z"
+  },
+  "orderCode": "TP250406000010",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f27290c88a867a2b22a45c"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 4,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "67f27290c88a867a2b22a45d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Trúc Bạch",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 32000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 32030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-06T12:24:48.667Z"
+  },
+  "orderCode": "TP250406000011",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f35408acfed4dfb7fbe03b"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "67f35408acfed4dfb7fbe03c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f35408acfed4dfb7fbe03d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 76999997,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 76999997,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-07T04:26:48.859Z"
+  },
+  "orderCode": "TP250407000012",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f46c2083e071596964b823"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f46c2083e071596964b824"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Hoàn Kiếm",
+    "ward": "Phường 2",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 22999999,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 23029999,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-08T00:21:52.701Z"
+  },
+  "orderCode": "TP250408000013",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f848fe3c1c6733b3c4b254"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f848fe3c1c6733b3c4b255"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Vĩnh Phúc",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 45999998,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 46029998,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-10T22:41:02.643Z"
+  },
+  "orderCode": "TP250411000014",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f8968e3c1c6733b3c4ba88"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67f8968e3c1c6733b3c4ba89"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hồ Chí Minh",
+    "district": "Quận 2",
+    "ward": "Phường 2",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 22999999,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 23029999,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-11T04:11:58.493Z"
+  },
+  "orderCode": "TP250411000015",
+  "__v": 0,
+  "trackingCode": "3124114NDQV"
+},
+{
+  "_id": {
+    "$oid": "67faf91ae3e37581bd279a6a"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67faf91ae3e37581bd279a6b"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "67faf91ae3e37581bd279a6c"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "test-1",
+    "phone": "0989779909",
+    "address": "Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.",
+    "city": "Hà Nội",
+    "district": "Hoàn Kiếm",
+    "ward": "Phường 3",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 46999999,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47029999,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-12T23:36:58.250Z"
+  },
+  "orderCode": "TP250413000016",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67fcd1f5b69376a42a082114"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999999,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "67fcd1f5b69376a42a082115"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Hoàn Kiếm",
+    "ward": "Phường 3",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 45999998,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 46029998,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-14T09:14:29.524Z"
+  },
+  "orderCode": "TP250414000017",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6800b0d37aad05a72a45aa11"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "6800b0d37aad05a72a45aa12"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "6800b0d37aad05a72a45aa13"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 43970000,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 43970000,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-17T07:42:11.207Z"
+  },
+  "orderCode": "TP250417000018",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6800f7fb7aad05a72a45ac7b"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "6800f7fb7aad05a72a45ac7c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "6800f7fb7aad05a72a45ac7d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Ba Đình",
+    "ward": "Phúc Xá",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 43970000,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 43970000,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-17T12:45:47.599Z"
+  },
+  "orderCode": "TP250417000019",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6801efbd890a0fe13dbf8056"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "6801efbd890a0fe13dbf8057"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Hoàn Kiếm",
+    "ward": "Phường 2",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 16990000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 17020000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T06:22:53.772Z"
+  },
+  "orderCode": "TP250418000020",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6801f5906833a144d6adb368"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "6801f5906833a144d6adb369"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "test-1",
+    "phone": "0989779909",
+    "address": "Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.",
+    "city": "Hồ Chí Minh",
+    "district": "Quận 1",
+    "ward": "Phường 2"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "pending",
+  "totalPrice": 11990000,
+  "discountPrice": 0,
+  "shippingFee": 0,
+  "finalPrice": 12020000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T06:47:44.922Z"
+  },
+  "orderCode": "TP250418000026",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6801f67ec447d24fe888d6a3"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "6801f67ec447d24fe888d6a4"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "test-1",
+    "phone": "0989779909",
+    "address": "Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.",
+    "city": "Hà Nội",
+    "district": "Hoàn Kiếm",
+    "ward": "Phường 2"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "pending",
+  "totalPrice": 11990000,
+  "discountPrice": 0,
+  "shippingFee": 0,
+  "finalPrice": 12020000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T06:51:42.458Z"
+  },
+  "orderCode": "TP250418000027",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68020a90a89d78c3002eaadb"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "68020a90a89d78c3002eaadc"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "Hà Nội",
+    "district": "Hoàn Kiếm",
+    "ward": "Phường 2",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 16990000,
+  "discountPrice": 8495000,
+  "shippingFee": 30000,
+  "finalPrice": 8525000,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T08:17:20.952Z"
+  },
+  "orderCode": "TP250418000028",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68020efb2efcf33adf0699d9"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "68020efb2efcf33adf0699da"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "Số 1 Ngã Tư Sở, Thanh Xuân, Hà Nội",
+    "city": "02",
+    "district": "024",
+    "ward": "00700",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "paid",
+  "totalPrice": 16990000,
+  "discountPrice": 0,
+  "shippingFee": 50000,
+  "finalPrice": 17040000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T08:36:11.493Z"
+  },
+  "orderCode": "TP250418000029",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "6802106b2efcf33adf069b2d"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e93c361156102e0d0025a0"
+      },
+      "name": "MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 4060)",
+      "price": 24990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743338622555-520704080.png",
+      "_id": {
+        "$oid": "6802106b2efcf33adf069b2e"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "\"test địa chỉ cụ thể\"",
+    "city": "Tỉnh Lai Châu",
+    "district": "Huyện Mường Tè",
+    "ward": "Xã Ka Lăng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 49980000,
+  "discountPrice": 30000,
+  "shippingFee": 50000,
+  "finalPrice": 50030000,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-04-18T08:42:19.574Z"
+  },
+  "orderCode": "TP250418000030",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680213e62efcf33adf069e84"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e93c361156102e0d0025a0"
+      },
+      "name": "MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 4060)",
+      "price": 24990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743338622555-520704080.png",
+      "_id": {
+        "$oid": "680213e62efcf33adf069e85"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "680213e62efcf33adf069e86"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Thành Nam",
+    "phone": "0858879202",
+    "address": "2a 12",
+    "city": "Tỉnh Bến Tre",
+    "district": "Huyện Châu Thành",
+    "ward": "Xã Giao Long",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "failed",
+  "totalPrice": 72979996,
+  "discountPrice": 30000,
+  "shippingFee": 50000,
+  "finalPrice": 72999996,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-04-18T08:57:10.656Z"
+  },
+  "orderCode": "TP250418000031",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "68021fa29109c1dcd8cb3bb7"
+  },
+  "user": {
+    "$oid": "68021df09109c1dcd8cb3ab5"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "68021fa29109c1dcd8cb3bb8"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "68021fa29109c1dcd8cb3bb9"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Phi Long",
+    "phone": "0989776904",
+    "address": "2a 12x",
+    "city": "Tỉnh Hưng Yên",
+    "district": "Huyện Yên Mỹ",
+    "ward": "Xã Thanh Long",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 74950000,
+  "discountPrice": 0,
+  "shippingFee": 50000,
+  "finalPrice": 75000000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T09:47:14.687Z"
+  },
+  "orderCode": "TP250418000032",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680221adee3928a738d2374f"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "680221adee3928a738d23750"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e93c361156102e0d0025a0"
+      },
+      "name": "MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 4060)",
+      "price": 24990000,
+      "quantity": 5,
+      "image": "/uploads/products/product-1743338622555-520704080.png",
+      "_id": {
+        "$oid": "680221adee3928a738d23751"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Hai Bà Trưng",
+    "ward": "Phường Bách Khoa",
+    "note": "giao nhanh nhé"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 141940000,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 141940000,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T09:55:57.631Z"
+  },
+  "orderCode": "TP250418000033",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68022270ee3928a738d2379e"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "68022270ee3928a738d2379f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Tỉnh Bắc Kạn",
+    "district": "Huyện Chợ Mới",
+    "ward": "Xã Nông Hạ",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "paid",
+  "totalPrice": 8000000,
+  "discountPrice": 0,
+  "shippingFee": 50000,
+  "finalPrice": 8080000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-18T09:59:12.364Z"
+  },
+  "orderCode": "TP250418000034",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "6802260bed6f234d43567619"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "6802260bed6f234d4356761a"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e93c361156102e0d0025a0"
+      },
+      "name": "MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 4060)",
+      "price": 24990000,
+      "quantity": 4,
+      "image": "/uploads/products/product-1743338622555-520704080.png",
+      "_id": {
+        "$oid": "6802260bed6f234d4356761b"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Tỉnh Hà Giang",
+    "district": "Huyện Bắc Quang",
+    "ward": "Thị trấn Vĩnh Tuy",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 133940000,
+  "discountPrice": 66970000,
+  "shippingFee": 50000,
+  "finalPrice": 67050000,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-04-18T10:14:35.638Z"
+  },
+  "orderCode": "TP250418000035",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68023581c688ad63133fda9e"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 23900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "68023581c688ad63133fda9f"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "68023581c688ad63133fdaa0"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "99 Đường Tôn Thất Tùng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng Hậu",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 39900000,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 39900000,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T11:20:33.658Z"
+  },
+  "orderCode": "TP250418000036",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6802441abdc8da4feecc927c"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 23900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "6802441abdc8da4feecc927d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "99 Đường Tôn Thất Tùng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng Hậu",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 47800000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47830000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T12:22:50.202Z"
+  },
+  "orderCode": "TP250418000037",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68024719da4a101207fba3b6"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "68024719da4a101207fba3b7"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "SuperAdmin",
+    "phone": "0967812904",
+    "address": "99 Đường Tôn Thất Tùng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Hai Bà Trưng",
+    "ward": "Phường Minh Khai",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "paid",
+  "totalPrice": 16000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 16030000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-18T12:35:37.381Z"
+  },
+  "orderCode": "TP250418000038",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "68027986390629ff372b26e2"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "68027986390629ff372b26e3"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "68027986390629ff372b26e4"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Đường Tôn Thất Tùng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Hai Bà Trưng",
+    "ward": "Phường Minh Khai",
+    "note": "Giao nhanh nhanh giúp mình nhé"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 31980000,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 31980000,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-18T16:10:46.316Z"
+  },
+  "orderCode": "TP250418000039",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680317e7687df4087427cedf"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "680317e7687df4087427cee0"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 23900000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "680317e7687df4087427cee1"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Văn Quang",
+    "phone": "0989779909",
+    "address": "Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.",
+    "city": "Tỉnh Hà Nam",
+    "district": "Huyện Kim Bảng",
+    "ward": "Xã Thụy Lôi",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "paid",
+  "totalPrice": 83690000,
+  "discountPrice": 30000,
+  "shippingFee": 50000,
+  "finalPrice": 83760000,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-19T03:26:31.063Z"
+  },
+  "orderCode": "TP250419000040",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "68031c6d687df4087427d132"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "68031c6d687df4087427d133"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "68031c6d687df4087427d134"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Đường Tôn Thất Tùng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Hai Bà Trưng",
+    "ward": "Phường Minh Khai",
+    "note": "Giao nhanh giúp mình nhé"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 92979996,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 92979996,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-19T03:45:49.464Z"
+  },
+  "orderCode": "TP250419000041",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6803720b63d9702f0101d160"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 22999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "6803720b63d9702f0101d161"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6803720b63d9702f0101d162"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Thành Nam",
+    "phone": "0858879202",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Long Biên",
+    "ward": "Phường Ngọc Thụy",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 160999988,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 160999988,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-04-19T09:51:07.865Z"
+  },
+  "orderCode": "TP250419000042",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6803770063d9702f0101d4b6"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6803770063d9702f0101d4b7"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "6803770063d9702f0101d4b8"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Thành Nam",
+    "phone": "0858879202",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Long Biên",
+    "ward": "Phường Ngọc Thụy",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "paid",
+  "totalPrice": 92979996,
+  "discountPrice": 46489998,
+  "shippingFee": 30000,
+  "finalPrice": 46519998,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-04-19T10:12:16.318Z"
+  },
+  "orderCode": "TP250419000043",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "680377a063d9702f0101d611"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "680377a063d9702f0101d612"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "680377a063d9702f0101d613"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "Giao hàng buổi chiều giúp mình nhé!"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 92979996,
+  "discountPrice": 30000,
+  "shippingFee": 30000,
+  "finalPrice": 92979996,
+  "coupon": {
+    "$oid": "67e71c2df63d83dec984671a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-19T10:14:56.695Z"
+  },
+  "orderCode": "TP250419000044",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6804561805e2d4c46d3bbf76"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6804561805e2d4c46d3bbf77"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68033194805fb835a94096c9"
+      },
+      "name": "Bộ PC Gaming Intel Ultra 5 245K/RAM 32GB/VGA RTX 5070 12GB",
+      "price": 14990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745039764299-103135077.jpg",
+      "_id": {
+        "$oid": "6804561805e2d4c46d3bbf78"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 98979996,
+  "discountPrice": 49489998,
+  "shippingFee": 30000,
+  "finalPrice": 49519998,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-04-20T02:04:08.005Z"
+  },
+  "orderCode": "TP250420000045",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6805ae0fbd7b2686c00854f2"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6805ae0fbd7b2686c00854f3"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "6805ae0fbd7b2686c00854f4"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 104969996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 104999996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-21T02:31:43.020Z"
+  },
+  "orderCode": "TP250421000046",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68090854dceff261ec290213"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "68090854dceff261ec290214"
+      }
+    },
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "68090854dceff261ec290215"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 85790000,
+  "discountPrice": 42895000,
+  "shippingFee": 30000,
+  "finalPrice": 42925000,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-23T15:33:40.060Z"
+  },
+  "orderCode": "TP250423000047",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680ca9aaa52cb312303bf5f9"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68033099805fb835a9409653"
+      },
+      "name": "Bộ PC Gaming I5 12400F, RAM 16G, VGA RTX 4070 12G",
+      "price": 72000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745039513982-723842278.jpg",
+      "_id": {
+        "$oid": "680ca9aaa52cb312303bf5fa"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 72000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 72030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-26T09:38:50.653Z"
+  },
+  "orderCode": "TP250426000048",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680cb67dc142f8c4c141c109"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "680cb67dc142f8c4c141c10a"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "680cb67dc142f8c4c141c10b"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e93c361156102e0d0025a0"
+      },
+      "name": "MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 4060)",
+      "price": 24990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745039626370-101458243.jpg",
+      "_id": {
+        "$oid": "680cb67dc142f8c4c141c10c"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 155879996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 155909996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-26T10:33:33.407Z"
+  },
+  "orderCode": "TP250426000049",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680cf80a75d9e1803ebc4eaa"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "680cf80a75d9e1803ebc4eab"
+      }
+    },
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "680cf80a75d9e1803ebc4eac"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "680cf80a75d9e1803ebc4ead"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 129879996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 129909996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-26T15:13:14.643Z"
+  },
+  "orderCode": "TP250426000050",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d1a9075d9e1803ebc5793"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "680d1a9075d9e1803ebc5794"
+      }
+    },
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "680d1a9075d9e1803ebc5795"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68032fed805fb835a940960b"
+      },
+      "name": "Bộ PC đồ họa Core Ultra 9 285K, RAM 32G DDR5 RGB, VGA RTX 4070 Ti Super",
+      "price": 69000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745039341753-807016252.jpg",
+      "_id": {
+        "$oid": "680d1a9075d9e1803ebc5796"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 129880000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 129910000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-26T17:40:32.023Z"
+  },
+  "orderCode": "TP250427000051",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680ef4b6a5e4c70b571742a6"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "680ef4b6a5e4c70b571742a7"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 68999996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 69029996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-28T03:23:34.992Z"
+  },
+  "orderCode": "TP250428000052",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680f4198a5e4c70b57177ad7"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "6803284d805fb835a9408fab"
+      },
+      "name": "Lenovo ThinkStation P360 Ultra (i7 12700, T1000 8GB, 32GB, 512GB - Black - Mới, Full box, Nhập khẩu)",
+      "price": 121990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037389503-64721261.jpg",
+      "_id": {
+        "$oid": "680f4198a5e4c70b57177ad8"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "680f4198a5e4c70b57177ad9"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng Hậu",
+    "note": "test"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 381979992,
+  "discountPrice": 267385994,
+  "shippingFee": 30000,
+  "finalPrice": 114623997,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-28T08:51:36.335Z"
+  },
+  "orderCode": "TP250428000053",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680f9b7ea2cc285a269603c4"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "680f9b7ea2cc285a269603c5"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 3,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "680f9b7ea2cc285a269603c6"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn 2",
+    "phone": "09678129042",
+    "address": "99 Phố Dịch Vọng 2",
+    "city": "Thành phố Hà Nội",
+    "district": "Huyện Quốc Oai",
+    "ward": "Xã Đại Thành",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 218989988,
+  "discountPrice": 153292991,
+  "shippingFee": 30000,
+  "finalPrice": 65726996,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-04-28T15:15:10.854Z"
+  },
+  "orderCode": "TP250428000054",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681190d8e716dc8f1dff0eaa"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "681190d8e716dc8f1dff0eab"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "681190d8e716dc8f1dff0eac"
+      }
+    },
+    {
+      "product": {
+        "$oid": "6802861db6b5ecd35075253c"
+      },
+      "name": "ASUS VivoBook 15 M1502YA - R7 7730U, 16GB, 1TB, FHD - Mist Blue - Mới, Full box, Nhập khẩu",
+      "price": 31000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995869916-262189847.png",
+      "_id": {
+        "$oid": "681190d8e716dc8f1dff0ead"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68032fed805fb835a940960b"
+      },
+      "name": "Bộ PC đồ họa Core Ultra 9 285K, RAM 32G DDR5 RGB, VGA RTX 4070 Ti Super",
+      "price": 69000000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745039341753-807016252.jpg",
+      "_id": {
+        "$oid": "681190d8e716dc8f1dff0eae"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 291690000,
+  "discountPrice": 145845000,
+  "shippingFee": 30000,
+  "finalPrice": 145875000,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-30T02:54:16.269Z"
+  },
+  "orderCode": "TP250430000055",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6811bab4e716dc8f1dff1309"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e93c361156102e0d0025a0"
+      },
+      "name": "MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 4060)",
+      "price": 24990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745039626370-101458243.jpg",
+      "_id": {
+        "$oid": "6811bab4e716dc8f1dff130a"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 24990000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 25020000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-30T05:52:52.152Z"
+  },
+  "orderCode": "TP250430000056",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68123daee716dc8f1dff1dec"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "name": "PC GVN Intel i5-12400F/ VGA RX 7600",
+      "price": 16990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743338370837-698969434.png",
+      "_id": {
+        "$oid": "68123daee716dc8f1dff1ded"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "68123daee716dc8f1dff1dee"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e744dd9065e8fe13501768"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 8 - i5 10310U, 16GB, 256GB, FHD+ - Đen - Used, Nhập khẩu",
+      "price": 8000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743209693513-340986495.png",
+      "_id": {
+        "$oid": "68123daee716dc8f1dff1def"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 127969996,
+  "discountPrice": 63984998,
+  "shippingFee": 30000,
+  "finalPrice": 64014998,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-04-30T15:11:42.541Z"
+  },
+  "orderCode": "TP250430000057",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812f15d06477ca7c29c5a8b"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 4,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "6812f15d06477ca7c29c5a8c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6812f15d06477ca7c29c5a8d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Hà Đông",
+    "ward": "Phường Kiến Hưng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 216599996,
+  "discountPrice": 108299998,
+  "shippingFee": 30000,
+  "finalPrice": 108329998,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T03:58:21.709Z"
+  },
+  "orderCode": "TP250501000058",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812f37a06477ca7c29c5d1d"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "6812f37a06477ca7c29c5d1e"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 3,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6812f37a06477ca7c29c5d1f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 280799988,
+  "discountPrice": 196559991,
+  "shippingFee": 30000,
+  "finalPrice": 84269996,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T04:07:22.586Z"
+  },
+  "orderCode": "TP250501000059",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6812f4f5bbb9e94fbfd10610"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "6812f4f5bbb9e94fbfd10611"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 23900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "6812f4f5bbb9e94fbfd10612"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Thành Nam",
+    "phone": "0858879202",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Long Biên",
+    "ward": "Phường Ngọc Thụy",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 121600000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 121630000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T04:13:41.257Z"
+  },
+  "orderCode": "TP250501000060",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681394e390ec718c7779cc6a"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "681394e390ec718c7779cc6b"
+      }
+    },
+    {
+      "product": {
+        "$oid": "6803284d805fb835a9408fab"
+      },
+      "name": "Lenovo ThinkStation P360 Ultra (i7 12700, T1000 8GB, 32GB, 512GB - Black - Mới, Full box, Nhập khẩu)",
+      "price": 121990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1745037389503-64721261.jpg",
+      "_id": {
+        "$oid": "681394e390ec718c7779cc6c"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 503969992,
+  "discountPrice": 352778994,
+  "shippingFee": 30000,
+  "finalPrice": 151220997,
+  "coupon": {
+    "$oid": "6812f626bbb9e94fbfd1084f"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-01T15:36:03.362Z"
+  },
+  "orderCode": "TP250501000061",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6814d9c39f655cbe3c2765f1"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6814d9c39f655cbe3c2765f2"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "pending",
+  "totalPrice": 68999996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 69029996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-02T14:42:11.578Z"
+  },
+  "orderCode": "TP250502000062",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6814da159b8e277517ae8415"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6814da159b8e277517ae8416"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "pending",
+  "totalPrice": 68999996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 69029996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-02T14:43:33.753Z"
+  },
+  "orderCode": "TP250502000063",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6814da73e3d8c75b91980a6a"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6814da73e3d8c75b91980a6b"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "pending",
+  "totalPrice": 68999996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 69029996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-02T14:45:07.121Z"
+  },
+  "orderCode": "TP250502000064",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6814db10dd497ea407f283bf"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 3,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6814db10dd497ea407f283c0"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 206999988,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 207029988,
+  "coupon": null,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-05-02T14:47:44.050Z"
+  },
+  "orderCode": "TP250502000065",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6814dbffce1ffb4455ddb994"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 3,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6814dbffce1ffb4455ddb995"
+      }
+    },
+    {
+      "product": {
+        "$oid": "680252529fedc721b4a10e98"
+      },
+      "name": "Acer Zenbook 14 OLED Q415 - Ultra 5 125H, 8GB, 512GB, FHD+ OLED Touch - Xám (Carbon Gray) - Mới, Sealed, Nhập khẩu",
+      "price": 14000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744982610428-946194177.png",
+      "_id": {
+        "$oid": "6814dbffce1ffb4455ddb996"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "Giao nhanh giúp mình nhé"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "paid",
+  "totalPrice": 220999988,
+  "discountPrice": 110499994,
+  "shippingFee": 30000,
+  "finalPrice": 110529994,
+  "coupon": {
+    "$oid": "67e864225b761d4e7563e34e"
+  },
+  "status": "shipping",
+  "createdAt": {
+    "$date": "2025-05-02T14:51:43.890Z"
+  },
+  "orderCode": "TP250502000066",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "6818de54ef713936b9bf15b0"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "6818de54ef713936b9bf15b1"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6818de54ef713936b9bf15b2"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 211799992,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 211829992,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-05T15:50:44.719Z"
+  },
+  "orderCode": "TP250505000062",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6818df0e1dbe15f6c98c0856"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6818df0e1dbe15f6c98c0857"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 68999996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 69029996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-05T15:53:50.774Z"
+  },
+  "orderCode": "TP250505000063",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6818e1c9d9dae7e4f1d6914d"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6818e1c9d9dae7e4f1d6914e"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 137999992,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 138029992,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-05T16:05:29.348Z"
+  },
+  "orderCode": "TP250505000064",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6818e2f9e7b6a915df090bd0"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6818e2f9e7b6a915df090bd1"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 68999996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 69029996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-05T16:10:33.166Z"
+  },
+  "orderCode": "TP250505000065",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6818e30ce7b6a915df090c0b"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6818e30ce7b6a915df090c0c"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 68999996,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 69029996,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-05T16:10:52.365Z"
+  },
+  "orderCode": "TP250505000066",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6818e3ede7b6a915df090cc2"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "6818e3ede7b6a915df090cc3"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 110700000,
+  "discountPrice": 77490000,
+  "shippingFee": 30000,
+  "finalPrice": 33240000,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-05T16:14:37.106Z"
+  },
+  "orderCode": "TP250505000067",
+  "__v": 0,
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "6818e5f3e7b6a915df090d8f"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68189e7fc7bb52222494ec38"
+      },
+      "name": "Dell Inspiron 14 Plus 7440 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 37990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746443903484-841855879.jpg",
+      "_id": {
+        "$oid": "6818e5f3e7b6a915df090d90"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "6818e5f3e7b6a915df090d91"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 49980000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 50010000,
+  "coupon": null,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-05-05T16:23:15.091Z"
+  },
+  "orderCode": "TP250505000068",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6818edcce7b6a915df090f11"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "6818edcce7b6a915df090f12"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "Giao nhanh giúp mình nhé"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 137999992,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 138029992,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-05T16:56:44.379Z"
+  },
+  "orderCode": "TP250505000069",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682ddd836ead5c99e56af0f7"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682ddd836ead5c99e56af0f8"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 141000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 141030000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T14:04:51.752Z"
+  },
+  "orderCode": "TP250521000070",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682dddac6ead5c99e56af138"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68189e7fc7bb52222494ec38"
+      },
+      "name": "Dell Inspiron 14 Plus 7440 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 37990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746443903484-841855879.jpg",
+      "_id": {
+        "$oid": "682dddac6ead5c99e56af139"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 37990000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 38020000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T14:05:32.877Z"
+  },
+  "orderCode": "TP250521000071",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682ddf0c6fd13daaa42fe016"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682ddf0c6fd13daaa42fe017"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-05-21T14:11:24.720Z"
+  },
+  "orderCode": "TP250521000072",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682ddf326fd13daaa42fe0dc"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682ddf326fd13daaa42fe0dd"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Admin",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 36900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": null,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-05-21T14:12:02.126Z"
+  },
+  "orderCode": "TP250521000073",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682ddf856fd13daaa42fe185"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682ddf856fd13daaa42fe186"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682ddf856fd13daaa42fe187"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Admin",
+    "phone": "0967812904",
+    "address": "99 Phố Dịch Vọng",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 76900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 76930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:13:25.476Z"
+  },
+  "orderCode": "TP250521000074",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de0e639c0a4787a7ba70d"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682de0e639c0a4787a7ba70e"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682de0e639c0a4787a7ba70f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "Giao nhanh giúp mình nhé mình cảm ơn ạ"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 76900000,
+  "discountPrice": 53830000,
+  "shippingFee": 30000,
+  "finalPrice": 23100000,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T14:19:18.739Z"
+  },
+  "orderCode": "TP250521000075",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682de14239c0a4787a7ba772"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682de14239c0a4787a7ba773"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 29900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 29930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:20:50.752Z"
+  },
+  "orderCode": "TP250521000076",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de28f0337eeb956df3103"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682de28f0337eeb956df3104"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:26:23.514Z"
+  },
+  "orderCode": "TP250521000077",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de4240337eeb956df37ae"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 23900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "682de4240337eeb956df37af"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682de4240337eeb956df37b0"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "Giao nhanh giúp mình nhé bro"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 94800000,
+  "discountPrice": 47400000,
+  "shippingFee": 30000,
+  "finalPrice": 47430000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T14:33:09.000Z"
+  },
+  "orderCode": "TP250521000078",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682de4250337eeb956df37c0"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 23900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "682de4250337eeb956df37c1"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682de4250337eeb956df37c2"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "Giao nhanh giúp mình nhé bro"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 94800000,
+  "discountPrice": 47400000,
+  "shippingFee": 30000,
+  "finalPrice": 47430000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:33:09.866Z"
+  },
+  "orderCode": "TP250521000079",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de4e9b76c980cea6b2644"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682de4e9b76c980cea6b2645"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 36900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:36:25.949Z"
+  },
+  "orderCode": "TP250521000080",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de4f8b76c980cea6b267f"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682de4f8b76c980cea6b2680"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "Giao nhanh giúp mình nhé"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:36:40.941Z"
+  },
+  "orderCode": "TP250521000081",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de5a1b76c980cea6b2f7e"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682de5a1b76c980cea6b2f7f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:39:29.019Z"
+  },
+  "orderCode": "TP250521000082",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de74de9bbeff52818df3e"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682de74de9bbeff52818df3f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 29900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 29930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:46:37.719Z"
+  },
+  "orderCode": "TP250521000084",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de83a6881ad28be17a42a"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682de83a6881ad28be17a42b"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:50:34.737Z"
+  },
+  "orderCode": "TP250521000085",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682de9a96881ad28be17a5bd"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682de9a96881ad28be17a5be"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 29900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 29930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T14:56:41.403Z"
+  },
+  "orderCode": "TP250521000086",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682deed5d6449cc46f3fd405"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682deed5d6449cc46f3fd406"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682deed5d6449cc46f3fd407"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "hehe!"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 76900000,
+  "discountPrice": 38450000,
+  "shippingFee": 30000,
+  "finalPrice": 38480000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T15:18:45.895Z"
+  },
+  "orderCode": "TP250521725898384",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682defe0c11be429573cf53b"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e71672078a5723fcd895be"
+      },
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11 - i7 1355U, 16GB, 512GB, FHD+ Touch - Black - Outlet, Nhập khẩu",
+      "price": 23900000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743197810187-929428334.jpg",
+      "_id": {
+        "$oid": "682defe0c11be429573cf53c"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Thành Nam",
+    "phone": "0858879202",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Long Biên",
+    "ward": "Phường Ngọc Thụy",
+    "note": "hehe"
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "paid",
+  "totalPrice": 71700000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 71730000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T15:23:12.737Z"
+  },
+  "orderCode": "TP250521992739746",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682dfb22e2456d07d3412cdf"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682dfb22e2456d07d3412ce0"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 36900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T16:11:14.247Z"
+  },
+  "orderCode": "TP250521874249130",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682dfbcfe6c513d004bb4dfd"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682dfbcfe6c513d004bb4dfe"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68189e7fc7bb52222494ec38"
+      },
+      "name": "Dell Inspiron 14 Plus 7440 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 37990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746443903484-841855879.jpg",
+      "_id": {
+        "$oid": "682dfbcfe6c513d004bb4dff"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "hehe"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 105880000,
+  "discountPrice": 52940000,
+  "shippingFee": 30000,
+  "finalPrice": 52970000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T16:14:07.242Z"
+  },
+  "orderCode": "TP250521047243861",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682dfc9ae6c513d004bb4eab"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682dfc9ae6c513d004bb4eac"
+      }
+    },
+    {
+      "product": {
+        "$oid": "6803284d805fb835a9408fab"
+      },
+      "name": "Lenovo ThinkStation P360 Ultra (i7 12700, T1000 8GB, 32GB, 512GB - Black - Mới, Full box, Nhập khẩu)",
+      "price": 121990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037389503-64721261.jpg",
+      "_id": {
+        "$oid": "682dfc9ae6c513d004bb4ead"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "paid",
+  "totalPrice": 168990000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 169020000,
+  "coupon": null,
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T16:17:30.701Z"
+  },
+  "orderCode": "TP250521250702202",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682dfcfae6c513d004bb52cb"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682dfcfae6c513d004bb52cc"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T16:19:06.506Z"
+  },
+  "orderCode": "TP250521346508348",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682dfd0fe6c513d004bb531c"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682dfd0fe6c513d004bb531d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 36900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": null,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-05-21T16:19:27.430Z"
+  },
+  "orderCode": "TP250521367431192",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e01a0e6c513d004bb5797"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682e01a0e6c513d004bb5798"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "hehe"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 73800000,
+  "discountPrice": 36900000,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T16:38:56.784Z"
+  },
+  "orderCode": "TP250521536784023",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682e0a71e6c513d004bb6e97"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682e0a71e6c513d004bb6e98"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "heheeeee"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 36900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T17:16:33.235Z"
+  },
+  "orderCode": "TP250522793236168",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e0d27ca6fc1ea9399f62b"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68186d54d565256de9cfa30a"
+      },
+      "name": "Acer Predator Triton Neo 16 PTN16-51-78JQ - Ultra 7 155H, RTX 4060 8GB, 32GB, 2TB, WQXGA 240Hz - Sparkly Silver - Mới, Full box, Chính hãng",
+      "price": 27990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746431316793-243344570.jpg",
+      "_id": {
+        "$oid": "682e0d27ca6fc1ea9399f62c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682e0d27ca6fc1ea9399f62d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 87790000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 87820000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T17:28:07.468Z"
+  },
+  "orderCode": "TP250522487471960",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e0d7db086de78daf35c81"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682e0d7db086de78daf35c82"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-05-21T17:29:33.401Z"
+  },
+  "orderCode": "TP250522573402266",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e197d1c99419cb7ccfbd0"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682e197d1c99419cb7ccfbd1"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682e197d1c99419cb7ccfbd2"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68189e7fc7bb52222494ec38"
+      },
+      "name": "Dell Inspiron 14 Plus 7440 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 37990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746443903484-841855879.jpg",
+      "_id": {
+        "$oid": "682e197d1c99419cb7ccfbd3"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 229780000,
+  "discountPrice": 114890000,
+  "shippingFee": 30000,
+  "finalPrice": 114920000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T18:20:45.675Z"
+  },
+  "orderCode": "TP250522645676718",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e1b3155936222d7d50647"
+  },
+  "user": {
+    "$oid": "680212c02efcf33adf069c82"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "682e1b3155936222d7d50648"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Thành Nam",
+    "phone": "0858879202",
+    "address": "2a 12 Đầm Trấu",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Long Biên",
+    "ward": "Phường Ngọc Thụy",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 11990000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 12020000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T18:28:01.251Z"
+  },
+  "orderCode": "TP250522081252010",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e27f2cceacfabfdc1f49c"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682e27f2cceacfabfdc1f49d"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682e27f2cceacfabfdc1f49e"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681c3d62b799703102010a7d"
+      },
+      "name": "MacBook Pro 14 M4 Pro 2024 12CPU/16GPU/24GB/512GB",
+      "price": 46990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746681186558-534494469.jpg",
+      "_id": {
+        "$oid": "682e27f2cceacfabfdc1f49f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "hehêhêhheheheheheheheheh"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 230690000,
+  "discountPrice": 115345000,
+  "shippingFee": 30000,
+  "finalPrice": 115375000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-21T19:22:26.452Z"
+  },
+  "orderCode": "TP250522346453905",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682e29f349a4e6ff840ae6e3"
+  },
+  "user": {
+    "$oid": "681306aa262616e80ada2d24"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 10,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "682e29f349a4e6ff840ae6e4"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Nguyễn Văn Quang",
+    "phone": "0985465904",
+    "address": "69 Đê Châu Xá",
+    "city": "Tỉnh Hưng Yên",
+    "district": "Huyện Yên Mỹ",
+    "ward": "Xã Thanh Long",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 119900000,
+  "discountPrice": 0,
+  "shippingFee": 50000,
+  "finalPrice": 119950000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-21T19:30:59.780Z"
+  },
+  "orderCode": "TP250522859781922",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e8c499c7c00bd3e2b37fa"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68189e7fc7bb52222494ec38"
+      },
+      "name": "Dell Inspiron 14 Plus 7440 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 37990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1746443903484-841855879.jpg",
+      "_id": {
+        "$oid": "682e8c499c7c00bd3e2b37fb"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681c3d62b799703102010a7d"
+      },
+      "name": "MacBook Pro 14 M4 Pro 2024 12CPU/16GPU/24GB/512GB",
+      "price": 46990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746681186558-534494469.jpg",
+      "_id": {
+        "$oid": "682e8c499c7c00bd3e2b37fc"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681872fed565256de9cfa5a3"
+      },
+      "name": "ASUS ROG x EVANGELION Edition (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 89000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746432947059-503891999.png",
+      "_id": {
+        "$oid": "682e8c499c7c00bd3e2b37fd"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "hehe"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 296950000,
+  "discountPrice": 207865000,
+  "shippingFee": 30000,
+  "finalPrice": 89115000,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T02:30:33.062Z"
+  },
+  "orderCode": "TP250522033067772",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e8cc9b97b468783f26867"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682e8cc9b97b468783f26868"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "banking",
+  "paymentStatus": "pending",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T02:32:41.424Z"
+  },
+  "orderCode": "TP250522161426899",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e8cefb97b468783f268e2"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "682e8cefb97b468783f268e3"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68186d54d565256de9cfa30a"
+      },
+      "name": "Acer Predator Triton Neo 16 PTN16-51-78JQ - Ultra 7 155H, RTX 4060 8GB, 32GB, 2TB, WQXGA 240Hz - Sparkly Silver - Mới, Full box, Chính hãng",
+      "price": 27990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746431316793-243344570.jpg",
+      "_id": {
+        "$oid": "682e8cefb97b468783f268e4"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 124979996,
+  "discountPrice": 62489998,
+  "shippingFee": 30000,
+  "finalPrice": 62519998,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T02:33:19.602Z"
+  },
+  "orderCode": "TP250522199603594",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e8d4dc47f1ea938327ab5"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682e8d4dc47f1ea938327ab6"
+      }
+    },
+    {
+      "product": {
+        "$oid": "680253b1ff0433610473463b"
+      },
+      "name": "OLED Q415 - Ultra 5 125H, 8GB, 512GB, FHD+ OLED Touch - Xám (Carbon Gray) - Mới, Sealed, Nhập khẩu",
+      "price": 1298997,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744982961153-463316765.png",
+      "_id": {
+        "$oid": "682e8d4dc47f1ea938327ab7"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 39497994,
+  "discountPrice": 19748997,
+  "shippingFee": 30000,
+  "finalPrice": 19778997,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T02:34:53.741Z"
+  },
+  "orderCode": "TP250522293743089",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e8d83c47f1ea938327b3d"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682e8d83c47f1ea938327b3e"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682e8d83c47f1ea938327b3f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 66800000,
+  "discountPrice": 33400000,
+  "shippingFee": 30000,
+  "finalPrice": 33430000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T02:35:47.031Z"
+  },
+  "orderCode": "TP250522347032277",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e8da3c47f1ea938327be7"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681f6db1c87c51bef8bfbbcf"
+      },
+      "name": "Dell XPS 16 9640 - Core Ultra 7, RTX 4050 6GB, 16GB, 1TB, FHD+ - Twilight Silver - Outlet, Nhập khẩu",
+      "price": 79000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746890161200-281243304.png",
+      "_id": {
+        "$oid": "682e8da3c47f1ea938327be8"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68032fed805fb835a940960b"
+      },
+      "name": "Bộ PC đồ họa Core Ultra 9 285K, RAM 32G DDR5 RGB, VGA RTX 4070 Ti Super",
+      "price": 69000000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745039341753-807016252.jpg",
+      "_id": {
+        "$oid": "682e8da3c47f1ea938327be9"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 217000000,
+  "discountPrice": 108500000,
+  "shippingFee": 30000,
+  "finalPrice": 108530000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T02:36:19.168Z"
+  },
+  "orderCode": "TP250522379169157",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682e939e3b69d8a61f081263"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "682e939e3b69d8a61f081264"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68186d54d565256de9cfa30a"
+      },
+      "name": "Acer Predator Triton Neo 16 PTN16-51-78JQ - Ultra 7 155H, RTX 4060 8GB, 32GB, 2TB, WQXGA 240Hz - Sparkly Silver - Mới, Full box, Chính hãng",
+      "price": 27990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746431316793-243344570.jpg",
+      "_id": {
+        "$oid": "682e939e3b69d8a61f081265"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "hehe"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 51970000,
+  "discountPrice": 25985000,
+  "shippingFee": 30000,
+  "finalPrice": 26015000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T03:01:50.658Z"
+  },
+  "orderCode": "TP250522910660616",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682ea34ceb1236ddf1147b4b"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 7,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682ea34ceb1236ddf1147b4c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "682ea34ceb1236ddf1147b4d"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "heeeeeeeeeeeeeeeeeheeeeeeeeeeee"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 294270000,
+  "discountPrice": 147135000,
+  "shippingFee": 30000,
+  "finalPrice": 147165000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T04:08:44.898Z"
+  },
+  "orderCode": "TP250522924899512",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682ec66900aded37384d2db9"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682ec66900aded37384d2dba"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681874dbd565256de9cfa6b9"
+      },
+      "name": "PC Gaming STAR GIGABYTE Recy | Intel I3 12100F/ RTX 3050 6G/ H610/ RAM 16GB/ SSD 512GB",
+      "price": 2790000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746433243737-119889663.jpg",
+      "_id": {
+        "$oid": "682ec66900aded37384d2dbb"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 143790000,
+  "discountPrice": 71895000,
+  "shippingFee": 30000,
+  "finalPrice": 71925000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T06:38:33.571Z"
+  },
+  "orderCode": "TP250522913574412",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682ecce83fd76c69186affc8"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682ecce83fd76c69186affc9"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 36900000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T07:06:16.446Z"
+  },
+  "orderCode": "TP250522576450895",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682ef53ae231a58506f8459a"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682ef53ae231a58506f8459b"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682ef53ae231a58506f8459c"
+      }
+    },
+    {
+      "product": {
+        "$oid": "6802538aff04336104734620"
+      },
+      "name": "Vivo Zenbook 14 OLED Q415 - Ultra 5 125H, 8GB, 512GB, FHD+ OLED Touch - Xám (Carbon Gray) - Mới, Sealed, Nhập khẩu",
+      "price": 17990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745902023376-923980141.jpg",
+      "_id": {
+        "$oid": "682ef53ae231a58506f8459d"
+      }
+    },
+    {
+      "product": {
+        "$oid": "6802523d9fedc721b4a10e83"
+      },
+      "name": "Dell XPS 14 9440 - Core Ultra 7 155H, 16GB, 512GB, FHD+ - Twilight Silver - Mới, Sealed, Nhập khẩu",
+      "price": 17000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744982589806-51917833.png",
+      "_id": {
+        "$oid": "682ef53ae231a58506f8459e"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "đơn hàng giá trị cao giao cẩn thận nhé"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 138690000,
+  "discountPrice": 97083000,
+  "shippingFee": 30000,
+  "finalPrice": 41637000,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T09:58:18.637Z"
+  },
+  "orderCode": "TP250522898638272",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682f38dee231a58506f85006"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 2,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "682f38dee231a58506f85007"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681f6db1c87c51bef8bfbbcf"
+      },
+      "name": "Dell XPS 16 9640 - Core Ultra 7, RTX 4050 6GB, 16GB, 1TB, FHD+ - Twilight Silver - Outlet, Nhập khẩu",
+      "price": 79000000,
+      "quantity": 4,
+      "image": "/uploads/products/product-1746890161200-281243304.png",
+      "_id": {
+        "$oid": "682f38dee231a58506f85008"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 453999992,
+  "discountPrice": 226999996,
+  "shippingFee": 30000,
+  "finalPrice": 227029996,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T14:46:54.971Z"
+  },
+  "orderCode": "TP250522214972469",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682f391be231a58506f85052"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682f391be231a58506f85053"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 47000000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 47030000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T14:47:55.123Z"
+  },
+  "orderCode": "TP250522275123590",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682f3957e231a58506f850ac"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682f3957e231a58506f850ad"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 47000000,
+  "discountPrice": 23500000,
+  "shippingFee": 30000,
+  "finalPrice": 23530000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "delivered",
+  "createdAt": {
+    "$date": "2025-05-22T14:48:55.826Z"
+  },
+  "orderCode": "TP250522335827642",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682f3ebde231a58506f8589d"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682f3ebde231a58506f8589e"
+      }
+    },
+    {
+      "product": {
+        "$oid": "680253b1ff0433610473463b"
+      },
+      "name": "OLED Q415 - Ultra 5 125H, 8GB, 512GB, FHD+ OLED Touch - Xám (Carbon Gray) - Mới, Sealed, Nhập khẩu",
+      "price": 1298997,
+      "quantity": 1,
+      "image": "/uploads/products/product-1744982961153-463316765.png",
+      "_id": {
+        "$oid": "682f3ebde231a58506f8589f"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 75098997,
+  "discountPrice": 52569297,
+  "shippingFee": 30000,
+  "finalPrice": 22559699,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T15:11:57.461Z"
+  },
+  "orderCode": "TP250522717462966",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682f580fdb2af91253992ac9"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681f6db1c87c51bef8bfbbcf"
+      },
+      "name": "Dell XPS 16 9640 - Core Ultra 7, RTX 4050 6GB, 16GB, 1TB, FHD+ - Twilight Silver - Outlet, Nhập khẩu",
+      "price": 79000000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1746890161200-281243304.png",
+      "_id": {
+        "$oid": "682f580fdb2af91253992aca"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 4,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "682f580fdb2af91253992acb"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 284960000,
+  "discountPrice": 142480000,
+  "shippingFee": 30000,
+  "finalPrice": 142510000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "shipping",
+  "createdAt": {
+    "$date": "2025-05-22T16:59:59.765Z"
+  },
+  "orderCode": "TP250522199767958",
+  "__v": 0,
+  "adminNote": "",
+  "trackingCode": ""
+},
+{
+  "_id": {
+    "$oid": "682f5a657b37cf79e27a59ea"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682f5a657b37cf79e27a59eb"
+      }
+    },
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "name": "Lenovo Yoga 7 2 in 1 14AHP9 - R7 8840HS, 16GB, 1TB, FHD+ Touch - Artic Grey - Outlet, Nhập khẩu",
+      "price": 11990000,
+      "quantity": 6,
+      "image": "/uploads/products/product-1743210001386-81240499.png",
+      "_id": {
+        "$oid": "682f5a657b37cf79e27a59ec"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 165940000,
+  "discountPrice": 82970000,
+  "shippingFee": 30000,
+  "finalPrice": 83000000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T17:09:57.984Z"
+  },
+  "orderCode": "TP250523797985935",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682f5c37c2f381177778b062"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68028651b6b5ecd35075255f"
+      },
+      "name": "Dell Inspiron 14 7445 2 in 1 - R5 8640HS, 8GB, 512GB, FHD+ Touch - Midnight Blue - Mới, Sealed, Nhập khẩu",
+      "price": 68999996,
+      "quantity": 7,
+      "image": "/uploads/products/product-1744995921622-590782551.jpg",
+      "_id": {
+        "$oid": "682f5c37c2f381177778b063"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 482999972,
+  "discountPrice": 241499986,
+  "shippingFee": 30000,
+  "finalPrice": 241529986,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T17:17:43.153Z"
+  },
+  "orderCode": "TP250523263156778",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682f5e4dc2f381177778b5da"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68196845a5c7a8a3437163cc"
+      },
+      "name": "Dell Inspiron 16 Plus 7640 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 29900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746498195138-435753503.png",
+      "_id": {
+        "$oid": "682f5e4dc2f381177778b5db"
+      }
+    },
+    {
+      "product": {
+        "$oid": "68189e7fc7bb52222494ec38"
+      },
+      "name": "Dell Inspiron 14 Plus 7440 - i5 12450H, 16GB, 512GB, FHD+ - Ice Blue - Mới, Sealed, Nhập khẩu",
+      "price": 37990000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1746443903484-841855879.jpg",
+      "_id": {
+        "$oid": "682f5e4dc2f381177778b5dc"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681c3d62b799703102010a7d"
+      },
+      "name": "MacBook Pro 14 M4 Pro 2024 12CPU/16GPU/24GB/512GB",
+      "price": 46990000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1746681186558-534494469.jpg",
+      "_id": {
+        "$oid": "682f5e4dc2f381177778b5dd"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": "heheheheheheheheh"
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 246850000,
+  "discountPrice": 123425000,
+  "shippingFee": 30000,
+  "finalPrice": 123455000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-22T17:26:37.568Z"
+  },
+  "orderCode": "TP250523797569353",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682fbaa50643b6a994642750"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 2,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682fbaa50643b6a994642751"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 73800000,
+  "discountPrice": 36900000,
+  "shippingFee": 30000,
+  "finalPrice": 36930000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-23T00:00:37.900Z"
+  },
+  "orderCode": "TP250523437904909",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682fbb850643b6a9946427e0"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "6803284d805fb835a9408fab"
+      },
+      "name": "Lenovo ThinkStation P360 Ultra (i7 12700, T1000 8GB, 32GB, 512GB - Black - Mới, Full box, Nhập khẩu)",
+      "price": 121990000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037389503-64721261.jpg",
+      "_id": {
+        "$oid": "682fbb850643b6a9946427e1"
+      }
+    },
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "name": "ASUS Blackwell (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by ASUS)",
+      "price": 47000000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1746688036147-832737526.png",
+      "_id": {
+        "$oid": "682fbb850643b6a9946427e2"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "cod",
+  "paymentStatus": "pending",
+  "totalPrice": 168990000,
+  "discountPrice": 84495000,
+  "shippingFee": 30000,
+  "finalPrice": 84525000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-23T00:04:21.337Z"
+  },
+  "orderCode": "TP250523661341909",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682fcf274a1304a38a90760b"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 3,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682fcf274a1304a38a90760c"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "failed",
+  "totalPrice": 110700000,
+  "discountPrice": 0,
+  "shippingFee": 30000,
+  "finalPrice": 110730000,
+  "coupon": null,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-23T01:28:07.735Z"
+  },
+  "orderCode": "TP250523687737784",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682fe4274a1304a38a90776f"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "name": "Dell XPS 15 9530 2023 - i7 13620H, A370M 4GB, 32GB, 1TB, FHD+ - Plantium Silver - Mới, Full box, Nhập khẩu",
+      "price": 36900000,
+      "quantity": 1,
+      "image": "/uploads/products/product-1745037035413-797926493.jpg",
+      "_id": {
+        "$oid": "682fe4274a1304a38a907770"
+      }
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Tùng Nguyễn",
+    "phone": "0967812904",
+    "address": "69 Đường Cầu Giấy",
+    "city": "Thành phố Hà Nội",
+    "district": "Quận Cầu Giấy",
+    "ward": "Phường Dịch Vọng",
+    "note": ""
+  },
+  "paymentMethod": "vnpay",
+  "paymentStatus": "paid",
+  "totalPrice": 36900000,
+  "discountPrice": 18450000,
+  "shippingFee": 30000,
+  "finalPrice": 18480000,
+  "coupon": {
+    "$oid": "6820c021251661f2b7008281"
+  },
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-05-23T02:57:43.059Z"
+  },
+  "orderCode": "TP250523063060686",
+  "__v": 0
+}]

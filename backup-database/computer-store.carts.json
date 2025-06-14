@@ -1,0 +1,665 @@
+[{
+  "_id": {
+    "$oid": "67e922dc20ddf9093716bd09"
+  },
+  "user": null,
+  "sessionId": "b-E4absqs6TSpC0pIW5XfRYAD6vUy3_v",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:20.758Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:20.758Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922de20ddf9093716bd14"
+  },
+  "user": null,
+  "sessionId": "DuhVF3Jmss336fREaH_9TAxcW_S8u7c0",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:22.118Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:22.118Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922df20ddf9093716bd19"
+  },
+  "user": null,
+  "sessionId": "pHj61XG7cPp-RnCFZKHCq-E4hGsLH2Y-",
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "quantity": 1,
+      "price": 16990000,
+      "_id": {
+        "$oid": "67e922df20ddf9093716bd1b"
+      }
+    }
+  ],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:23.356Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:23.360Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "67e922e020ddf9093716bd29"
+  },
+  "user": null,
+  "sessionId": "i6LJ8e_nVNzD6zyyr79eEDhMShRUibwc",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:24.448Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:24.448Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922e120ddf9093716bd2d"
+  },
+  "user": null,
+  "sessionId": "jAvCmqQmxjQumMJ9DQg--8IeqL5Oi84J",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:25.638Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:25.638Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922e220ddf9093716bd31"
+  },
+  "user": null,
+  "sessionId": "v3fnlcL3HT55Pov70EjFGIt36hMAqrd6",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:26.488Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:26.488Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922e220ddf9093716bd35"
+  },
+  "user": null,
+  "sessionId": "XsHytT-2AZn9Ely6eO-V0B1uFxV4cb3Q",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:26.633Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:26.633Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922e320ddf9093716bd40"
+  },
+  "user": null,
+  "sessionId": "MAYN6A25eFkKMLV1gzTD0OhAZI1SPTYh",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:27.919Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:27.919Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922e520ddf9093716bd4b"
+  },
+  "user": null,
+  "sessionId": "gxA6GMgfW0jMBdt4ZBRSVjBN7zttw1Eg",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:29.197Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:29.197Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922e520ddf9093716bd50"
+  },
+  "user": null,
+  "sessionId": "Spiq6PakDbS-MilJvz7Rca75jAl7_kr0",
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "quantity": 1,
+      "price": 16990000,
+      "_id": {
+        "$oid": "67e922e520ddf9093716bd52"
+      }
+    }
+  ],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:29.835Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:29.838Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "67e922e620ddf9093716bd60"
+  },
+  "user": null,
+  "sessionId": "Df0f9ay2610gQiFgK4sCo5hN4dQVhTgW",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:30.904Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:30.904Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922e820ddf9093716bd64"
+  },
+  "user": null,
+  "sessionId": "UB7w1jqr3VpfRWUFh4zJOBmIoLURCR2I",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:32.560Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:32.560Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922ec20ddf9093716bd69"
+  },
+  "user": null,
+  "sessionId": "zSqEUBuyBNtnS7z9L2Fp68C222tm3uQM",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:36.232Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:36.232Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922ec20ddf9093716bd6d"
+  },
+  "user": null,
+  "sessionId": "R1GkGO7R-YP6hCohJk5GJZbnIYNUaB8H",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:36.843Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:36.843Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922ec20ddf9093716bd71"
+  },
+  "user": null,
+  "sessionId": "0KawAkVVtemojbkSbgM_nj_k-LwI835Z",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:36.894Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:36.894Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922f020ddf9093716bd7c"
+  },
+  "user": null,
+  "sessionId": "Kp1ZqJI0OPkBerfqELSrzXkn5vhhw-g4",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:40.246Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:40.246Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922f120ddf9093716bd87"
+  },
+  "user": null,
+  "sessionId": "UMzv9J_2mOe8frv43PxyhoygD0UJHzk7",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:41.971Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:41.971Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922f320ddf9093716bd93"
+  },
+  "user": null,
+  "sessionId": "KlpSD6CfYlhgS1hcqBqu35ObfQ7WjHF3",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:43.978Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:43.978Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922f420ddf9093716bd98"
+  },
+  "user": null,
+  "sessionId": "kWxlXrqxwiPRJ7JNDB68hdmvq1OyY-Sr",
+  "items": [
+    {
+      "product": {
+        "$oid": "67e746119065e8fe13501777"
+      },
+      "quantity": 1,
+      "price": 11990000,
+      "_id": {
+        "$oid": "67e922f420ddf9093716bd9a"
+      }
+    }
+  ],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:44.627Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:44.629Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "67e922f520ddf9093716bda9"
+  },
+  "user": null,
+  "sessionId": "b30q7bsfngAeuLwmqtpjkbhjIfP6Pkx0",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:45.728Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:45.728Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922f620ddf9093716bdad"
+  },
+  "user": null,
+  "sessionId": "EHtslqIPPLJl_ou9AOWg-eFU-sSM_WbJ",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:46.418Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:46.418Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922f720ddf9093716bdb1"
+  },
+  "user": null,
+  "sessionId": "hl_b10jCTUzYwiTQzpBVE38r91BJ_bJV",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:47.439Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:47.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e922f720ddf9093716bdb5"
+  },
+  "user": null,
+  "sessionId": "fsZ6YUWfgOQ91NCFAOm7BgfpQPPdAhK7",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:47.489Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:47.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e92303a1eba7f81538e38b"
+  },
+  "user": null,
+  "sessionId": "mzbF9tkYbmhH7Sx-ynzIflLUIvlkCFiG",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:59.731Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:59.731Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e92303a1eba7f81538e38f"
+  },
+  "user": null,
+  "sessionId": "fBFUO5M8J_JTbSDd48SEjftTepw_HM_W",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:54:59.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:54:59.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923b1a1eba7f81538e4fd"
+  },
+  "user": null,
+  "sessionId": "bhAAigorodLdRz_LJ0Oj9ophTYxT-eCD",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:57:53.193Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:57:53.193Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923b2a1eba7f81538e501"
+  },
+  "user": null,
+  "sessionId": "p6WeO8V9KI1R7hSm4kAywPJaQu-aqYFT",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:57:54.291Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:57:54.291Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923b4a1eba7f81538e50c"
+  },
+  "user": null,
+  "sessionId": "XxKeqsa-lCaZq4hpel2h9_kP01u7IKoD",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:57:56.349Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:57:56.349Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923b6a1eba7f81538e511"
+  },
+  "user": null,
+  "sessionId": "i9aHAY_tAiO3Jlpu0ASHlGkoaIHFkBVR",
+  "items": [
+    {
+      "product": {
+        "$oid": "67e863905b761d4e7563e300"
+      },
+      "quantity": 2,
+      "price": 16990000,
+      "_id": {
+        "$oid": "67e923b6a1eba7f81538e513"
+      }
+    }
+  ],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:57:58.252Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:57:58.254Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "67e923b7a1eba7f81538e521"
+  },
+  "user": null,
+  "sessionId": "ZDtOB_G9FeInKfTIUVSen7-jUIh5WL0x",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:57:59.335Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:57:59.335Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923b8a1eba7f81538e525"
+  },
+  "user": null,
+  "sessionId": "GdDhbJRKsh8BTgTn5Gv4SriKGXwkObqr",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:58:00.422Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:58:00.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923b9a1eba7f81538e529"
+  },
+  "user": null,
+  "sessionId": "y68G1M3VFiHW565ybwPC0vjG2T7EA0-M",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:58:01.317Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:58:01.317Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923b9a1eba7f81538e52d"
+  },
+  "user": null,
+  "sessionId": "oMH8PfZeduV4OkSz-OM9Yy5_TLrDKR7g",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:58:01.358Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:58:01.358Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67e923bda1eba7f81538e531"
+  },
+  "user": null,
+  "sessionId": "dJXyaHySGWzuZJ__WI-3WJNrJw8xFg8Y",
+  "items": [],
+  "couponCode": null,
+  "createdAt": {
+    "$date": "2025-03-30T10:58:05.330Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-30T10:58:05.330Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681cd254384243c262e87185"
+  },
+  "user": {
+    "$oid": "67e7b767857010879a6f053d"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "681871d0d565256de9cfa583"
+      },
+      "quantity": 1,
+      "price": 47000000,
+      "_id": {
+        "$oid": "681cd254384243c262e87186"
+      }
+    },
+    {
+      "product": {
+        "$oid": "680326eb805fb835a9408f63"
+      },
+      "quantity": 1,
+      "price": 36900000,
+      "_id": {
+        "$oid": "681cd5c0e76ce1724a9196bf"
+      }
+    }
+  ],
+  "totalPrice": 83900000,
+  "updatedAt": {
+    "$date": "2025-05-08T16:03:12.169Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "682e169b77e461d94f628946"
+  },
+  "user": {
+    "$oid": "67e703fac70dac6c52314265"
+  },
+  "items": [],
+  "totalPrice": 0,
+  "updatedAt": {
+    "$date": "2025-05-22T16:50:44.396Z"
+  },
+  "__v": 1,
+  "coupon": {
+    "$oid": "680efdbea5e4c70b5717597a"
+  }
+},
+{
+  "_id": {
+    "$oid": "68308b10219f2ab1debce09f"
+  },
+  "user": {
+    "$oid": "68198fea35543d95ee854cdc"
+  },
+  "items": [
+    {
+      "product": {
+        "$oid": "68189e7fc7bb52222494ec38"
+      },
+      "quantity": 2,
+      "price": 37990000,
+      "_id": {
+        "$oid": "68308b10219f2ab1debce0a0"
+      }
+    }
+  ],
+  "totalPrice": 75980000,
+  "updatedAt": {
+    "$date": "2025-05-23T14:49:54.096Z"
+  },
+  "__v": 0
+}]

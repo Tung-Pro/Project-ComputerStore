@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>  
+    <link rel="icon" type="/admin/image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/plugins/summernote/dist/summernote.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
+    <style>
+        .product-images-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .product-image-preview {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-image-preview img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .remove-image {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(255, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+       
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/products">Quản lý sản phẩm</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/products/edit/<%= product._id %>">Chỉnh sửa sản phẩm</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Chỉnh sửa sản phẩm</h4>
+                                <% if (error) { %>
+                                    <div class="alert alert-danger"><%= error %></div>
+                                <% } %>
+                                <div class="basic-form">
+                                    <form action="/admin/products/edit/<%= product._id %>" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Tên sản phẩm</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>" placeholder="Nhập tên sản phẩm" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Slug</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="slug" name="slug" value="<%= product.slug %>" placeholder="Ví dụ: laptop-asus-gaming">
+                                                <small class="form-text text-muted">Để trống để tự động tạo từ tên sản phẩm</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Danh mục</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" name="category" required>
+                                                    <option value="">Chọn danh mục</option>
+                                                    <% if (categories && categories.length > 0) { %>
+                                                        <% categories.forEach(category => { %>
+                                                            <option value="<%= category._id %>" <%= product.category && product.category.toString() === category._id.toString() ? 'selected' : '' %>><%= category.name %></option>
+                                                        <% }); %>
+                                                    <% } %>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Giá sản phẩm</label>
+                                            <div class="col-sm-10">
+                                                <input type="number" class="form-control" name="price" value="<%= product.price %>" placeholder="Nhập giá sản phẩm" required min="0">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Giá khuyến mãi</label>
+                                            <div class="col-sm-10">
+                                                <input type="number" class="form-control" name="discountPrice" value="<%= product.discountPrice %>" placeholder="Nhập giá khuyến mãi (nếu có)" min="0">
+                                                <small class="form-text text-muted">Để trống hoặc 0 nếu không có khuyến mãi</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Số lượng</label>
+                                            <div class="col-sm-10">
+                                                <input type="number" class="form-control" name="quantity" value="<%= product.quantity %>" placeholder="Nhập số lượng tồn kho" required min="0">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Ảnh chính</label>
+                                            <div class="col-sm-10">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="mainImage" name="mainImage" accept="image/*">
+                                                    <label class="custom-file-label" for="mainImage">Chọn ảnh chính mới (nếu muốn thay đổi)</label>
+                                                </div>
+                                                <input type="hidden" name="currentMainImage" value="<%= product.mainImage %>">
+                                                <div class="mt-3" id="mainImagePreview" style="display: block;">
+                                                    <img src="<%= product.mainImage %>" alt="<%= product.name %>" style="max-width: 300px; max-height: 200px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Ảnh phụ (tối đa 5 ảnh)</label>
+                                            <div class="col-sm-10">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="productImages" name="productImages" accept="image/*" multiple>
+                                                    <label class="custom-file-label" for="productImages">Chọn thêm ảnh phụ (có thể chọn nhiều)</label>
+                                                </div>
+                                                <small class="form-text text-muted">Bạn có thể có tối đa 5 ảnh phụ</small>
+                                                
+                                                <div class="product-images-container" id="imagesPreviewContainer">
+                                                    <% if (product.images && product.images.length > 0) { %>
+                                                        <% product.images.forEach((image, index) => { %>
+                                                            <div class="product-image-preview" data-id="existing_<%= index %>">
+                                                                <img src="<%= image %>" alt="<%= product.name %> phụ">
+                                                                <button type="button" class="remove-image" data-id="existing_<%= index %>">&times;</button>
+                                                                <input type="hidden" name="existingImages[]" value="<%= image %>">
+                                                            </div>
+                                                        <% }); %>
+                                                    <% } %>
+                                                </div>
+                                                <input type="hidden" id="imagesInput" name="images" value="">
+                                                <input type="hidden" id="deletedImages" name="deletedImages" value="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Mô tả ngắn</label>
+                                            <div class="col-sm-10">
+                                                <textarea class="form-control" id="shortDescription" name="shortDescription" rows="3" placeholder="Mô tả ngắn về sản phẩm (hiển thị ở trang danh sách sản phẩm)"><%= product.shortDescription || '' %></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Mô tả sản phẩm</label>
+                                            <div class="col-sm-10">
+                                                <textarea id="productDescription" name="description"><%= product.description %></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Thông số kỹ thuật</label>
+                                            <div class="col-sm-10">
+                                                <div id="specifications">
+                                                    <% if (product.specifications && Object.keys(product.specifications).length > 0) { %>
+                                                        <% Object.entries(product.specifications).forEach(([key, value]) => { %>
+                                                            <div class="specification-item row mb-2">
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" name="specKeys[]" value="<%= key %>" placeholder="Tên thông số">
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <input type="text" class="form-control" name="specValues[]" value="<%= value %>" placeholder="Giá trị">
+                                                                </div>
+                                                                <div class="col-sm-1">
+                                                                    <button type="button" class="btn btn-danger remove-spec"><i class="fa fa-trash"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        <% }); %>
+                                                    <% } else { %>
+                                                        <div class="specification-item row mb-2">
+                                                            <div class="col-sm-5">
+                                                                <input type="text" class="form-control" name="specKeys[]" placeholder="Tên thông số (VD: CPU)">
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control" name="specValues[]" placeholder="Giá trị (VD: Intel Core i5)">
+                                                            </div>
+                                                            <div class="col-sm-1">
+                                                                <button type="button" class="btn btn-danger remove-spec"><i class="fa fa-trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    <% } %>
+                                                </div>
+                                                <button type="button" class="btn btn-primary btn-sm" id="addSpecification">
+                                                    <i class="fa fa-plus"></i> Thêm thông số
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Trạng thái</label>
+                                            <div class="col-sm-10">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="active" name="active" <%= product.active ? 'checked' : '' %>>
+                                                    <label class="form-check-label" for="active">Đang bán</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="featured" name="featured" <%= product.featured ? 'checked' : '' %>>
+                                                    <label class="form-check-label" for="featured">Sản phẩm nổi bật</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <div class="col-sm-10 offset-sm-2">
+                                                <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
+                                                <a href="/admin/products" class="btn btn-secondary">Hủy</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://www.facebook.com/vtungpro">Nguyễn Văn Tùng</a> - MSV: 521100184</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+
+    <script src="/admin/plugins/summernote/dist/summernote.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Khởi tạo Summernote editor cho mô tả sản phẩm
+            $('#productDescription').summernote({
+                height: 300,
+                minHeight: 150,
+                maxHeight: 500,
+                //focus: true,
+                lang: 'vi-VN',
+                placeholder: 'Nhập mô tả chi tiết sản phẩm...',
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                callbacks: {
+                    onImageUpload: function(files) {
+                        // Có thể thêm xử lý upload ảnh ở đây
+                    }
+                }
+            });
+            
+            // Hiển thị ảnh chính khi chọn file
+            $('#mainImage').change(function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#mainImagePreview img').attr('src', e.target.result);
+                        $('#mainImagePreview').show();
+                    }
+                    reader.readAsDataURL(file);
+                    
+                    // Hiển thị tên file
+                    $(this).next('.custom-file-label').html(file.name);
+                }
+            });
+            
+            // Mảng lưu các ảnh mới đã chọn
+            let selectedImages = [];
+            // Mảng lưu các ảnh đã xóa
+            let deletedImages = [];
+            
+            // Đếm số ảnh hiện tại
+            const existingImagesCount = $('.product-image-preview[data-id^="existing_"]').length;
+            
+            // Xử lý khi chọn ảnh phụ mới
+            $('#productImages').change(function() {
+                const files = Array.from(this.files);
+                const remainingSlots = 5 - existingImagesCount + deletedImages.length - selectedImages.length;
+                
+                if (remainingSlots <= 0) {
+                    alert('Bạn chỉ có thể có tối đa 5 ảnh phụ!');
+                    return;
+                }
+                
+                // Chỉ lấy số lượng file còn được phép
+                const filesToAdd = files.slice(0, remainingSlots);
+                
+                // Hiển thị tên file
+                $(this).next('.custom-file-label').html(
+                    filesToAdd.length > 1 ? 
+                    `Đã chọn ${filesToAdd.length} ảnh` : 
+                    filesToAdd[0].name
+                );
+                
+                // Đọc và hiển thị ảnh
+                filesToAdd.forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        // Tạo placeholder cho ảnh
+                        const imageId = 'img_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                        
+                        const imageElement = `
+                            <div class="product-image-preview" data-id="${imageId}">
+                                <img src="${e.target.result}" alt="Preview">
+                                <button type="button" class="remove-image" data-id="${imageId}">&times;</button>
+                            </div>
+                        `;
+                        
+                        $('#imagesPreviewContainer').append(imageElement);
+                        
+                        // Thêm ảnh vào danh sách đã chọn
+                        selectedImages.push({
+                            id: imageId,
+                            file: file
+                        });
+                    }
+                    reader.readAsDataURL(file);
+                });
+            });
+            
+            // Xử lý khi xóa ảnh mới
+            $(document).on('click', '.remove-image', function() {
+                const imageId = $(this).data('id');
+                
+                // Nếu là ảnh hiện có
+                if (imageId.startsWith('existing_')) {
+                    // Lấy URL của ảnh bị xóa
+                    const imageSrc = $(this).siblings('img').attr('src');
+                    deletedImages.push(imageSrc);
+                    $('#deletedImages').val(JSON.stringify(deletedImages));
+                }
+                // Nếu là ảnh mới
+                else {
+                    // Xóa khỏi danh sách ảnh đã chọn
+                    selectedImages = selectedImages.filter(img => img.id !== imageId);
+                }
+                
+                // Xóa khỏi giao diện
+                $(`.product-image-preview[data-id="${imageId}"]`).remove();
+            });
+            
+            // Tự động tạo slug từ tên
+            function createSlug(text) {
+                return text.toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '')
+                    .replace(/đ/g, 'd')
+                    .replace(/Đ/g, 'D')
+                    .replace(/[^a-z0-9\s]/g, '')
+                    .replace(/\s+/g, '-')
+                    .trim();
+            }
+
+            $('#name').on('input', function() {
+                const name = $(this).val();
+                const slug = createSlug(name);
+                $('#slug').val(slug);
+            });
+            
+            // Thêm thông số kỹ thuật
+            $('#addSpecification').click(function() {
+                const newSpec = `
+                    <div class="specification-item row mb-2">
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="specKeys[]" placeholder="Tên thông số">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="specValues[]" placeholder="Giá trị">
+                        </div>
+                        <div class="col-sm-1">
+                            <button type="button" class="btn btn-danger remove-spec"><i class="fa fa-trash"></i></button>
+                        </div>
+                    </div>
+                `;
+                
+                $('#specifications').append(newSpec);
+            });
+            
+            // Xóa thông số kỹ thuật
+            $(document).on('click', '.remove-spec', function() {
+                $(this).closest('.specification-item').remove();
+            });
+        });
+    </script>
+
+</body>
+
+</html> 

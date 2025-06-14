@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/images/favicon.png">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="/admin/plugins/summernote/dist/summernote.css" rel="stylesheet">
+    <link href="/admin/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
+</head>
+<body>
+     <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+   <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <%- include('../../partials/sidebar.ejs') %>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+    
+        <div class="content-body">
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/categories">Danh mục sản phẩm</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/categories/edit/<%= category._id %>">Chỉnh sửa danh mục sản phẩm</a></li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Chỉnh sửa danh mục sản phẩm</h4>
+                                <% if (error) { %>
+                                    <div class="alert alert-danger"><%= error %></div>
+                                <% } %>
+                                <div class="basic-form">
+                                    <form action="/admin/categories/edit/<%= category._id %>" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="name">Tên danh mục</label>
+                                            <input type="text" class="form-control" id="name" name="name" value="<%= category.name %>" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">Mô tả</label>
+                                            <textarea id="categoryDescription" name="description"><%= category.description %></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="slug">Đường dẫn (Slug)</label>
+                                            <input type="text" class="form-control" id="slug" name="slug" value="<%= category.slug %>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="image">Hình ảnh</label>
+                                            <input type="file" id="image" name="image" accept="image/*">
+                                            <input type="hidden" name="currentImage" value="<%= category.image %>">
+                                            <% if(category.image) { %>
+                                                <div class="mt-3">
+                                                    <img src="<%= category.image %>" alt="<%= category.name %>" style="max-width: 200px;">
+                                                </div>
+                                            <% } %>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="active" name="active" <%= category.active ? 'checked' : '' %>>
+                                                <label class="form-check-label" for="active">Hoạt động</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                                        <a href="/admin/categories" class="btn btn-secondary">Hủy</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="/admin/plugins/common/common.min.js"></script>
+    <script src="/admin/js/custom.min.js"></script>
+    <script src="/admin/js/settings.js"></script>
+    <script src="/admin/js/gleek.js"></script>
+    <script src="/admin/js/styleSwitcher.js"></script>
+    <script src="/admin/plugins/summernote/dist/summernote.min.js"></script>
+    <!-- Date Picker -->
+    <script src="/admin/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Khởi tạo Summernote editor cho mô tả danh mục
+            $('#categoryDescription').summernote({
+                height: 300,
+                minHeight: 150,
+                maxHeight: 500,
+                // focus: true,
+                lang: 'vi-VN',
+                placeholder: 'Nhập mô tả chi tiết cho danh mục...',
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                callbacks: {
+                    onImageUpload: function(files) {
+                        // Có thể thêm xử lý upload ảnh ở đây
+                    }
+                }
+            });
+
+            // Hiển thị xem trước ảnh khi chọn file
+            document.getElementById('image').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        let img = document.querySelector('div.mt-3 img');
+                        if (!img) {
+                            const container = document.createElement('div');
+                            container.className = 'mt-3';
+                            img = document.createElement('img');
+                            img.style.maxWidth = '200px';
+                            container.appendChild(img);
+                            this.parentElement.appendChild(container);
+                        }
+                        img.src = event.target.result;
+                        img.alt = document.getElementById('name').value;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Tự động tạo slug từ tên
+            function createSlug(text) {
+                    return text.toLowerCase()
+                        .normalize('NFD')
+                        .replace(/[\u0300-\u036f]/g, '')
+                        .replace(/đ/g, 'd')
+                        .replace(/Đ/g, 'D')
+                        .replace(/[^a-z0-9\s]/g, '')
+                        .replace(/\s+/g, '-')
+                        .trim();
+                }
+
+                $('#name').on('input', function() {
+                    const name = $(this).val();
+                    const slug = createSlug(name);
+                    $('#slug').val(slug);
+                });
+        });
+    </script>
+</body>
+</html> 
